@@ -28,7 +28,7 @@ class OrganizationsController < ApplicationController
   private
 
   def current_organization
-    @organization = @current_user.organizations
+    @organization = @current_user.organizations.find(params[:id])
     render json: {errors: 'organization data not found'}, status: :not_found if @organization.nil? ||
       @organization.id != params[:id].to_i
   end

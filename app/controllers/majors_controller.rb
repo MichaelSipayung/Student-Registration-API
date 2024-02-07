@@ -1,7 +1,7 @@
 class MajorsController < ApplicationController
   before_action :authorize_request, only: %i[create update show]
-  before_action :current_major, only: %i[edit update show]
-  before_action :fill_major, only: %i[new create]
+  before_action :current_major, only: %i[update show]
+  before_action :fill_major, only: %i[create]
 
   def create
     @major = @current_user.build_major(major_params)

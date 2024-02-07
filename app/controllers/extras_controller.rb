@@ -28,7 +28,7 @@ class ExtrasController < ApplicationController
   private
 
   def current_extra
-    @extra = @current_user.extras
+    @extra = @current_user.extras.find(params[:id])
     render json: {errors: 'extra data not found'}, status: :not_found if @extra.nil? ||
       @extra.id != params[:id].to_i
   end

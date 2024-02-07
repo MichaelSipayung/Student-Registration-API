@@ -4,7 +4,7 @@ class PmdkEachScoreInformationsController < ApplicationController
   before_action :fill_pmdk_each_score, only: %i[create]
 
   def create
-    @pmdk_each_score = @current_user.pmdk_each_score_information(pmdk_each_score_information_params)
+    @pmdk_each_score = @current_user.build_pmdk_each_score_information(pmdk_each_score_information_params)
     if @pmdk_each_score.save
       render json: { message: 'pmdk each score data was created' }, status: :ok
     else
@@ -36,7 +36,7 @@ class PmdkEachScoreInformationsController < ApplicationController
 
   def pmdk_each_score_information_params
     params.require(:pmdk_each_score_information).permit(
-      :matematika_semester1, :matematika_semester2, :matematika_semester3, :matematika_semester4,
+      :matematika1, :matematika2, :matematika3, :matematika4,
       :matematika5, :kimia1, :kimia2, :kimia3, :kimia4,
       :kimia5, :fisika1, :fisika2, :fisika3, :fisika4,
       :fisika5, :inggris1, :inggris2, :inggris3,

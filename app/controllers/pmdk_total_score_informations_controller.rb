@@ -1,4 +1,4 @@
-class PmdkTotalScoreInformationController < ApplicationController
+class PmdkTotalScoreInformationsController < ApplicationController
   before_action :authorize_request, only: %i[create update show]
   before_action :current_pmdk_total_score, only: %i[update show]
   before_action :fill_pmdk_total, only: %i[create]
@@ -13,7 +13,7 @@ class PmdkTotalScoreInformationController < ApplicationController
   end
 
   def update
-    @pmdk_total_score = @current_user.pmdk_total_score
+    @pmdk_total_score = @current_user.pmdk_total_score_information
     if @pmdk_total_score.update(pmdk_total_score_params)
       render json: { message: 'pmdk total score updated' }, status: :ok
     else
@@ -22,14 +22,14 @@ class PmdkTotalScoreInformationController < ApplicationController
   end
 
   def show
-    @pmdk_total_score = @current_user.pmdk_total_score
+    @pmdk_total_score = @current_user.pmdk_total_score_information
     render json: @pmdk_total_score, status: :ok
   end
 
   private
 
   def current_pmdk_total_score
-    @pmdk_total_score = @current_user.pmdk_total_score
+    @pmdk_total_score = @current_user.pmdk_total_score_information
     render json: {errors: 'pmdk_total_score data not found'}, status: :not_found if @pmdk_total_score.nil? ||
       @pmdk_total_score.id != params[:id].to_i
   end
@@ -44,7 +44,7 @@ class PmdkTotalScoreInformationController < ApplicationController
   end
 
   def fill_pmdk_total
-    @pmdk_total_score = @current_user.pmdk_total_score
+    @pmdk_total_score = @current_user.pmdk_total_score_information
     render json: {errors: 'pmdk_total_score data already exist, go update it'},
            status: :unprocessable_entity if  @pmdk_total_score
   end

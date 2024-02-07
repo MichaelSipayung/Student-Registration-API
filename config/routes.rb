@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :utbk_scores, only: %i[create update show]
   resources :utbk_school_informations, only: %i[create update show]
   resources :usm_school_informations, only: %i[create update show]
-  resources :pmdk_total_score_information, only: %i[create update show]
+  resources :pmdk_total_score_informations, only: %i[create update show]
   resources :pmdk_school_informations, only: %i[create update show]
   resources :pmdk_each_score_informations, only: %i[create update show]
   resources :languages, only: %i[create update show]

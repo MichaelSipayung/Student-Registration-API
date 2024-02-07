@@ -28,7 +28,7 @@ class AchievementsController < ApplicationController
   private
 
   def current_achievement
-    @achievement = @current_user.achievements
+    @achievement = @current_user.achievements.find(params[:id])
     render json: {errors: 'achievement data not found'}, status: :not_found if @achievement.nil? ||
       @achievement.id != params[:id].to_i
   end

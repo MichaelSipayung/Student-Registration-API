@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_06_074951) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -195,8 +195,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_074951) do
     t.string "jurusan_sekolah"
     t.integer "jumlah_pelajaran_un"
     t.decimal "jumlah_nilai_un"
-    t.decimal "jumlah_pelajaran_semester5"
-    t.integer "jumlah_nilai_semester5"
+    t.integer "jumlah_pelajaran_semester5"
+    t.decimal "jumlah_nilai_semester5"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

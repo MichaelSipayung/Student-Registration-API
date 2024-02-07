@@ -7,6 +7,13 @@ one:
   kategori: MyString
   user: nina
 
+three:
+  nama_prestasi: MyString
+  tahun: 2024-02-06
+  tingkat: MyString
+  kategori: MyString
+  user: nina
+
 two:
   nama_prestasi: MyString
   tahun: 2024-02-06

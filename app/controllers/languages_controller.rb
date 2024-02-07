@@ -28,7 +28,7 @@ class LanguagesController < ApplicationController
   private
 
   def current_language
-    @language = @current_user.languages
+    @language = @current_user.languages.find(params[:id])
     render json: {errors: 'language data not found'}, status: :not_found if @language.nil? ||
       @language.id != params[:id].to_i
   end

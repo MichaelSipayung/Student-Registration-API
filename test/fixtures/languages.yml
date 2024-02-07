@@ -5,6 +5,11 @@ one:
   tingkat: MyString
   user: nina
 
+three:
+  nama_bahasa: MyString
+  tingkat: MyString
+  user: nina
+
 two:
   nama_bahasa: MyString
   tingkat: MyString
