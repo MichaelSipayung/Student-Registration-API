@@ -1,0 +1,47 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matematika1: 9.99
+  matematika2: 9.99
+  matematika3: 9.99
+  matematika4: 9.99
+  matematika5: 9.99
+  fisika1: 9.99
+  fisika2: 9.99
+  fisika3: 9.99
+  fisika4: 9.99
+  fisika5: 9.99
+  kimia1: 9.99
+  kimia2: 9.99
+  kimia3: 9.99
+  kimia4: 9.99
+  kimia5: 9.99
+  inggris1: 9.99
+  inggris2: 9.99
+  inggris3: 9.99
+  inggris4: 9.99
+  inggris5: 9.99
+  user: nina
+
+two:
+  matematika1: 9.99
+  matematika2: 9.99
+  matematika3: 9.99
+  matematika4: 9.99
+  matematika5: 9.99
+  fisika1: 9.99
+  fisika2: 9.99
+  fisika3: 9.99
+  fisika4: 9.99
+  fisika5: 9.99
+  kimia1: 9.99
+  kimia2: 9.99
+  kimia3: 9.99
+  kimia4: 9.99
+  kimia5: 9.99
+  inggris1: 9.99
+  inggris2: 9.99
+  inggris3: 9.99
+  inggris4: 9.99
+  inggris5: 9.99
+  user: john

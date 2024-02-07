@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_peserta: MyString
+  tanggal_ujian: 2024-02-06
+  nilai_penalaran_umum: 9.99
+  nilai_pengetahuan_kuantitatif: 9.99
+  nilai_pengetahuan_dan_pemahaman_umum: 9.99
+  nilai_kemampuan_memahami_bacaan_dan_menulis: 9.99
+  jumlah_nilai_semester6: 9.99
+  jumlah_pelajaran_semester6: 1
+  user: nina
+
+two:
+  no_peserta: MyString
+  tanggal_ujian: 2024-02-06
+  nilai_penalaran_umum: 9.99
+  nilai_pengetahuan_kuantitatif: 9.99
+  nilai_pengetahuan_dan_pemahaman_umum: 9.99
+  nilai_kemampuan_memahami_bacaan_dan_menulis: 9.99
+  jumlah_nilai_semester6: 9.99
+  jumlah_pelajaran_semester6: 1
+  user: john

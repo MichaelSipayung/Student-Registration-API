@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jumlah_n: 1
+  sumber_informasi: MyString
+  motivasi: MyString
+  user: nina
+
+two:
+  jumlah_n: 1
+  sumber_informasi: MyString
+  motivasi: MyString
+  user: john

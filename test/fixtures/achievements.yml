@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nama_prestasi: MyString
+  tahun: 2024-02-06
+  tingkat: MyString
+  kategori: MyString
+  user: nina
+
+two:
+  nama_prestasi: MyString
+  tahun: 2024-02-06
+  tingkat: MyString
+  kategori: MyString
+  user: john

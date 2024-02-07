@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asal_sekolah: MyString
+  akreditas: MyString
+  jurusan_sekolah: MyString
+  jumlah_pelajaran_un: 1
+  jumlah_nilai_un: 9.99
+  jumlah_pelajaran_semester5: 9.99
+  jumlah_nilai_semester5: 1
+  user: nina
+
+two:
+  asal_sekolah: MyString
+  akreditas: MyString
+  jurusan_sekolah: MyString
+  jumlah_pelajaran_un: 1
+  jumlah_nilai_un: 9.99
+  jumlah_pelajaran_semester5: 9.99
+  jumlah_nilai_semester5: 1
+  user: john

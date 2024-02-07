@@ -1,0 +1,20 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jumlah_nilai_semester1: 9.99
+  jumlah_nilai_semester2: 9.99
+  jumlah_nilai_semester3: 9.99
+  jumlah_nilai_semester4: 9.99
+  jumlah_nilai_semester5: 9.99
+  jumlah_pelajaran_semester1: 1
+  jumlah_pelajaran_semester2: 1
+  user: nina
+two:
+  jumlah_nilai_semester1: 9.99
+  jumlah_nilai_semester2: 9.99
+  jumlah_nilai_semester3: 9.99
+  jumlah_nilai_semester4: 9.99
+  jumlah_nilai_semester5: 9.99
+  jumlah_pelajaran_semester1: 1
+  jumlah_pelajaran_semester3: 1
+  user: john

@@ -1,0 +1,36 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: nina
+  nama_lengkap: john mulio
+  agama: MyString
+  tempat_lahir: MyString
+  jenis_kelamin: MyString
+  domisili: MyString
+  no_kps: 123456
+  nik: 1234567896512378
+  nisn: 1234567896
+  tanggal_lahir: 2024-02-05
+
+two:
+  user: john
+  nama_lengkap: john mulio
+  agama: MyString
+  tempat_lahir: MyString
+  jenis_kelamin: MyString
+  domisili: MyString
+  no_kps: 123456
+  nik: 1234567896512378
+  nisn: 1234567896
+  tanggal_lahir: 2024-02-05
+
+#two:
+#  nama_lengkap: MyString
+#  agama: MyString
+#  tempat_lahir: MyString
+#  jenis_kelamin: MyString
+#  domisili: MyString
+#  no_kps: 1
+#  nik_integer: MyString
+#  nisn: 1
+#  tanggal_lahir: 2024-02-05

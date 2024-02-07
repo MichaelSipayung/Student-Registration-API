@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jurusan1: MyString
+  jurusan2: MyString
+  jurusan3: MyString
+  gelombang: MyString
+  user: nina
+
+two:
+  jurusan1: MyString
+  jurusan2: MyString
+  jurusan3: MyString
+  gelombang: MyString
+  user: john
