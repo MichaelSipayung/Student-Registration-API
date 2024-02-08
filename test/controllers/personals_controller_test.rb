@@ -65,7 +65,8 @@ class PersonalsControllerTest < ActionDispatch::IntegrationTest
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
-    get personal_url(personals(:one)), headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+    get personal_url(personals(:one)),
+        headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
   end
 end
