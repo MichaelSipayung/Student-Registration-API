@@ -1,0 +1,2 @@
+class LanguageDegreeListsController < ApplicationController
+end

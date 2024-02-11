@@ -1,0 +1,2 @@
+class MajorListsController < ApplicationController
+end

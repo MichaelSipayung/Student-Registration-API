@@ -1,0 +1,2 @@
+class ParentJobListsController < ApplicationController
+end

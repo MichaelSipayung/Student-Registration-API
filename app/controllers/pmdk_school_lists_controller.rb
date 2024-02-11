@@ -1,0 +1,2 @@
+class PmdkSchoolListsController < ApplicationController
+end

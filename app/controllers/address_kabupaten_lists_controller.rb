@@ -1,0 +1,2 @@
+class AddressKabupatenListsController < ApplicationController
+end

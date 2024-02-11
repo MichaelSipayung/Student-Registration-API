@@ -1,0 +1,2 @@
+class AchievementTingkatListsController < ApplicationController
+end

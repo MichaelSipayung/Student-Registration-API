@@ -1,0 +1,2 @@
+class OrganizationDegreeListsController < ApplicationController
+end

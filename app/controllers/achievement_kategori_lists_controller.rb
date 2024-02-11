@@ -1,0 +1,2 @@
+class AchievementKategoriListsController < ApplicationController
+end

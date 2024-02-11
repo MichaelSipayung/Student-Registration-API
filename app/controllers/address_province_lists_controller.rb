@@ -1,0 +1,2 @@
+class AddressProvinceListsController < ApplicationController
+end

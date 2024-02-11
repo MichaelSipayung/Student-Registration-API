@@ -1,0 +1,2 @@
+class ExtraListsController < ApplicationController
+end

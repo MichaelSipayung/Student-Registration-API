@@ -1,0 +1,2 @@
+class SourceInformationListsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class HighSchoolMajorListsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class ParentEducationListsController < ApplicationController
+end
