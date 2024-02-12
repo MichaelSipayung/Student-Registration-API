@@ -10,9 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_11_124532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accreditation_school_lists", force: :cascade do |t|
+    t.string "akreditasi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "achievement_kategori_lists", force: :cascade do |t|
+    t.string "kategori"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "achievement_tingkat_lists", force: :cascade do |t|
+    t.string "tingkat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "achievements", force: :cascade do |t|
     t.string "nama_prestasi"
@@ -23,6 +41,28 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_achievements_on_user_id"
+  end
+
+  create_table "address_kabupaten_lists", force: :cascade do |t|
+    t.string "kabupaten"
+    t.bigint "address_province_list_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_province_list_id"], name: "index_address_kabupaten_lists_on_address_province_list_id"
+  end
+
+  create_table "address_kecamatan_lists", force: :cascade do |t|
+    t.string "kecamatan"
+    t.bigint "address_kabupaten_list_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_kabupaten_list_id"], name: "index_address_kecamatan_lists_on_address_kabupaten_list_id"
+  end
+
+  create_table "address_province_lists", force: :cascade do |t|
+    t.string "provinsi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "addresses", force: :cascade do |t|
@@ -39,6 +79,25 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
+  create_table "all_school_lists", force: :cascade do |t|
+    t.string "sekolah"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "batch_lists", force: :cascade do |t|
+    t.string "gelombang"
+    t.boolean "aktif"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "extra_lists", force: :cascade do |t|
+    t.string "predikat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "extras", force: :cascade do |t|
     t.string "nama_kegiatan"
     t.date "mulai"
@@ -50,6 +109,24 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.index ["user_id"], name: "index_extras_on_user_id"
   end
 
+  create_table "high_school_major_lists", force: :cascade do |t|
+    t.string "jurusan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "language_degree_lists", force: :cascade do |t|
+    t.string "tingkat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "language_name_lists", force: :cascade do |t|
+    t.string "bahasa"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "languages", force: :cascade do |t|
     t.string "nama_bahasa"
     t.string "tingkat"
@@ -57,6 +134,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_languages_on_user_id"
+  end
+
+  create_table "major_lists", force: :cascade do |t|
+    t.string "jurusan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "majors", force: :cascade do |t|
@@ -70,6 +153,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.index ["user_id"], name: "index_majors_on_user_id"
   end
 
+  create_table "organization_degree_lists", force: :cascade do |t|
+    t.string "jabatan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "organizations", force: :cascade do |t|
     t.string "nama_organisasi"
     t.date "mulai"
@@ -79,6 +168,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_organizations_on_user_id"
+  end
+
+  create_table "parent_education_lists", force: :cascade do |t|
+    t.string "pendidikan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parent_job_lists", force: :cascade do |t|
+    t.string "pekerjaan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "parents", force: :cascade do |t|
@@ -96,6 +197,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_parents_on_user_id"
+  end
+
+  create_table "personal_gender_lists", force: :cascade do |t|
+    t.string "jenis_kelamin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "personal_religion_lists", force: :cascade do |t|
+    t.string "agama"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "personals", force: :cascade do |t|
@@ -153,6 +266,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.index ["user_id"], name: "index_pmdk_school_informations_on_user_id"
   end
 
+  create_table "pmdk_school_lists", force: :cascade do |t|
+    t.string "sekolah"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pmdk_total_score_informations", force: :cascade do |t|
     t.decimal "jumlah_nilai_semester1"
     t.decimal "jumlah_nilai_semester2"
@@ -168,6 +287,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_pmdk_total_score_informations_on_user_id"
+  end
+
+  create_table "source_information_lists", force: :cascade do |t|
+    t.string "informasi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "source_motivation_lists", force: :cascade do |t|
+    t.string "motivasi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sources", force: :cascade do |t|
@@ -231,6 +362,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_07_050258) do
   end
 
   add_foreign_key "achievements", "users"
+  add_foreign_key "address_kabupaten_lists", "address_province_lists"
+  add_foreign_key "address_kecamatan_lists", "address_kabupaten_lists"
   add_foreign_key "addresses", "users"
   add_foreign_key "extras", "users"
   add_foreign_key "languages", "users"

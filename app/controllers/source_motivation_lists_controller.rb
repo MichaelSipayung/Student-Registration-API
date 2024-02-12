@@ -1,0 +1,2 @@
+class SourceMotivationListsController < ApplicationController
+end

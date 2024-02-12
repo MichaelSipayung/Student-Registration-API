@@ -1,0 +1,18 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+acehtengah:
+  id: 19009
+  address_province_list_id: 1300900
+  kabupaten: kab aceh tengah
+
+acehselatan:
+  address_province_list_id: 1300900
+  kabupaten: kab aceh selatan
+
+acehtimur:
+  address_province_list_id: 1300900
+  kabupaten: kab aceh timur
+
+tobasamosir:
+  address_province_list_id: 1300911
+  kabupaten: kab toba samosir

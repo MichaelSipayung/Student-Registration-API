@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+kecacehtengah:
+  address_kabupaten_list_id: 19009
+  kecamatan: kec aceh tengah
+
+kecacehselatan:
+  address_kabupaten_list_id: 19009
+  kecamatan: kec aceh selatan
+
+kecacehtimur:
+  address_kabupaten_list_id: 19009
+  kecamatan: kec aceh timur

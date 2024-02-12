@@ -1,0 +1,2 @@
+class PersonalGenderListsController < ApplicationController
+end
