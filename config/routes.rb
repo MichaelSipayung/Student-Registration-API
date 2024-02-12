@@ -37,7 +37,8 @@ Rails.application.routes.draw do
   resources :high_school_major_lists, only: %i[create update show destroy]
   resources :language_degree_lists, only: %i[create update show destroy]
   resources :language_name_lists, only: %i[create update show destroy]
-
+  resources :major_lists, only: %i[create update show destroy]
+  resources :organization_degree_lists, only: %i[create update show destroy]
 
   get '/*a', to: 'application#not_found'
 end
