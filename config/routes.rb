@@ -24,6 +24,11 @@ Rails.application.routes.draw do
   resources :languages, only: %i[create update show]
   resources :achievements, only: %i[create update show]
   resources :addresses, only: %i[create update show]
+  # for list data
+  resources :accreditation_school_lists, only: %i[create update show destroy]
+  resources :achievement_kategori_lists, only: %i[create update show destroy]
+  resources :achievement_tingkat_lists, only: %i[create update show destroy]
+
 
   get '/*a', to: 'application#not_found'
 end
