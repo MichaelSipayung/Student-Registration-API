@@ -13,6 +13,7 @@ class ParentJobListsController < ApplicationController
   end
 
   def update
+
     if @parent_job_list.update(parent_job_list_params)
       render json: {message: 'parent job list updated'}, status: :ok
     else
