@@ -10,7 +10,7 @@ class AchievementTingkatListsControllerTest < ActionDispatch::IntegrationTest
     @token = body['token']
   end
 
-  test 'should create achievement kategori' do
+  test 'should create achievement tingkat' do
     assert_difference('AchievementTingkatList.count') do
       post achievement_tingkat_lists_url, params: {
         achievement_tingkat_list: { tingkat: 'kecamatan' }
@@ -19,7 +19,7 @@ class AchievementTingkatListsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should update achievement kategori' do
+  test 'should update achievement tingkat' do
     patch achievement_tingkat_list_url(achievement_tingkat_lists(:one)),
           params: {
             achievement_tingkat_list: { tingkat: 'provinsi' }
@@ -29,7 +29,7 @@ class AchievementTingkatListsControllerTest < ActionDispatch::IntegrationTest
                  achievement_tingkat_lists(:one).reload.tingkat
   end
 
-  test 'should show achievement kategori' do
+  test 'should show achievement tingkat' do
     get achievement_tingkat_list_url(achievement_tingkat_lists(:one)),
         headers: {'Authorization' => "Bearer #{@token}" }, as: :json
     assert_response :success

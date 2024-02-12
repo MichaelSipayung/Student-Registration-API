@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   resources :accreditation_school_lists, only: %i[create update show destroy]
   resources :achievement_kategori_lists, only: %i[create update show destroy]
   resources :achievement_tingkat_lists, only: %i[create update show destroy]
+  resources :address_province_lists, only: %i[create update show destroy]
+  resources :address_kabupaten_lists, only: %i[create update show destroy]
+  resources :address_kecamatan_lists, only: %i[create update show destroy]
 
 
   get '/*a', to: 'application#not_found'
