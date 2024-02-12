@@ -31,6 +31,12 @@ Rails.application.routes.draw do
   resources :address_province_lists, only: %i[create update show destroy]
   resources :address_kabupaten_lists, only: %i[create update show destroy]
   resources :address_kecamatan_lists, only: %i[create update show destroy]
+  resources :all_school_lists, only: %i[create update show destroy]
+  resources :batch_lists, only: %i[create update show destroy]
+  resources :extra_lists, only: %i[create update show destroy]
+  resources :high_school_major_lists, only: %i[create update show destroy]
+  resources :language_degree_lists, only: %i[create update show destroy]
+  resources :language_name_lists, only: %i[create update show destroy]
 
 
   get '/*a', to: 'application#not_found'
