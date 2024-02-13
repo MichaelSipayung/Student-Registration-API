@@ -1,0 +1,1569 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/accreditation_school_lists":
+    post:
+      summary: create accreditation_school_list
+      tags:
+        - Accreditation school list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/accreditation_school_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show accreditation_school_list
+      tags:
+        - Accreditation school list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update accreditation_school_list
+      tags:
+        - Accreditation school list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update accreditation_school_list
+      tags:
+        - Accreditation school list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete accreditation_school_list
+      tags:
+        - Accreditation school list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/achievement_kategori_lists":
+    post:
+      summary: create achievement_kategori_list
+      tags:
+        - Achievement category list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/achievement_kategori_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show achievement_kategori_list
+      tags:
+        - Achievement category list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update achievement_kategori_list
+      tags:
+        - Achievement category list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update achievement_kategori_list
+      tags:
+        - Achievement category list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete achievement_kategori_list
+      tags:
+        - Achievement category list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/achievement_tingkat_lists":
+    post:
+      summary: create achievement_tingkat_list
+      tags:
+        - Achievement level list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/achievement_tingkat_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show achievement_tingkat_list
+      tags:
+        - Achievement level list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update achievement_tingkat_list
+      tags:
+        - Achievement level list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update achievement_tingkat_list
+      tags:
+        - Achievement level list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete achievement_tingkat_list
+      tags:
+        - Achievement level list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/achievements":
+    post:
+      summary: create achievement
+      tags:
+        - Achievement endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/achievements/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show achievement
+      tags:
+        - Achievement endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update achievement
+      tags:
+        - Achievement endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update achievement
+      tags:
+        - Achievement endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/address_kabupaten_lists":
+    post:
+      summary: create address_kabupaten_list
+      tags:
+        - Address kabupaten list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/address_kabupaten_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show address_kabupaten_list
+      tags:
+        - Address kabupaten list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update address_kabupaten_list
+      tags:
+        - Address kabupaten list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update address_kabupaten_list
+      tags:
+        - Address kabupaten list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete address_kabupaten_list
+      tags:
+        - Address kabupaten list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/address_kecamatan_lists":
+    post:
+      summary: create address_kecamatan_list
+      tags:
+        - Address kecamatan list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/address_kecamatan_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show address_kecamatan_list
+      tags:
+        - Address kecamatan list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update address_kecamatan_list
+      tags:
+        - Address kecamatan list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update address_kecamatan_list
+      tags:
+        - Address kecamatan list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete address_kecamatan_list
+      tags:
+        - Address kecamatan list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/address_province_lists":
+    post:
+      summary: create address_province_list
+      tags:
+        - Address province list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/address_province_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show address_province_list
+      tags:
+        - Address province list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update address_province_list
+      tags:
+        - Address province list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update address_province_list
+      tags:
+        - Address province list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete address_province_list
+      tags:
+        - Address province list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/addresses":
+    post:
+      summary: create address
+      tags:
+        - Address endpoint
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                alamat:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                kelurahan:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                kecamatan:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                kode_pos:
+                  type: integer
+                  minimum: 5
+                  maximum: 5
+                provinsi:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                no_telepon:
+                  type: integer
+                  minimum: 10
+                  maximum: 13
+                kabupaten:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+              required:
+              - alamat
+              - kelurahan
+              - kecamatan
+              - kode_pos
+              - provinsi
+              - no_telepon
+              - kabupaten
+  "/api/v1/addresses/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show address
+      tags:
+        - Address endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update address
+      tags:
+        - Address endpoint
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                alamat:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                kelurahan:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                kecamatan:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                kode_pos:
+                  type: integer
+                  minimum: 5
+                  maximum: 5
+                provinsi:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                no_telepon:
+                  type: integer
+                  minimum: 10
+                  maximum: 13
+                kabupaten:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+  "/api/v1/all_school_lists":
+    post:
+      summary: create all_school_list
+      tags:
+        - All school list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/all_school_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show all_school_list
+      tags:
+        - All school list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update all_school_list
+      tags:
+        - All school list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update all_school_list
+      tags:
+        - All school list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete all_school_list
+      tags:
+        - All school list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/batch_lists":
+    post:
+      summary: create batch_list
+      tags:
+        - Batch list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/batch_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show batch_list
+      tags:
+        - Batch list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update batch_list
+      tags:
+        - Batch list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update batch_list
+      tags:
+        - Batch list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete batch_list
+      tags:
+        - Batch list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/extra_lists":
+    post:
+      summary: create extra_list
+      tags:
+        - Extra activity list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/extra_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show extra_list
+      tags:
+        - Extra activity list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update extra_list
+      tags:
+        - Extra activity list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update extra_list
+      tags:
+        - Extra activity list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete extra_list
+      tags:
+        - Extra activity list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/extras":
+    post:
+      summary: create extra
+      tags:
+        - Extra activity endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/extras/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show extra
+      tags:
+        - Extra activity endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update extra
+      tags:
+        - Extra activity endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update extra
+      tags:
+        - Extra activity endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/high_school_major_lists":
+    post:
+      summary: create high_school_major_list
+      tags:
+        - High school major list endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/high_school_major_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show high_school_major_list
+      tags:
+        - High school major list endpoint 
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update high_school_major_list
+      tags:
+        - High school major list endpoint 
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update high_school_major_list
+      tags:
+        - High school major list endpoint       
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete high_school_major_list
+      tags:
+        - High school major list endpoint       
+      responses:
+        '200':
+          description: successful
+  "/api/v1/language_degree_lists":
+    post:
+      summary: create language_degree_list
+      tags:
+        - Language degree list endpoint       
+      responses:
+        '200':
+          description: successful
+  "/api/v1/language_degree_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show language_degree_list
+      tags:
+        - Language degree list endpoint      
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update language_degree_list
+      tags:
+        - Language degree list endpoint      
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update language_degree_list
+      tags:
+        - Language degree list endpoint      
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete language_degree_list
+      tags:
+        - Language degree list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/language_name_lists":
+    post:
+      summary: create language_name_list
+      tags:
+        - Language name list endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/language_name_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show language_name_list
+      tags:
+        - Language name list endpoint      
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update language_name_list
+      tags:
+        - Language name list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update language_name_list
+      tags:
+        - Language name list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete language_name_list
+      tags:
+        - Language name list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/languages":
+    post:
+      summary: create language
+      tags:
+        - Language endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/languages/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show language
+      tags:
+        - Language endpoint      
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update language
+      tags:
+        - Language endpoint      
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update language
+      tags:
+        - Language endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/major_lists":
+    post:
+      summary: create major_list
+      tags:
+        - Major list endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/major_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show major_list
+      tags:
+        - Major list endpoint      
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update major_list
+      tags:
+        - Major list endpoint      
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update major_list
+      tags:
+        - Major list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete major_list
+      tags:
+        - Major list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/majors":
+    post:
+      summary: create major
+      tags:
+        - Major endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/majors/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show major
+      tags:
+        - Major endpoint      
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update major
+      tags:
+        - Major endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update major
+      tags:
+        - Major endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/organization_degree_lists":
+    post:
+      summary: create organization_degree_list
+      tags:
+        - Organization degree list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/organization_degree_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show organization_degree_list
+      tags:
+        - Organization degree list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update organization_degree_list
+      tags:
+        - Organization degree list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update organization_degree_list
+      tags:
+        - Organization degree list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete organization_degree_list
+      tags:
+        - Organization degree list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/organizations":
+    post:
+      summary: create organization
+      tags:
+        - Organization endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/organizations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show organization
+      tags:
+        - Organization endpoint 
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update organization
+      tags:
+        - Organization endpoint 
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update organization
+      tags:
+        - Organization endpoint 
+      responses:
+        '200':
+          description: successful
+  "/api/v1/parent_education_lists":
+    post:
+      summary: create parent_education_list
+      tags:
+        - Parent education list endpoint       
+      responses:
+        '200':
+          description: successful
+  "/api/v1/parent_education_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show parent_education_list
+      tags:
+        - Parent education list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update parent_education_list
+      tags:
+        - Parent education list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update parent_education_list
+      tags:
+        - Parent education list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete parent_education_list
+      tags:
+        - Parent education list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/parent_job_lists":
+    post:
+      summary: create parent_job_list
+      tags:
+        - Parent job list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/parent_job_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show parent_job_list
+      tags:
+        - Parent job list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update parent_job_list
+      tags:
+        - Parent job list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update parent_job_list
+      tags:
+        - Parent job list endpoint      
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete parent_job_list
+      tags:
+        - Parent job list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/parents":
+    post:
+      summary: create parent
+      tags:
+        - Parent endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/parents/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show parent
+      tags:
+        - Parent endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update parent
+      tags:
+        - Parent endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update parent
+      tags:
+        - Parent endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/personal_gender_lists":
+    post:
+      summary: create personal_gender_list
+      tags:
+        - Personal gender list endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/personal_gender_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show personal_gender_list
+      tags:
+        - Personal gender list endpoint       
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update personal_gender_list
+      tags:
+        - Personal gender list endpoint 
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update personal_gender_list
+      tags:
+        - Personal gender list endpoint 
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete personal_gender_list
+      tags:
+        - Personal gender list endpoint 
+      responses:
+        '200':
+          description: successful
+  "/api/v1/personal_religion_lists":
+    post:
+      summary: create personal_religion_list
+      tags:
+        - Personal religion list endpoint 
+      responses:
+        '200':
+          description: successful
+  "/api/v1/personal_religion_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show personal_religion_list
+      tags:
+        - Personal religion list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update personal_religion_list
+      tags:
+        - Personal religion list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update personal_religion_list
+      tags:
+        - Personal religion list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete personal_religion_list
+      tags:
+        - Personal religion list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/personals":
+    post:
+      summary: create personal
+      tags:
+        - Personal endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/personals/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show personal
+      tags:
+        - Personal endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update personal
+      tags:
+        - Personal endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update personal
+      tags:
+        - Personal endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_each_score_informations":
+    post:
+      summary: create pmdk_each_score_information
+      tags:
+        - PMDK each score information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_each_score_informations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show pmdk_each_score_information
+      tags:
+        - PMDK each score information endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update pmdk_each_score_information
+      tags:
+        - PMDK each score information endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update pmdk_each_score_information
+      tags:
+        - PMDK each score information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_school_informations":
+    post:
+      summary: create pmdk_school_information
+      tags:
+        - PMDK school information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_school_informations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show pmdk_school_information
+      tags:
+        - PMDK school information endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update pmdk_school_information
+      tags:
+        - PMDK school information endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update pmdk_school_information
+      tags:
+        - PMDK school information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_school_lists":
+    post:
+      summary: create pmdk_school_list
+      tags:
+        - PMDK school list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_school_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show pmdk_school_list
+      tags:
+        - PMDK school list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update pmdk_school_list
+      tags:
+        - PMDK school list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update pmdk_school_list
+      tags:
+        - PMDK school list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete pmdk_school_list
+      tags:
+        - PMDK school list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_total_score_informations":
+    post:
+      summary: create pmdk_total_score_information
+      tags:
+        - PMDK total score information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/pmdk_total_score_informations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show pmdk_total_score_information
+      tags:
+        - PMDK total score information endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update pmdk_total_score_information
+      tags:
+        - PMDK total score information endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update pmdk_total_score_information
+      tags:
+        - PMDK total score information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/source_information_lists":
+    post:
+      summary: create source_information_list
+      tags:
+        - Source information list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/source_information_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show source_information_list
+      tags:
+        - Source information list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update source_information_list
+      tags:
+        - Source information list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update source_information_list
+      tags:
+        - Source information list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete source_information_list
+      tags:
+        - Source information list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/source_motivation_lists":
+    post:
+      summary: create source_motivation_list
+      tags:
+        - Source motivation list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/source_motivation_lists/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show source_motivation_list
+      tags:
+        - Source motivation list endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update source_motivation_list
+      tags:
+        - Source motivation list endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update source_motivation_list
+      tags:
+        - Source motivation list endpoint
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete source_motivation_list
+      tags:
+        - Source motivation list endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/sources":
+    post:
+      summary: create source
+      tags:
+        - Source endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/sources/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show source
+      tags:
+        - Source endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update source
+      tags:
+        - Source endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update source
+      tags:
+        - Source endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/usm_school_informations":
+    post:
+      summary: create usm_school_information
+      tags:
+        - Usm school information endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/usm_school_informations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show usm_school_information
+      tags:
+        - Usm school information endpoint      
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update usm_school_information
+      tags:
+        - Usm school information endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update usm_school_information
+      tags:
+        - Usm school information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/utbk_school_informations":
+    post:
+      summary: create utbk_school_information
+      tags:
+        - Utbk school information endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/utbk_school_informations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show utbk_school_information
+      tags:
+        - Utbk school information endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update utbk_school_information
+      tags:
+        - Utbk school information endpoint      
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update utbk_school_information
+      tags:
+        - Utbk school information endpoint      
+      responses:
+        '200':
+          description: successful
+  "/api/v1/utbk_scores":
+    post:
+      summary: create utbk_score
+      tags:
+        - Utbk score endpoint
+      responses:
+        '200':
+          description: successful
+  "/api/v1/utbk_scores/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show utbk_score
+      tags:
+        - Utbk score endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update utbk_score
+      tags:
+        - Utbk score endpoint
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update utbk_score
+      tags:
+        - Utbk score endpoint
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000/
+components:
+  securitySchemes:
+    Bearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+- Bearer: []
