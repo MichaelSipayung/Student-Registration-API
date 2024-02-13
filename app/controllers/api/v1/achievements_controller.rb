@@ -9,7 +9,8 @@ module Api
         if @achievement.save
           render json: { message: 'achievement data was created' }, status: :ok
         else
-          render json: {errors: @achievement.errors.full_messages}, status: :unprocessable_entity
+          render json: {errors: @achievement.errors.full_messages},
+                 status: :unprocessable_entity
         end
       end
 
@@ -18,7 +19,8 @@ module Api
         if @achievement.update(achievement_params)
           render json: { message: 'achievement data updated' }, status: :ok
         else
-          render json: {errors: @achievement.errors.full_messages}, status: :unprocessable_entity
+          render json: {errors: @achievement.errors.full_messages},
+                 status: :unprocessable_entity
         end
       end
 
@@ -31,7 +33,8 @@ module Api
 
       def current_achievement
         @achievement = @current_user.achievements.find(params[:id])
-        render json: {errors: 'achievement data not found'}, status: :not_found if @achievement.nil? ||
+        render json: {errors: 'achievement data not found'},
+               status: :not_found if @achievement.nil? ||
           @achievement.id != params[:id].to_i
       end
 

@@ -14,7 +14,8 @@ class UsmSchoolInformationsControllerTest < ActionDispatch::IntegrationTest
     assert_difference 'UsmSchoolInformation.count' do
       post api_v1_usm_school_informations_path, params: {
         usm_school_information: {
-          jurusan_sekolah: 'ipa MA', asal_sekolah: 'sma santo tomas 2', akreditas: 'terakreditasi',
+          jurusan_sekolah: 'ipa MA', asal_sekolah: 'sma santo tomas 2',
+          akreditas: 'terakreditasi',
           jumlah_pelajaran_semester5: 15, jumlah_nilai_semester5: 799.9
         }
       }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
@@ -43,11 +44,16 @@ class UsmSchoolInformationsControllerTest < ActionDispatch::IntegrationTest
     }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
     usm_school_informations(:one).reload
-    assert_equal 'ipa MA', usm_school_informations(:one).reload.jurusan_sekolah
-    assert_equal 'sma santo tomas 2', usm_school_informations(:one).reload.asal_sekolah
-    assert_equal 'terakreditasi', usm_school_informations(:one).reload.akreditas
-    assert_equal 15, usm_school_informations(:one).reload.jumlah_pelajaran_semester5
-    assert_equal 799.9, usm_school_informations(:one).reload.jumlah_nilai_semester5
+    assert_equal 'ipa MA',
+                 usm_school_informations(:one).reload.jurusan_sekolah
+    assert_equal 'sma santo tomas 2',
+                 usm_school_informations(:one).reload.asal_sekolah
+    assert_equal 'terakreditasi',
+                 usm_school_informations(:one).reload.akreditas
+    assert_equal 15,
+                 usm_school_informations(:one).reload.jumlah_pelajaran_semester5
+    assert_equal 799.9,
+                 usm_school_informations(:one).reload.jumlah_nilai_semester5
   end
 
   test 'should show usm school information' do
