@@ -42,3 +42,11 @@ Run the test suite using the following command:
 
 1. rails test:controllers
 2. rails test:models
+
+## Contributing
+
+We welcome contributions to this project! Please read our [Contributing Guide](CONTRIBUTING.md) for more information.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
