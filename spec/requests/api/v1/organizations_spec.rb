@@ -6,7 +6,18 @@ RSpec.describe 'api/v1/organizations', type: :request do
 
     post('create organization') do
       response(200, 'successful') do
+        consumes 'application/json'
+        parameter name: :organization, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_organisasi: {type: :string, minLength: 4, maxLength: 20},
+            mulai: {type: :string, minLength: 4, maxLength: 20},
+            berakhir: {type: :string, minLength: 4, maxLength: 20},
+            jabatan: {type: :string, minLength: 4, maxLength: 20},
 
+          },
+          required: %w[nama_organisasi mulai berakhir jabatan ]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +52,18 @@ RSpec.describe 'api/v1/organizations', type: :request do
     patch('update organization') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'
+        parameter name: :organization, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_organisasi: {type: :string, minLength: 4, maxLength: 20},
+            mulai: {type: :string, minLength: 4, maxLength: 20},
+            berakhir: {type: :string, minLength: 4, maxLength: 20},
+            jabatan: {type: :string, minLength: 4, maxLength: 20},
 
+          },
+          # required: %w[nama_organisasi mulai berakhir jabatan ]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +78,18 @@ RSpec.describe 'api/v1/organizations', type: :request do
     put('update organization') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'
+        parameter name: :organization, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_organisasi: {type: :string, minLength: 4, maxLength: 20},
+            mulai: {type: :string, minLength: 4, maxLength: 20},
+            berakhir: {type: :string, minLength: 4, maxLength: 20},
+            jabatan: {type: :string, minLength: 4, maxLength: 20},
 
+          },
+          # required: %w[nama_organisasi mulai berakhir jabatan ]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

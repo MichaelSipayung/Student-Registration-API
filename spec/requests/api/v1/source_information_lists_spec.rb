@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
 
     post('create source_information_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :source_information_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            informasi: {type: :string, minLength: 4, maxLength: 25},
+          },
+          required: %w[informasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
     patch('update source_information_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :source_information_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            informasi: {type: :string, minLength: 4, maxLength: 25},
+          },
+          # required: %w[informasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
     put('update source_information_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :source_information_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            informasi: {type: :string, minLength: 4, maxLength: 25},
+          },
+          # required: %w[informasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

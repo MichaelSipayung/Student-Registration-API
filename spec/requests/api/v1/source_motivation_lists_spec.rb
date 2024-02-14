@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
 
     post('create source_motivation_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :source_motivation_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            motivasi: {type: :string, minLength: 4, maxLength: 20},
+          },
+          required: %w[motivasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
     patch('update source_motivation_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :source_motivation_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            motivasi: {type: :string, minLength: 4, maxLength: 20},
+          },
+          # required: %w[motivasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
     put('update source_motivation_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :source_motivation_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            motivasi: {type: :string, minLength: 4, maxLength: 20},
+          },
+          # required: %w[motivasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

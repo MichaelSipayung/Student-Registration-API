@@ -6,7 +6,16 @@ RSpec.describe 'api/v1/sources', type: :request do
 
     post('create source') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :source, in: :body, schema: {
+          type: :object,
+          properties: {
+            sumber_informasi: {type: :string, minLength: 4, maxLength: 30},
+            motivasi: {type: :string, minLength: 4, maxLength: 30},
+            jumlah_n: {type: :integer, minimum: 1, maximum: 50},
+          },
+          required: %w[sumber_informasi motivasi jumlah_n]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +50,16 @@ RSpec.describe 'api/v1/sources', type: :request do
     patch('update source') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :source, in: :body, schema: {
+          type: :object,
+          properties: {
+            sumber_informasi: {type: :string, minLength: 4, maxLength: 30},
+            motivasi: {type: :string, minLength: 4, maxLength: 30},
+            jumlah_n: {type: :integer, minimum: 1, maximum: 50},
+          },
+          # required: %w[sumber_informasi motivasi jumlah_n]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +74,16 @@ RSpec.describe 'api/v1/sources', type: :request do
     put('update source') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :source, in: :body, schema: {
+          type: :object,
+          properties: {
+            sumber_informasi: {type: :string, minLength: 4, maxLength: 30},
+            motivasi: {type: :string, minLength: 4, maxLength: 30},
+            jumlah_n: {type: :integer, minimum: 1, maximum: 50},
+          },
+          # required: %w[sumber_informasi motivasi jumlah_n]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
