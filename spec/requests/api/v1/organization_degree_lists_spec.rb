@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
 
     post('create organization_degree_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :organization_degree_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jabatan: {type: :string, minLength: 3, maxLength: 15},
+          },
+          required: %w[jabatan]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
     patch('update organization_degree_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :organization_degree_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jabatan: {type: :string, minLength: 3, maxLength: 15},
+          },
+          # required: %w[jabatan]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
     put('update organization_degree_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :organization_degree_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jabatan: {type: :string, minLength: 3, maxLength: 15},
+          },
+          # required: %w[jabatan]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

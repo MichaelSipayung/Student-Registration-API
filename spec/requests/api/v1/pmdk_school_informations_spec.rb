@@ -6,7 +6,18 @@ RSpec.describe 'api/v1/pmdk_school_informations', type: :request do
 
     post('create pmdk_school_information') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :pmdk_school_information, in: :body, schema: {
+          type: :object,
+          properties: {
+            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            akreditas: {type: :string, minLength: 1, maxLength: 20},
+            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+          },
+          required: %w[sekolah]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +52,18 @@ RSpec.describe 'api/v1/pmdk_school_informations', type: :request do
     patch('update pmdk_school_information') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :pmdk_school_information, in: :body, schema: {
+          type: :object,
+          properties: {
+            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            akreditas: {type: :string, minLength: 1, maxLength: 20},
+            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+          },
+          # required: %w[sekolah]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +78,18 @@ RSpec.describe 'api/v1/pmdk_school_informations', type: :request do
     put('update pmdk_school_information') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :pmdk_school_information, in: :body, schema: {
+          type: :object,
+          properties: {
+            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            akreditas: {type: :string, minLength: 1, maxLength: 20},
+            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+          },
+          # required: %w[sekolah]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

@@ -6,7 +6,18 @@ RSpec.describe 'api/v1/utbk_school_informations', type: :request do
 
     post('create utbk_school_information') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :utbk_school_information, in: :body, schema: {
+          type: :object,
+          properties: {
+            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            akreditas: {type: :string, minLength: 1, maxLength: 20},
+            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+          },
+          required: %w[asal_sekolah jurusan_sekolah akreditas]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +52,17 @@ RSpec.describe 'api/v1/utbk_school_informations', type: :request do
     patch('update utbk_school_information') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :utbk_school_information, in: :body, schema: {
+          type: :object,
+          properties: {
+            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            akreditas: {type: :string, minLength: 1, maxLength: 20},
+            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+          }
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +77,17 @@ RSpec.describe 'api/v1/utbk_school_informations', type: :request do
     put('update utbk_school_information') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :utbk_school_information, in: :body, schema: {
+          type: :object,
+          properties: {
+            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+            akreditas: {type: :string, minLength: 1, maxLength: 20},
+            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+          }
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

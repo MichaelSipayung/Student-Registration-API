@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
 
     post('create personal_gender_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :personal_gender_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jenis_kelamin: {type: :string, minLength: 4, maxLength: 10},
+          },
+          required: %w[jenis_kelamin]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
     patch('update personal_gender_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :personal_gender_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jenis_kelamin: {type: :string, minLength: 4, maxLength: 10},
+          },
+          # required: %w[jenis_kelamin]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
     put('update personal_gender_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :personal_gender_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jenis_kelamin: {type: :string, minLength: 4, maxLength: 10},
+          },
+          # required: %w[jenis_kelamin]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
