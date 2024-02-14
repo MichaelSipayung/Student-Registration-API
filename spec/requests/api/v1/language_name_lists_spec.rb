@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
 
     post('create language_name_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :language_name_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            bahasa: {type: :string, minLength: 4, maxLength: 15},
+          },
+          required: %w[bahasa]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
     patch('update language_name_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :language_name_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            bahasa: {type: :string, minLength: 4, maxLength: 15},
+          },
+          # required: %w[bahasa]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
     put('update language_name_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :language_name_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            bahasa: {type: :string, minLength: 4, maxLength: 15},
+          },
+          # required: %w[bahasa]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

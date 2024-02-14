@@ -6,7 +6,15 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
 
     post('create batch_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :batch_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            gelombang: {type: :string, minLength: 4, maxLength: 25},
+            aktif: {type: :boolean},
+          },
+          required: %w[gelombang aktif]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +49,15 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
     patch('update batch_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :batch_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            gelombang: {type: :string, minLength: 4, maxLength: 25},
+            aktif: {type: :boolean},
+          },
+          # required: %w[gelombang aktif]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +72,15 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
     put('update batch_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :batch_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            gelombang: {type: :string, minLength: 4, maxLength: 25},
+            aktif: {type: :boolean},
+          },
+          # required: %w[gelombang aktif]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

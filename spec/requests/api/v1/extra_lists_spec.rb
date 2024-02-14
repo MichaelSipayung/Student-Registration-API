@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
 
     post('create extra_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :extra_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            predikat: {type: :string, minLength: 4, maxLength: 15},
+          },
+          required: %w[predikat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
     patch('update extra_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :extra_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            predikat: {type: :string, minLength: 4, maxLength: 15},
+          },
+          # required: %w[predikat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -71,7 +85,14 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
     delete('delete extra_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :extra_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            predikat: {type: :string, minLength: 4, maxLength: 15},
+          },
+          # required: %w[predikat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

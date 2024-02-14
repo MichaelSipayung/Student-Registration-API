@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
 
     post('create all_school_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :all_school_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            sekolah: {type: :string, minLength: 5, maxLength: 35},
+          },
+          required: %w[sekolah]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
     patch('update all_school_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :all_school_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            sekolah: {type: :string, minLength: 5, maxLength: 35},
+          },
+          # required: %w[sekolah]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
     put('update all_school_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :all_school_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            sekolah: {type: :string, minLength: 5, maxLength: 35},
+          },
+          # required: %w[sekolah]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

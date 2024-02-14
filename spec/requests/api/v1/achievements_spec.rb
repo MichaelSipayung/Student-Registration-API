@@ -6,7 +6,18 @@ RSpec.describe 'api/v1/achievements', type: :request do
 
     post('create achievement') do
       response(200, 'successful') do
+        consumes 'application/json'
+        parameter name: :achievement, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_prestasi: {type: :string, minLength: 4, maxLength: 20},
+            tingkat: {type: :string, minLength: 4, maxLength: 20},
+            tahun: {type: :string, minLength: 4, maxLength: 20},
+            kategori: {type: :string, minLength: 4, maxLength: 20},
 
+          },
+          required: %w[nama_prestasi tingkat tahun kategori]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +52,18 @@ RSpec.describe 'api/v1/achievements', type: :request do
     patch('update achievement') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'
+        parameter name: :achievement, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_prestasi: {type: :string, minLength: 4, maxLength: 20},
+            tingkat: {type: :string, minLength: 4, maxLength: 20},
+            tahun: {type: :string, minLength: 4, maxLength: 20},
+            kategori: {type: :string, minLength: 4, maxLength: 20},
 
+          },
+          # required: %w[nama_prestasi tingkat tahun kategori]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +78,18 @@ RSpec.describe 'api/v1/achievements', type: :request do
     put('update achievement') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'
+        parameter name: :achievement, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_prestasi: {type: :string, minLength: 4, maxLength: 20},
+            tingkat: {type: :string, minLength: 4, maxLength: 20},
+            tahun: {type: :string, minLength: 4, maxLength: 20},
+            kategori: {type: :string, minLength: 4, maxLength: 20},
 
+          },
+          # required: %w[nama_prestasi tingkat tahun kategori]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
