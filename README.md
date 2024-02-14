@@ -1,4 +1,3 @@
-# README
 
 # University Student Registration API
 
@@ -19,9 +18,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Ruby version 3.1.4
+- Ruby version 3.0.0
 - Rails version 7.1.3
-- PostgreSQL
+- PostgreSQL or Sqlite3
 
 ### Installation
 
@@ -40,3 +39,6 @@ The API documentation is available at `http://localhost:3000/api-docs`. The docu
 ## Running the tests
 
 Run the test suite using the following command:
+
+1. rails test:controllers
+2. rails test:models
