@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/major_lists', type: :request do
 
     post('create major_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :major_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jurusan: {type: :string, minLength: 4, maxLength: 30},
+          },
+          required: %w[jurusan]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/major_lists', type: :request do
     patch('update major_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :major_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jurusan: {type: :string, minLength: 4, maxLength: 30},
+          },
+          # required: %w[jurusan]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/major_lists', type: :request do
     put('update major_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :major_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            jurusan: {type: :string, minLength: 4, maxLength: 30},
+          },
+          # required: %w[jurusan]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

@@ -6,7 +6,17 @@ RSpec.describe 'api/v1/majors', type: :request do
 
     post('create major') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :major, in: :body, schema: {
+          type: :object,
+          properties: {
+            jurusan1: {type: :string, minLength: 4, maxLength: 30},
+            jurusan2: {type: :string, minLength: 4, maxLength: 30},
+            jurusan3: {type: :string, minLength: 4, maxLength: 30},
+            gelombang: {type: :string, minLength: 4, maxLength: 30},
+          },
+          required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +51,17 @@ RSpec.describe 'api/v1/majors', type: :request do
     patch('update major') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :major, in: :body, schema: {
+          type: :object,
+          properties: {
+            jurusan1: {type: :string, minLength: 4, maxLength: 30},
+            jurusan2: {type: :string, minLength: 4, maxLength: 30},
+            jurusan3: {type: :string, minLength: 4, maxLength: 30},
+            gelombang: {type: :string, minLength: 4, maxLength: 30},
+          },
+          # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +76,17 @@ RSpec.describe 'api/v1/majors', type: :request do
     put('update major') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :major, in: :body, schema: {
+          type: :object,
+          properties: {
+            jurusan1: {type: :string, minLength: 4, maxLength: 30},
+            jurusan2: {type: :string, minLength: 4, maxLength: 30},
+            jurusan3: {type: :string, minLength: 4, maxLength: 30},
+            gelombang: {type: :string, minLength: 4, maxLength: 30},
+          },
+          # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

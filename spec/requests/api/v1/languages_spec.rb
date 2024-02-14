@@ -6,7 +6,15 @@ RSpec.describe 'api/v1/languages', type: :request do
 
     post('create language') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :language, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_bahasa: {type: :string, minLength: 4, maxLength: 20},
+            tingkat: {type: :string, minLength: 4, maxLength: 20},
+          },
+          required: %w[nama_bahasa tingkat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +49,15 @@ RSpec.describe 'api/v1/languages', type: :request do
     patch('update language') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :language, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_bahasa: {type: :string, minLength: 4, maxLength: 20},
+            tingkat: {type: :string, minLength: 4, maxLength: 20},
+          },
+          # required: %w[nama_bahasa tingkat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +72,15 @@ RSpec.describe 'api/v1/languages', type: :request do
     put('update language') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :language, in: :body, schema: {
+          type: :object,
+          properties: {
+            nama_bahasa: {type: :string, minLength: 4, maxLength: 20},
+            tingkat: {type: :string, minLength: 4, maxLength: 20},
+          },
+          # required: %w[nama_bahasa tingkat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

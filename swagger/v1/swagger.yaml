@@ -7,9 +7,22 @@ paths:
   "/api/v1/accreditation_school_lists":
     post:
       summary: create accreditation_school_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                akreditasi:
+                  type: string
+                  minLength: 1
+                  maxLength: 15
+              required:
+              - akreditasi
   "/api/v1/accreditation_school_lists/{id}":
     parameters:
     - name: id
@@ -25,14 +38,36 @@ paths:
           description: successful
     patch:
       summary: update accreditation_school_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                akreditasi:
+                  type: string
+                  minLength: 1
+                  maxLength: 15
     put:
       summary: update accreditation_school_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                akreditasi:
+                  type: string
+                  minLength: 1
+                  maxLength: 15
     delete:
       summary: delete accreditation_school_list
       responses:
@@ -41,9 +76,22 @@ paths:
   "/api/v1/achievement_kategori_lists":
     post:
       summary: create achievement_kategori_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kategori:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
+              required:
+              - kategori
   "/api/v1/achievement_kategori_lists/{id}":
     parameters:
     - name: id
@@ -59,14 +107,36 @@ paths:
           description: successful
     patch:
       summary: update achievement_kategori_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kategori:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     put:
       summary: update achievement_kategori_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kategori:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     delete:
       summary: delete achievement_kategori_list
       responses:
@@ -75,9 +145,22 @@ paths:
   "/api/v1/achievement_tingkat_lists":
     post:
       summary: create achievement_tingkat_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
+              required:
+              - tingkat
   "/api/v1/achievement_tingkat_lists/{id}":
     parameters:
     - name: id
@@ -93,14 +176,36 @@ paths:
           description: successful
     patch:
       summary: update achievement_tingkat_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     put:
       summary: update achievement_tingkat_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     delete:
       summary: delete achievement_tingkat_list
       responses:
@@ -109,9 +214,37 @@ paths:
   "/api/v1/achievements":
     post:
       summary: create achievement
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_prestasi:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tahun:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                kategori:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+              required:
+              - nama_prestasi
+              - tingkat
+              - tahun
+              - kategori
   "/api/v1/achievements/{id}":
     parameters:
     - name: id
@@ -127,20 +260,82 @@ paths:
           description: successful
     patch:
       summary: update achievement
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_prestasi:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tahun:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                kategori:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
     put:
       summary: update achievement
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_prestasi:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tahun:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                kategori:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
   "/api/v1/address_kabupaten_lists":
     post:
       summary: create address_kabupaten_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kabupaten:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
+                address_province_list_id:
+                  type: integer
+              required:
+              - kabupaten
+              - address_province_list_id
   "/api/v1/address_kabupaten_lists/{id}":
     parameters:
     - name: id
@@ -156,14 +351,40 @@ paths:
           description: successful
     patch:
       summary: update address_kabupaten_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kabupaten:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
+                address_province_list_id:
+                  type: integer
     put:
       summary: update address_kabupaten_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kabupaten:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
+                address_province_list_id:
+                  type: integer
     delete:
       summary: delete address_kabupaten_list
       responses:
@@ -172,9 +393,25 @@ paths:
   "/api/v1/address_kecamatan_lists":
     post:
       summary: create address_kecamatan_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kecamatan:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
+                address_kabupaten_list_id:
+                  type: integer
+              required:
+              - kecamatan
+              - address_kabupaten_list_id
   "/api/v1/address_kecamatan_lists/{id}":
     parameters:
     - name: id
@@ -190,14 +427,40 @@ paths:
           description: successful
     patch:
       summary: update address_kecamatan_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kecamatan:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
+                address_kabupaten_list_id:
+                  type: integer
     put:
       summary: update address_kecamatan_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                kecamatan:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
+                address_kabupaten_list_id:
+                  type: integer
     delete:
       summary: delete address_kecamatan_list
       responses:
@@ -206,9 +469,22 @@ paths:
   "/api/v1/address_province_lists":
     post:
       summary: create address_province_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                provinsi:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
+              required:
+              - provinsi
   "/api/v1/address_province_lists/{id}":
     parameters:
     - name: id
@@ -229,14 +505,36 @@ paths:
           description: successful
     put:
       summary: update address_province_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                provinsi:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
     delete:
       summary: delete address_province_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                provinsi:
+                  type: string
+                  minLength: 3
+                  maxLength: 35
   "/api/v1/addresses":
     post:
       summary: create address
@@ -342,9 +640,22 @@ paths:
   "/api/v1/all_school_lists":
     post:
       summary: create all_school_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sekolah:
+                  type: string
+                  minLength: 5
+                  maxLength: 35
+              required:
+              - sekolah
   "/api/v1/all_school_lists/{id}":
     parameters:
     - name: id
@@ -360,14 +671,36 @@ paths:
           description: successful
     patch:
       summary: update all_school_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sekolah:
+                  type: string
+                  minLength: 5
+                  maxLength: 35
     put:
       summary: update all_school_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sekolah:
+                  type: string
+                  minLength: 5
+                  maxLength: 35
     delete:
       summary: delete all_school_list
       responses:
@@ -376,9 +709,25 @@ paths:
   "/api/v1/batch_lists":
     post:
       summary: create batch_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                gelombang:
+                  type: string
+                  minLength: 4
+                  maxLength: 25
+                aktif:
+                  type: boolean
+              required:
+              - gelombang
+              - aktif
   "/api/v1/batch_lists/{id}":
     parameters:
     - name: id
@@ -394,14 +743,40 @@ paths:
           description: successful
     patch:
       summary: update batch_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                gelombang:
+                  type: string
+                  minLength: 4
+                  maxLength: 25
+                aktif:
+                  type: boolean
     put:
       summary: update batch_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                gelombang:
+                  type: string
+                  minLength: 4
+                  maxLength: 25
+                aktif:
+                  type: boolean
     delete:
       summary: delete batch_list
       responses:
@@ -410,9 +785,22 @@ paths:
   "/api/v1/extra_lists":
     post:
       summary: create extra_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                predikat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
+              required:
+              - predikat
   "/api/v1/extra_lists/{id}":
     parameters:
     - name: id
@@ -428,9 +816,20 @@ paths:
           description: successful
     patch:
       summary: update extra_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                predikat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     put:
       summary: update extra_list
       responses:
@@ -438,15 +837,54 @@ paths:
           description: successful
     delete:
       summary: delete extra_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                predikat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
   "/api/v1/extras":
     post:
       summary: create extra
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_kegiatan:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                predikat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                mulai:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                berakhir:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+              required:
+              - nama_kegiatan
+              - predikat
+              - mulai
+              - berakhir
   "/api/v1/extras/{id}":
     parameters:
     - name: id
@@ -462,20 +900,79 @@ paths:
           description: successful
     patch:
       summary: update extra
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_kegiatan:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                predikat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                mulai:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                berakhir:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
     put:
       summary: update extra
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_kegiatan:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                predikat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                mulai:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                berakhir:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
   "/api/v1/high_school_major_lists":
     post:
       summary: create high_school_major_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan:
+                  type: string
+                  minLength: 3
+                  maxLength: 25
+              required:
+              - jurusan
   "/api/v1/high_school_major_lists/{id}":
     parameters:
     - name: id
@@ -491,14 +988,36 @@ paths:
           description: successful
     patch:
       summary: update high_school_major_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan:
+                  type: string
+                  minLength: 3
+                  maxLength: 25
     put:
       summary: update high_school_major_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan:
+                  type: string
+                  minLength: 3
+                  maxLength: 25
     delete:
       summary: delete high_school_major_list
       responses:
@@ -507,9 +1026,22 @@ paths:
   "/api/v1/language_degree_lists":
     post:
       summary: create language_degree_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
+              required:
+              - tingkat
   "/api/v1/language_degree_lists/{id}":
     parameters:
     - name: id
@@ -525,14 +1057,36 @@ paths:
           description: successful
     patch:
       summary: update language_degree_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     put:
       summary: update language_degree_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     delete:
       summary: delete language_degree_list
       responses:
@@ -541,9 +1095,22 @@ paths:
   "/api/v1/language_name_lists":
     post:
       summary: create language_name_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                bahasa:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
+              required:
+              - bahasa
   "/api/v1/language_name_lists/{id}":
     parameters:
     - name: id
@@ -559,14 +1126,36 @@ paths:
           description: successful
     patch:
       summary: update language_name_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                bahasa:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     put:
       summary: update language_name_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                bahasa:
+                  type: string
+                  minLength: 4
+                  maxLength: 15
     delete:
       summary: delete language_name_list
       responses:
@@ -575,9 +1164,27 @@ paths:
   "/api/v1/languages":
     post:
       summary: create language
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_bahasa:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+              required:
+              - nama_bahasa
+              - tingkat
   "/api/v1/languages/{id}":
     parameters:
     - name: id
@@ -593,20 +1200,63 @@ paths:
           description: successful
     patch:
       summary: update language
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_bahasa:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
     put:
       summary: update language
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama_bahasa:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
+                tingkat:
+                  type: string
+                  minLength: 4
+                  maxLength: 20
   "/api/v1/major_lists":
     post:
       summary: create major_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+              required:
+              - jurusan
   "/api/v1/major_lists/{id}":
     parameters:
     - name: id
@@ -622,14 +1272,36 @@ paths:
           description: successful
     patch:
       summary: update major_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
     put:
       summary: update major_list
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
     delete:
       summary: delete major_list
       responses:
@@ -638,9 +1310,37 @@ paths:
   "/api/v1/majors":
     post:
       summary: create major
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan1:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                jurusan2:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                jurusan3:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                gelombang:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+              required:
+              - jurusan1
+              - jurusan2
+              - jurusan3
+              - gelombang
   "/api/v1/majors/{id}":
     parameters:
     - name: id
@@ -656,14 +1356,60 @@ paths:
           description: successful
     patch:
       summary: update major
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan1:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                jurusan2:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                jurusan3:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                gelombang:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
     put:
       summary: update major
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jurusan1:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                jurusan2:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                jurusan3:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
+                gelombang:
+                  type: string
+                  minLength: 4
+                  maxLength: 30
   "/api/v1/organization_degree_lists":
     post:
       summary: create organization_degree_list

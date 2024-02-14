@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
 
     post('create address_province_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :address_province_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            provinsi: {type: :string, minLength: 3, maxLength: 35},
+          },
+          required: %w[provinsi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +63,14 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
     put('update address_province_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :address_province_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            provinsi: {type: :string, minLength: 3, maxLength: 35},
+          },
+          # required: %w[provinsi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -71,7 +85,14 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
     delete('delete address_province_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :address_province_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            provinsi: {type: :string, minLength: 3, maxLength: 35},
+          },
+          # required: %w[provinsi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

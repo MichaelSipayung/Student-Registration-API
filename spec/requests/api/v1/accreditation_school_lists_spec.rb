@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
 
     post('create accreditation_school_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :accreditation_school_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            akreditasi: {type: :string, minLength: 1, maxLength: 15},
+          },
+          required: %w[akreditasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
     patch('update accreditation_school_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :accreditation_school_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            akreditasi: {type: :string, minLength: 1, maxLength: 15},
+          },
+          # required: %w[akreditasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
     put('update accreditation_school_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :accreditation_school_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            akreditasi: {type: :string, minLength: 1, maxLength: 15},
+          },
+          # required: %w[akreditasi]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

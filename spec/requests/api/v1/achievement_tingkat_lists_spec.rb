@@ -6,7 +6,14 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
 
     post('create achievement_tingkat_list') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter name: :achievement_tingkat_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            tingkat: {type: :string, minLength: 4, maxLength: 15},
+          },
+          required: %w[tingkat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -41,7 +48,14 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
     patch('update achievement_tingkat_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :achievement_tingkat_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            tingkat: {type: :string, minLength: 4, maxLength: 15},
+          },
+          # required: %w[tingkat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,7 +70,14 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
     put('update achievement_tingkat_list') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :achievement_tingkat_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            tingkat: {type: :string, minLength: 4, maxLength: 15},
+          },
+          # required: %w[tingkat]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
