@@ -4254,8 +4254,8 @@ paths:
                       minimum: 2
                       maximum: 100
                     nilai_penalaran_umum:
-                      type: integer
-                      number: 5
+                      type: number
+                      minimum: 5
                       maximum: 1000
                     nilai_pengetahuan_kuantitatif:
                       type: number
@@ -4327,8 +4327,8 @@ paths:
                       minimum: 2
                       maximum: 100
                     nilai_penalaran_umum:
-                      type: integer
-                      number: 5
+                      type: number
+                      minimum: 5
                       maximum: 1000
                     nilai_pengetahuan_kuantitatif:
                       type: number
