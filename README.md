@@ -51,4 +51,13 @@ We welcome contributions to this project! Please read our [Contributing Guide](C
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-![Image description](https://www.dropbox.com/scl/fi/7j55p3p82vieh7mnrn4er/1.png?rlkey=1pmuh4x92kgxqfidpyym6zlhp&dl=1)
+## Example Swagger UI Result
+![Image description](https://spacecodemiller.nyc3.cdn.digitaloceanspaces.com/asset-api-only/1.png)
+![Image description](https://spacecodemiller.nyc3.cdn.digitaloceanspaces.com/asset-api-only/2.png)
+![Image description](https://spacecodemiller.nyc3.cdn.digitaloceanspaces.com/asset-api-only/3.png)
+![Image description](https://spacecodemiller.nyc3.cdn.digitaloceanspaces.com/asset-api-only/4.png)
+![Image description](https://spacecodemiller.nyc3.cdn.digitaloceanspaces.com/asset-api-only/5.png)
+
+
+
+
