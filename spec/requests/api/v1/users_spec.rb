@@ -1,11 +1,10 @@
 require 'swagger_helper'
 
-RSpec.describe 'api/v1/users', type: :request do
+RSpec.describe 'api/v1/users', type: :request, tags: ['User'] do
 
   path '/api/v1/users' do
 
     get('list users') do
-      tags 'User endpoint'
       response(200, 'successful') do
 
         after do |example|
