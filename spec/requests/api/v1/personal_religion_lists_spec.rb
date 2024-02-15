@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
         parameter name: :personal_religion_list, in: :body, schema: {
           type: :object,
           properties: {
-            agama: {type: :string, minLength: 4, maxLength: 20},
-          },
-          required: %w[agama]
+            personal_religion_list: {
+              type: :object,
+              properties: {
+                agama: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              required: %w[agama]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
         parameter name: :personal_religion_list, in: :body, schema: {
           type: :object,
           properties: {
-            agama: {type: :string, minLength: 4, maxLength: 20},
-          },
-          required: %w[agama]
+            personal_religion_list: {
+              type: :object,
+              properties: {
+                agama: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              # required: %w[agama]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
         parameter name: :personal_religion_list, in: :body, schema: {
           type: :object,
           properties: {
-            agama: {type: :string, minLength: 4, maxLength: 20},
-          },
-          required: %w[agama]
+            personal_religion_list: {
+              type: :object,
+              properties: {
+                agama: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              # required: %w[agama]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

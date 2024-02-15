@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
         parameter name: :parent_education_list, in: :body, schema: {
           type: :object,
           properties: {
-            pendidikan: {type: :string, minLength: 2, maxLength: 20},
-          },
-          required: %w[pendidikan]
+            parent_education_list: {
+              type: :object,
+              properties: {
+                pendidikan: { type: :string, minLength: 2, maxLength: 20 },
+              },
+              required: %w[pendidikan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
         parameter name: :parent_education_list, in: :body, schema: {
           type: :object,
           properties: {
-            pendidikan: {type: :string, minLength: 2, maxLength: 20},
-          },
-          # required: %w[pendidikan]
+            parent_education_list: {
+              type: :object,
+              properties: {
+                pendidikan: { type: :string, minLength: 2, maxLength: 20 },
+              },
+              # required: %w[pendidikan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
         parameter name: :parent_education_list, in: :body, schema: {
           type: :object,
           properties: {
-            pendidikan: {type: :string, minLength: 2, maxLength: 20},
-          },
-          # required: %w[pendidikan]
+            parent_education_list: {
+              type: :object,
+              properties: {
+                pendidikan: { type: :string, minLength: 2, maxLength: 20 },
+              },
+              # required: %w[pendidikan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

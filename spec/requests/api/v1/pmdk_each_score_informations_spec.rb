@@ -12,31 +12,36 @@ RSpec.describe 'api/v1/pmdk_each_score_informations', type: :request do
         parameter name: :pmdk_each_score_information, in: :body, schema: {
           type: :object,
           properties: {
-            matematika1: {type: :number, minimum: 2, maximum: 100},
-            matematika2: {type: :number, minimum: 2, maximum: 100},
-            matematika3: {type: :number, minimum: 2, maximum: 100},
-            matematika4: {type: :number, minimum: 2, maximum: 100},
-            matematika5: {type: :number, minimum: 2, maximum: 100},
-            kimia1: {type: :number, minimum: 2, maximum: 100},
-            kimia2: {type: :number, minimum: 2, maximum: 100},
-            kimia3: {type: :number, minimum: 2, maximum: 100},
-            kimia4: {type: :number, minimum: 2, maximum: 100},
-            kimia5: {type: :number, minimum: 2, maximum: 100},
-            fisika1: {type: :number, minimum: 2, maximum: 100},
-            fisika2: {type: :number, minimum: 2, maximum: 100},
-            fisika3: {type: :number, minimum: 2, maximum: 100},
-            fisika4: {type: :number, minimum: 2, maximum: 100},
-            fisika5: {type: :number, minimum: 2, maximum: 100},
-            inggris1: {type: :number, minimum: 2, maximum: 100},
-            inggris2: {type: :number, minimum: 2, maximum: 100},
-            inggris3: {type: :number, minimum: 2, maximum: 100},
-            inggris4: {type: :number, minimum: 2, maximum: 100},
-            inggris5: {type: :number, minimum: 2, maximum: 100},
-          },
-          required: %w[matematika1 matematika2 matematika3 matematika5 matematika5
+            pmdk_each_score_information: {
+              type: :object,
+              properties: {
+                matematika1: { type: :number, minimum: 2, maximum: 100 },
+                matematika2: { type: :number, minimum: 2, maximum: 100 },
+                matematika3: { type: :number, minimum: 2, maximum: 100 },
+                matematika4: { type: :number, minimum: 2, maximum: 100 },
+                matematika5: { type: :number, minimum: 2, maximum: 100 },
+                kimia1: { type: :number, minimum: 2, maximum: 100 },
+                kimia2: { type: :number, minimum: 2, maximum: 100 },
+                kimia3: { type: :number, minimum: 2, maximum: 100 },
+                kimia4: { type: :number, minimum: 2, maximum: 100 },
+                kimia5: { type: :number, minimum: 2, maximum: 100 },
+                fisika1: { type: :number, minimum: 2, maximum: 100 },
+                fisika2: { type: :number, minimum: 2, maximum: 100 },
+                fisika3: { type: :number, minimum: 2, maximum: 100 },
+                fisika4: { type: :number, minimum: 2, maximum: 100 },
+                fisika5: { type: :number, minimum: 2, maximum: 100 },
+                inggris1: { type: :number, minimum: 2, maximum: 100 },
+                inggris2: { type: :number, minimum: 2, maximum: 100 },
+                inggris3: { type: :number, minimum: 2, maximum: 100 },
+                inggris4: { type: :number, minimum: 2, maximum: 100 },
+                inggris5: { type: :number, minimum: 2, maximum: 100 },
+              },
+              required: %w[matematika1 matematika2 matematika3 matematika5 matematika5
                       kimia1 kimia2 kimia3 kimia4 kimia5
                       fisika1 fisika2 fisika3 fisika4 fisika5
                       inggris1 inggris2 inggris3 inggris4 inggris5]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -80,26 +85,35 @@ RSpec.describe 'api/v1/pmdk_each_score_informations', type: :request do
         parameter name: :pmdk_each_score_information, in: :body, schema: {
           type: :object,
           properties: {
-            matematika1: {type: :number, minimum: 2, maximum: 100},
-            matematika2: {type: :number, minimum: 2, maximum: 100},
-            matematika3: {type: :number, minimum: 2, maximum: 100},
-            matematika4: {type: :number, minimum: 2, maximum: 100},
-            matematika5: {type: :number, minimum: 2, maximum: 100},
-            kimia1: {type: :number, minimum: 2, maximum: 100},
-            kimia2: {type: :number, minimum: 2, maximum: 100},
-            kimia3: {type: :number, minimum: 2, maximum: 100},
-            kimia4: {type: :number, minimum: 2, maximum: 100},
-            kimia5: {type: :number, minimum: 2, maximum: 100},
-            fisika1: {type: :number, minimum: 2, maximum: 100},
-            fisika2: {type: :number, minimum: 2, maximum: 100},
-            fisika3: {type: :number, minimum: 2, maximum: 100},
-            fisika4: {type: :number, minimum: 2, maximum: 100},
-            fisika5: {type: :number, minimum: 2, maximum: 100},
-            inggris1: {type: :number, minimum: 2, maximum: 100},
-            inggris2: {type: :number, minimum: 2, maximum: 100},
-            inggris3: {type: :number, minimum: 2, maximum: 100},
-            inggris4: {type: :number, minimum: 2, maximum: 100},
-            inggris5: {type: :number, minimum: 2, maximum: 100},
+            pmdk_each_score_information: {
+              type: :object,
+              properties: {
+                matematika1: { type: :number, minimum: 2, maximum: 100 },
+                matematika2: { type: :number, minimum: 2, maximum: 100 },
+                matematika3: { type: :number, minimum: 2, maximum: 100 },
+                matematika4: { type: :number, minimum: 2, maximum: 100 },
+                matematika5: { type: :number, minimum: 2, maximum: 100 },
+                kimia1: { type: :number, minimum: 2, maximum: 100 },
+                kimia2: { type: :number, minimum: 2, maximum: 100 },
+                kimia3: { type: :number, minimum: 2, maximum: 100 },
+                kimia4: { type: :number, minimum: 2, maximum: 100 },
+                kimia5: { type: :number, minimum: 2, maximum: 100 },
+                fisika1: { type: :number, minimum: 2, maximum: 100 },
+                fisika2: { type: :number, minimum: 2, maximum: 100 },
+                fisika3: { type: :number, minimum: 2, maximum: 100 },
+                fisika4: { type: :number, minimum: 2, maximum: 100 },
+                fisika5: { type: :number, minimum: 2, maximum: 100 },
+                inggris1: { type: :number, minimum: 2, maximum: 100 },
+                inggris2: { type: :number, minimum: 2, maximum: 100 },
+                inggris3: { type: :number, minimum: 2, maximum: 100 },
+                inggris4: { type: :number, minimum: 2, maximum: 100 },
+                inggris5: { type: :number, minimum: 2, maximum: 100 },
+              },
+              # required: %w[matematika1 matematika2 matematika3 matematika5 matematika5
+              #         kimia1 kimia2 kimia3 kimia4 kimia5
+              #         fisika1 fisika2 fisika3 fisika4 fisika5
+              #         inggris1 inggris2 inggris3 inggris4 inggris5]
+            }
           }
         }
         after do |example|
@@ -122,26 +136,35 @@ RSpec.describe 'api/v1/pmdk_each_score_informations', type: :request do
         parameter name: :pmdk_each_score_information, in: :body, schema: {
           type: :object,
           properties: {
-            matematika1: {type: :number, minimum: 2, maximum: 100},
-            matematika2: {type: :number, minimum: 2, maximum: 100},
-            matematika3: {type: :number, minimum: 2, maximum: 100},
-            matematika4: {type: :number, minimum: 2, maximum: 100},
-            matematika5: {type: :number, minimum: 2, maximum: 100},
-            kimia1: {type: :number, minimum: 2, maximum: 100},
-            kimia2: {type: :number, minimum: 2, maximum: 100},
-            kimia3: {type: :number, minimum: 2, maximum: 100},
-            kimia4: {type: :number, minimum: 2, maximum: 100},
-            kimia5: {type: :number, minimum: 2, maximum: 100},
-            fisika1: {type: :number, minimum: 2, maximum: 100},
-            fisika2: {type: :number, minimum: 2, maximum: 100},
-            fisika3: {type: :number, minimum: 2, maximum: 100},
-            fisika4: {type: :number, minimum: 2, maximum: 100},
-            fisika5: {type: :number, minimum: 2, maximum: 100},
-            inggris1: {type: :number, minimum: 2, maximum: 100},
-            inggris2: {type: :number, minimum: 2, maximum: 100},
-            inggris3: {type: :number, minimum: 2, maximum: 100},
-            inggris4: {type: :number, minimum: 2, maximum: 100},
-            inggris5: {type: :number, minimum: 2, maximum: 100},
+            pmdk_each_score_information: {
+              type: :object,
+              properties: {
+                matematika1: { type: :number, minimum: 2, maximum: 100 },
+                matematika2: { type: :number, minimum: 2, maximum: 100 },
+                matematika3: { type: :number, minimum: 2, maximum: 100 },
+                matematika4: { type: :number, minimum: 2, maximum: 100 },
+                matematika5: { type: :number, minimum: 2, maximum: 100 },
+                kimia1: { type: :number, minimum: 2, maximum: 100 },
+                kimia2: { type: :number, minimum: 2, maximum: 100 },
+                kimia3: { type: :number, minimum: 2, maximum: 100 },
+                kimia4: { type: :number, minimum: 2, maximum: 100 },
+                kimia5: { type: :number, minimum: 2, maximum: 100 },
+                fisika1: { type: :number, minimum: 2, maximum: 100 },
+                fisika2: { type: :number, minimum: 2, maximum: 100 },
+                fisika3: { type: :number, minimum: 2, maximum: 100 },
+                fisika4: { type: :number, minimum: 2, maximum: 100 },
+                fisika5: { type: :number, minimum: 2, maximum: 100 },
+                inggris1: { type: :number, minimum: 2, maximum: 100 },
+                inggris2: { type: :number, minimum: 2, maximum: 100 },
+                inggris3: { type: :number, minimum: 2, maximum: 100 },
+                inggris4: { type: :number, minimum: 2, maximum: 100 },
+                inggris5: { type: :number, minimum: 2, maximum: 100 },
+              },
+              # required: %w[matematika1 matematika2 matematika3 matematika5 matematika5
+              #         kimia1 kimia2 kimia3 kimia4 kimia5
+              #         fisika1 fisika2 fisika3 fisika4 fisika5
+              #         inggris1 inggris2 inggris3 inggris4 inggris5]
+            }
           }
         }
         after do |example|

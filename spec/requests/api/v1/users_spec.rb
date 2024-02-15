@@ -21,7 +21,6 @@ RSpec.describe 'api/v1/users', type: :request, tags: ['User'] do
 
     post('create user') do
       tags 'User endpoint'
-
       response(201, 'successful') do
         consumes 'application/json'
         parameter name: :user, in: :body, schema: {

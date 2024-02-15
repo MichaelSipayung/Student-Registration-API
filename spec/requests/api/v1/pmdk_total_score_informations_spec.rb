@@ -12,22 +12,27 @@ RSpec.describe 'api/v1/pmdk_total_score_informations', type: :request do
         parameter name: :pmdk_total_score_information, in: :body, schema: {
           type: :object,
           properties: {
-            jumlah_nilai_semester1: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester2: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester3: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester4: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester5: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_pelajaran_semester1: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester2: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester3: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester4: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester5: {type: :integer, minimum: 2, maximum: 30},
+            pmdk_total_score_information: {
+              type: :object,
+              properties: {
+                jumlah_nilai_semester1: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester2: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester3: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester4: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester5: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_pelajaran_semester1: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester2: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester3: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester4: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester5: { type: :integer, minimum: 2, maximum: 30 },
 
-          },
-          required: %w[jumlah_nilai_semester1 jumlah_nilai_semester2 jumlah_nilai_semester3
+              },
+              required: %w[jumlah_nilai_semester1 jumlah_nilai_semester2 jumlah_nilai_semester3
               jumlah_nilai_semester4 jumlah_nilai_semester5 jumlah_pelajaran_semester1
               jumlah_pelajaran_semester2 jumlah_pelajaran_semester3 jumlah_pelajaran_semester4
               jumlah_pelajaran_semester5]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -71,22 +76,27 @@ RSpec.describe 'api/v1/pmdk_total_score_informations', type: :request do
         parameter name: :pmdk_total_score_information, in: :body, schema: {
           type: :object,
           properties: {
-            jumlah_nilai_semester1: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester2: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester3: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester4: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester5: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_pelajaran_semester1: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester2: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester3: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester4: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester5: {type: :integer, minimum: 2, maximum: 30},
+            pmdk_total_score_information: {
+              type: :object,
+              properties: {
+                jumlah_nilai_semester1: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester2: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester3: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester4: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester5: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_pelajaran_semester1: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester2: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester3: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester4: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester5: { type: :integer, minimum: 2, maximum: 30 },
 
-          },
-          # required: %w[jumlah_nilai_semester1 jumlah_nilai_semester2 jumlah_nilai_semester3
-          #     jumlah_nilai_semester4 jumlah_nilai_semester5 jumlah_pelajaran_semester1
-          #     jumlah_pelajaran_semester2 jumlah_pelajaran_semester3 jumlah_pelajaran_semester4
-          #     jumlah_pelajaran_semester5]
+              },
+              # required: %w[jumlah_nilai_semester1 jumlah_nilai_semester2 jumlah_nilai_semester3
+              # jumlah_nilai_semester4 jumlah_nilai_semester5 jumlah_pelajaran_semester1
+              # jumlah_pelajaran_semester2 jumlah_pelajaran_semester3 jumlah_pelajaran_semester4
+              # jumlah_pelajaran_semester5]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -108,22 +118,27 @@ RSpec.describe 'api/v1/pmdk_total_score_informations', type: :request do
         parameter name: :pmdk_total_score_information, in: :body, schema: {
           type: :object,
           properties: {
-            jumlah_nilai_semester1: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester2: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester3: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester4: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_nilai_semester5: {type: :number, minimum: 2, maximum: 3000},
-            jumlah_pelajaran_semester1: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester2: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester3: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester4: {type: :integer, minimum: 2, maximum: 30},
-            jumlah_pelajaran_semester5: {type: :integer, minimum: 2, maximum: 30},
+            pmdk_total_score_information: {
+              type: :object,
+              properties: {
+                jumlah_nilai_semester1: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester2: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester3: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester4: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_nilai_semester5: { type: :number, minimum: 2, maximum: 3000 },
+                jumlah_pelajaran_semester1: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester2: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester3: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester4: { type: :integer, minimum: 2, maximum: 30 },
+                jumlah_pelajaran_semester5: { type: :integer, minimum: 2, maximum: 30 },
 
-          },
-          # required: %w[jumlah_nilai_semester1 jumlah_nilai_semester2 jumlah_nilai_semester3
-          #     jumlah_nilai_semester4 jumlah_nilai_semester5 jumlah_pelajaran_semester1
-          #     jumlah_pelajaran_semester2 jumlah_pelajaran_semester3 jumlah_pelajaran_semester4
-          #     jumlah_pelajaran_semester5]
+              },
+              # required: %w[jumlah_nilai_semester1 jumlah_nilai_semester2 jumlah_nilai_semester3
+              # jumlah_nilai_semester4 jumlah_nilai_semester5 jumlah_pelajaran_semester1
+              # jumlah_pelajaran_semester2 jumlah_pelajaran_semester3 jumlah_pelajaran_semester4
+              # jumlah_pelajaran_semester5]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

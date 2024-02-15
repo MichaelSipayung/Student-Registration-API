@@ -12,10 +12,15 @@ RSpec.describe 'api/v1/languages', type: :request do
         parameter name: :language, in: :body, schema: {
           type: :object,
           properties: {
-            nama_bahasa: {type: :string, minLength: 4, maxLength: 20},
-            tingkat: {type: :string, minLength: 4, maxLength: 20},
-          },
-          required: %w[nama_bahasa tingkat]
+            language: {
+              type: :object,
+              properties: {
+                nama_bahasa: { type: :string, minLength: 4, maxLength: 20 },
+                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              required: %w[nama_bahasa tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -59,10 +64,15 @@ RSpec.describe 'api/v1/languages', type: :request do
         parameter name: :language, in: :body, schema: {
           type: :object,
           properties: {
-            nama_bahasa: {type: :string, minLength: 4, maxLength: 20},
-            tingkat: {type: :string, minLength: 4, maxLength: 20},
-          },
-          # required: %w[nama_bahasa tingkat]
+            language: {
+              type: :object,
+              properties: {
+                nama_bahasa: { type: :string, minLength: 4, maxLength: 20 },
+                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              # required: %w[nama_bahasa tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -84,10 +94,15 @@ RSpec.describe 'api/v1/languages', type: :request do
         parameter name: :language, in: :body, schema: {
           type: :object,
           properties: {
-            nama_bahasa: {type: :string, minLength: 4, maxLength: 20},
-            tingkat: {type: :string, minLength: 4, maxLength: 20},
-          },
-          # required: %w[nama_bahasa tingkat]
+            language: {
+              type: :object,
+              properties: {
+                nama_bahasa: { type: :string, minLength: 4, maxLength: 20 },
+                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              # required: %w[nama_bahasa tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

@@ -12,18 +12,23 @@ RSpec.describe 'api/v1/personals', type: :request do
         parameter name: :personal, in: :body, schema: {
           type: :object,
           properties: {
-            nama_lengkap: {type: :string, minLength: 4, maxLength: 25},
-            agama: {type: :string, minLength: 4, maxLength: 20},
-            nik: {type: :integer, minimum: 1111111111111111, maximum: 9999999999999999},
-            nisn: {type: :integer, minimum: 1111111111, maximum: 9999999999},
-            no_kps: {type: :integer, minimum: 111111, maximum: 999999},
-            tanggal_lahir: {type: :string, minLength: 4, maxLength: 20},
-            tempat_lahir: {type: :string, minLength: 4, maxLength: 20},
-            jenis_kelamin: {type: :string, minLength: 4, maxLength: 20},
-            domisili: {type: :string, minLength: 4, maxLength: 30},
-          },
-          required: %w[nama_lengkap agama nik nisn tanggal_lahir tempat_lahir jenis_kelamin
+            personal: {
+              type: :object,
+              properties: {
+                nama_lengkap: { type: :string, minLength: 4, maxLength: 25 },
+                agama: { type: :string, minLength: 4, maxLength: 20 },
+                nik: { type: :integer, minimum: 1111111111111111, maximum: 9999999999999999 },
+                nisn: { type: :integer, minimum: 1111111111, maximum: 9999999999 },
+                no_kps: { type: :integer, minimum: 111111, maximum: 999999 },
+                tanggal_lahir: { type: :string, minLength: 4, maxLength: 20 },
+                tempat_lahir: { type: :string, minLength: 4, maxLength: 20 },
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 20 },
+                domisili: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              required: %w[nama_lengkap agama nik nisn tanggal_lahir tempat_lahir jenis_kelamin
                       domisili]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -67,18 +72,23 @@ RSpec.describe 'api/v1/personals', type: :request do
         parameter name: :personal, in: :body, schema: {
           type: :object,
           properties: {
-            nama_lengkap: {type: :string, minLength: 4, maxLength: 25},
-            agama: {type: :string, minLength: 4, maxLength: 20},
-            nik: {type: :integer, minimum: 1111111111111111, maximum: 9999999999999999},
-            nisn: {type: :integer, minimum: 1111111111, maximum: 9999999999},
-            no_kps: {type: :integer, minimum: 111111, maximum: 999999},
-            tanggal_lahir: {type: :string, minLength: 4, maxLength: 20},
-            tempat_lahir: {type: :string, minLength: 4, maxLength: 20},
-            jenis_kelamin: {type: :string, minLength: 4, maxLength: 20},
-            domisili: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[nama_lengkap agama nik nisn tanggal_lahir tempat_lahir jenis_kelamin
-          #             domisili]
+            personal: {
+              type: :object,
+              properties: {
+                nama_lengkap: { type: :string, minLength: 4, maxLength: 25 },
+                agama: { type: :string, minLength: 4, maxLength: 20 },
+                nik: { type: :integer, minimum: 1111111111111111, maximum: 9999999999999999 },
+                nisn: { type: :integer, minimum: 1111111111, maximum: 9999999999 },
+                no_kps: { type: :integer, minimum: 111111, maximum: 999999 },
+                tanggal_lahir: { type: :string, minLength: 4, maxLength: 20 },
+                tempat_lahir: { type: :string, minLength: 4, maxLength: 20 },
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 20 },
+                domisili: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[nama_lengkap agama nik nisn tanggal_lahir tempat_lahir jenis_kelamin
+              #         domisili]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -100,18 +110,23 @@ RSpec.describe 'api/v1/personals', type: :request do
         parameter name: :personal, in: :body, schema: {
           type: :object,
           properties: {
-            nama_lengkap: {type: :string, minLength: 4, maxLength: 25},
-            agama: {type: :string, minLength: 4, maxLength: 20},
-            nik: {type: :integer, minimum: 1111111111111111, maximum: 9999999999999999},
-            nisn: {type: :integer, minimum: 1111111111, maximum: 9999999999},
-            no_kps: {type: :integer, minimum: 111111, maximum: 999999},
-            tanggal_lahir: {type: :string, minLength: 4, maxLength: 20},
-            tempat_lahir: {type: :string, minLength: 4, maxLength: 20},
-            jenis_kelamin: {type: :string, minLength: 4, maxLength: 20},
-            domisili: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[nama_lengkap agama nik nisn tanggal_lahir tempat_lahir jenis_kelamin
-          #             domisili]
+            personal: {
+              type: :object,
+              properties: {
+                nama_lengkap: { type: :string, minLength: 4, maxLength: 25 },
+                agama: { type: :string, minLength: 4, maxLength: 20 },
+                nik: { type: :integer, minimum: 1111111111111111, maximum: 9999999999999999 },
+                nisn: { type: :integer, minimum: 1111111111, maximum: 9999999999 },
+                no_kps: { type: :integer, minimum: 111111, maximum: 999999 },
+                tanggal_lahir: { type: :string, minLength: 4, maxLength: 20 },
+                tempat_lahir: { type: :string, minLength: 4, maxLength: 20 },
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 20 },
+                domisili: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[nama_lengkap agama nik nisn tanggal_lahir tempat_lahir jenis_kelamin
+              #         domisili]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

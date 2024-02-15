@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
         parameter name: :extra_list, in: :body, schema: {
           type: :object,
           properties: {
-            predikat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          required: %w[predikat]
+            extra_list: {
+              type: :object,
+              properties: {
+                predikat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              required: %w[predikat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
         parameter name: :extra_list, in: :body, schema: {
           type: :object,
           properties: {
-            predikat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[predikat]
+            extra_list: {
+              type: :object,
+              properties: {
+                predikat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[predikat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -78,7 +88,19 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
 
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :extra_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            extra_list: {
+              type: :object,
+              properties: {
+                predikat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[predikat]
+            }
+          }
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -99,7 +121,7 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
         parameter name: :extra_list, in: :body, schema: {
           type: :object,
           properties: {
-            predikat: {type: :string, minLength: 4, maxLength: 15},
+            predikat: { type: :string, minLength: 4, maxLength: 15 },
           },
           # required: %w[predikat]
         }

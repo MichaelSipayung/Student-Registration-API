@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
         parameter name: :organization_degree_list, in: :body, schema: {
           type: :object,
           properties: {
-            jabatan: {type: :string, minLength: 3, maxLength: 15},
-          },
-          required: %w[jabatan]
+            organization_degree_list: {
+              type: :object,
+              properties: {
+                jabatan: { type: :string, minLength: 3, maxLength: 15 },
+              },
+              required: %w[jabatan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
         parameter name: :organization_degree_list, in: :body, schema: {
           type: :object,
           properties: {
-            jabatan: {type: :string, minLength: 3, maxLength: 15},
-          },
-          # required: %w[jabatan]
+            organization_degree_list: {
+              type: :object,
+              properties: {
+                jabatan: { type: :string, minLength: 3, maxLength: 15 },
+              },
+              # required: %w[jabatan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
         parameter name: :organization_degree_list, in: :body, schema: {
           type: :object,
           properties: {
-            jabatan: {type: :string, minLength: 3, maxLength: 15},
-          },
-          # required: %w[jabatan]
+            organization_degree_list: {
+              type: :object,
+              properties: {
+                jabatan: { type: :string, minLength: 3, maxLength: 15 },
+              },
+              # required: %w[jabatan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

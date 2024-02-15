@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
         parameter name: :language_name_list, in: :body, schema: {
           type: :object,
           properties: {
-            bahasa: {type: :string, minLength: 4, maxLength: 15},
-          },
-          required: %w[bahasa]
+            language_name_list: {
+              type: :object,
+              properties: {
+                bahasa: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              required: %w[bahasa]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
         parameter name: :language_name_list, in: :body, schema: {
           type: :object,
           properties: {
-            bahasa: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[bahasa]
+            language_name_list: {
+              type: :object,
+              properties: {
+                bahasa: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[bahasa]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
         parameter name: :language_name_list, in: :body, schema: {
           type: :object,
           properties: {
-            bahasa: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[bahasa]
+            language_name_list: {
+              type: :object,
+              properties: {
+                bahasa: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[bahasa]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

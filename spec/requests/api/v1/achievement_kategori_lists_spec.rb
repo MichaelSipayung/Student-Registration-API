@@ -11,9 +11,14 @@ RSpec.describe 'api/v1/achievement_kategori_lists', type: :request do
         parameter name: :achievement_kategori_list, in: :body, schema: {
           type: :object,
           properties: {
-            kategori: {type: :string, minLength: 4, maxLength: 15},
-          },
-          required: %w[kategori]
+            achievement_kategori_list: {
+              type: :object,
+              properties: {
+                kategori: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              required: %w[kategori]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -55,9 +60,14 @@ RSpec.describe 'api/v1/achievement_kategori_lists', type: :request do
         parameter name: :achievement_kategori_list, in: :body, schema: {
           type: :object,
           properties: {
-            kategori: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[kategori]
+            achievement_kategori_list: {
+              type: :object,
+              properties: {
+                kategori: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[kategori]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -78,9 +88,14 @@ RSpec.describe 'api/v1/achievement_kategori_lists', type: :request do
         parameter name: :achievement_kategori_list, in: :body, schema: {
           type: :object,
           properties: {
-            kategori: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[kategori]
+            achievement_kategori_list: {
+              type: :object,
+              properties: {
+                kategori: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[kategori]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

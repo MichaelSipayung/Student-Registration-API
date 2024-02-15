@@ -12,13 +12,18 @@ RSpec.describe 'api/v1/utbk_school_informations', type: :request do
         parameter name: :utbk_school_information, in: :body, schema: {
           type: :object,
           properties: {
-            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            akreditas: {type: :string, minLength: 1, maxLength: 20},
-            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
-            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
-          },
-          required: %w[asal_sekolah jurusan_sekolah akreditas]
+            utbk_school_information: {
+              type: :object,
+              properties: {
+                asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+                jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+                akreditas: {type: :string, minLength: 1, maxLength: 20},
+                jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+                jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+              },
+              required: %w[asal_sekolah jurusan_sekolah akreditas]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -62,11 +67,17 @@ RSpec.describe 'api/v1/utbk_school_informations', type: :request do
         parameter name: :utbk_school_information, in: :body, schema: {
           type: :object,
           properties: {
-            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            akreditas: {type: :string, minLength: 1, maxLength: 20},
-            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
-            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+            utbk_school_information: {
+              type: :object,
+              properties: {
+                asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+                jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+                akreditas: {type: :string, minLength: 1, maxLength: 20},
+                jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+                jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+              },
+              required: %w[asal_sekolah jurusan_sekolah akreditas]
+            }
           }
         }
         after do |example|
@@ -89,11 +100,17 @@ RSpec.describe 'api/v1/utbk_school_informations', type: :request do
         parameter name: :utbk_school_information, in: :body, schema: {
           type: :object,
           properties: {
-            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            akreditas: {type: :string, minLength: 1, maxLength: 20},
-            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
-            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+            utbk_school_information: {
+              type: :object,
+              properties: {
+                asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
+                jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
+                akreditas: {type: :string, minLength: 1, maxLength: 20},
+                jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
+                jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
+              },
+              required: %w[asal_sekolah jurusan_sekolah akreditas]
+            }
           }
         }
         after do |example|

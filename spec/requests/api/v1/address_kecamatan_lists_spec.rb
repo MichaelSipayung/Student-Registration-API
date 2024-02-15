@@ -12,10 +12,15 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
         parameter name: :address_kecamatan_list, in: :body, schema: {
           type: :object,
           properties: {
-            kecamatan: {type: :string, minLength: 3, maxLength: 35},
-            address_kabupaten_list_id: {type: :integer},
-          },
-          required: %w[kecamatan address_kabupaten_list_id]
+            address_kecamatan_list: {
+              type: :object,
+              properties: {
+                kecamatan: { type: :string, minLength: 3, maxLength: 35 },
+                address_kabupaten_list_id: { type: :integer },
+              },
+              required: %w[kecamatan address_kabupaten_list_id]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -59,10 +64,15 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
         parameter name: :address_kecamatan_list, in: :body, schema: {
           type: :object,
           properties: {
-            kecamatan: {type: :string, minLength: 3, maxLength: 35},
-            address_kabupaten_list_id: {type: :integer},
-          },
-          # required: %w[kecamatan address_kabupaten_list_id]
+            address_kecamatan_list: {
+              type: :object,
+              properties: {
+                kecamatan: { type: :string, minLength: 3, maxLength: 35 },
+                address_kabupaten_list_id: { type: :integer },
+              },
+              # required: %w[kecamatan address_kabupaten_list_id]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -84,10 +94,15 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
         parameter name: :address_kecamatan_list, in: :body, schema: {
           type: :object,
           properties: {
-            kecamatan: {type: :string, minLength: 3, maxLength: 35},
-            address_kabupaten_list_id: {type: :integer},
-          },
-          # required: %w[kecamatan address_kabupaten_list_id]
+            address_kecamatan_list: {
+              type: :object,
+              properties: {
+                kecamatan: { type: :string, minLength: 3, maxLength: 35 },
+                address_kabupaten_list_id: { type: :integer },
+              },
+              # required: %w[kecamatan address_kabupaten_list_id]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

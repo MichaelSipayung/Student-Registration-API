@@ -12,16 +12,21 @@ RSpec.describe 'api/v1/usm_school_informations', type: :request do
         parameter name: :usm_school_information, in: :body, schema: {
           type: :object,
           properties: {
-            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            akreditas: {type: :string, minLength: 1, maxLength: 20},
-            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
-            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
-            jumlah_pelajaran_semester5: {type: :integer, minimum: 2, maximum: 20},
-            jumlah_nilai_semester5: {type: :number, minimum: 2, maximum: 2000},
-          },
-          required: %w[asal_sekolah jurusan_sekolah akreditas
+            usm_school_information: {
+              type: :object,
+              properties: {
+                asal_sekolah: { type: :string, minLength: 3, maxLength: 50 },
+                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50 },
+                akreditas: { type: :string, minLength: 1, maxLength: 20 },
+                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000 },
+                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10 },
+                jumlah_pelajaran_semester5: { type: :integer, minimum: 2, maximum: 20 },
+                jumlah_nilai_semester5: { type: :number, minimum: 2, maximum: 2000 },
+              },
+              required: %w[asal_sekolah jurusan_sekolah akreditas
                       jumlah_pelajaran_semester5 jumlah_nilai_semester5]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -65,13 +70,20 @@ RSpec.describe 'api/v1/usm_school_informations', type: :request do
         parameter name: :usm_school_information, in: :body, schema: {
           type: :object,
           properties: {
-            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            akreditas: {type: :string, minLength: 1, maxLength: 20},
-            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
-            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
-            jumlah_pelajaran_semester5: {type: :integer, minimum: 2, maximum: 20},
-            jumlah_nilai_semester5: {type: :number, minimum: 2, maximum: 2000},
+            usm_school_information: {
+              type: :object,
+              properties: {
+                asal_sekolah: { type: :string, minLength: 3, maxLength: 50 },
+                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50 },
+                akreditas: { type: :string, minLength: 1, maxLength: 20 },
+                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000 },
+                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10 },
+                jumlah_pelajaran_semester5: { type: :integer, minimum: 2, maximum: 20 },
+                jumlah_nilai_semester5: { type: :number, minimum: 2, maximum: 2000 },
+              },
+              # required: %w[asal_sekolah jurusan_sekolah akreditas
+              #         jumlah_pelajaran_semester5 jumlah_nilai_semester5]
+            }
           }
         }
         after do |example|
@@ -94,13 +106,20 @@ RSpec.describe 'api/v1/usm_school_informations', type: :request do
         parameter name: :usm_school_information, in: :body, schema: {
           type: :object,
           properties: {
-            asal_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            jurusan_sekolah: {type: :string, minLength: 3, maxLength: 50},
-            akreditas: {type: :string, minLength: 1, maxLength: 20},
-            jumlah_nilai_un: {type: :number, minimum: 2, maximum: 1000},
-            jumlah_pelajaran_un: {type: :integer, minimum: 2, maximum: 10},
-            jumlah_pelajaran_semester5: {type: :integer, minimum: 2, maximum: 20},
-            jumlah_nilai_semester5: {type: :number, minimum: 2, maximum: 2000},
+            usm_school_information: {
+              type: :object,
+              properties: {
+                asal_sekolah: { type: :string, minLength: 3, maxLength: 50 },
+                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50 },
+                akreditas: { type: :string, minLength: 1, maxLength: 20 },
+                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000 },
+                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10 },
+                jumlah_pelajaran_semester5: { type: :integer, minimum: 2, maximum: 20 },
+                jumlah_nilai_semester5: { type: :number, minimum: 2, maximum: 2000 },
+              },
+              # required: %w[asal_sekolah jurusan_sekolah akreditas
+              #         jumlah_pelajaran_semester5 jumlah_nilai_semester5]
+            }
           }
         }
         after do |example|

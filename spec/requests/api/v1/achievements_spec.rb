@@ -11,13 +11,18 @@ RSpec.describe 'api/v1/achievements', type: :request do
         parameter name: :achievement, in: :body, schema: {
           type: :object,
           properties: {
-            nama_prestasi: {type: :string, minLength: 4, maxLength: 20},
-            tingkat: {type: :string, minLength: 4, maxLength: 20},
-            tahun: {type: :string, minLength: 4, maxLength: 20},
-            kategori: {type: :string, minLength: 4, maxLength: 20},
+            achievement: {
+              type: :object,
+              properties: {
+                nama_prestasi: { type: :string, minLength: 4, maxLength: 20 },
+                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+                tahun: { type: :string, minLength: 4, maxLength: 20 },
+                kategori: { type: :string, minLength: 4, maxLength: 20 },
 
-          },
-          required: %w[nama_prestasi tingkat tahun kategori]
+              },
+              required: %w[nama_prestasi tingkat tahun kategori]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -59,13 +64,18 @@ RSpec.describe 'api/v1/achievements', type: :request do
         parameter name: :achievement, in: :body, schema: {
           type: :object,
           properties: {
-            nama_prestasi: {type: :string, minLength: 4, maxLength: 20},
-            tingkat: {type: :string, minLength: 4, maxLength: 20},
-            tahun: {type: :string, minLength: 4, maxLength: 20},
-            kategori: {type: :string, minLength: 4, maxLength: 20},
+            achievement: {
+              type: :object,
+              properties: {
+                nama_prestasi: { type: :string, minLength: 4, maxLength: 20 },
+                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+                tahun: { type: :string, minLength: 4, maxLength: 20 },
+                kategori: { type: :string, minLength: 4, maxLength: 20 },
 
-          },
-          # required: %w[nama_prestasi tingkat tahun kategori]
+              },
+              # required: %w[nama_prestasi tingkat tahun kategori]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -86,13 +96,18 @@ RSpec.describe 'api/v1/achievements', type: :request do
         parameter name: :achievement, in: :body, schema: {
           type: :object,
           properties: {
-            nama_prestasi: {type: :string, minLength: 4, maxLength: 20},
-            tingkat: {type: :string, minLength: 4, maxLength: 20},
-            tahun: {type: :string, minLength: 4, maxLength: 20},
-            kategori: {type: :string, minLength: 4, maxLength: 20},
+            achievement: {
+              type: :object,
+              properties: {
+                nama_prestasi: { type: :string, minLength: 4, maxLength: 20 },
+                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+                tahun: { type: :string, minLength: 4, maxLength: 20 },
+                kategori: { type: :string, minLength: 4, maxLength: 20 },
 
-          },
-          # required: %w[nama_prestasi tingkat tahun kategori]
+              },
+              # required: %w[nama_prestasi tingkat tahun kategori]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

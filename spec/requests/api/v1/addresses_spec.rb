@@ -13,15 +13,20 @@ RSpec.describe 'api/v1/addresses', type: :request do
         parameter name: :address, in: :body, schema: {
           type: :object,
           properties: {
-            alamat: {type: :string, minLength: 4, maxLength: 30},
-            kelurahan: {type: :string, minLength: 4, maxLength: 30},
-            kecamatan: {type: :string, minLength: 4, maxLength: 30},
-            kode_pos: {type: :integer, minimum: 5, maximum: 5},
-            provinsi: {type: :string, minLength: 4, maxLength: 30},
-            no_telepon: {type: :integer, minimum: 10, maximum: 13},
-            kabupaten: {type: :string, minLength: 4, maxLength: 30},
-          },
-          required: %w[alamat kelurahan kecamatan kode_pos provinsi no_telepon kabupaten]
+            address: {
+              type: :object,
+              properties: {
+                alamat: { type: :string, minLength: 4, maxLength: 30 },
+                kelurahan: { type: :string, minLength: 4, maxLength: 30 },
+                kecamatan: { type: :string, minLength: 4, maxLength: 30 },
+                kode_pos: { type: :integer, minimum: 5, maximum: 5 },
+                provinsi: { type: :string, minLength: 4, maxLength: 30 },
+                no_telepon: { type: :integer, minimum: 10, maximum: 13 },
+                kabupaten: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              required: %w[alamat kelurahan kecamatan kode_pos provinsi no_telepon kabupaten]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -65,15 +70,20 @@ RSpec.describe 'api/v1/addresses', type: :request do
         parameter name: :address, in: :body, schema: {
           type: :object,
           properties: {
-            alamat: {type: :string, minLength: 4, maxLength: 30},
-            kelurahan: {type: :string, minLength: 4, maxLength: 30},
-            kecamatan: {type: :string, minLength: 4, maxLength: 30},
-            kode_pos: {type: :integer, minimum: 5, maximum: 5},
-            provinsi: {type: :string, minLength: 4, maxLength: 30},
-            no_telepon: {type: :integer, minimum: 10, maximum: 13},
-            kabupaten: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[alamat kelurahan kecamatan kode_pos provinsi no_telepon kabupaten]
+            address: {
+              type: :object,
+              properties: {
+                alamat: { type: :string, minLength: 4, maxLength: 30 },
+                kelurahan: { type: :string, minLength: 4, maxLength: 30 },
+                kecamatan: { type: :string, minLength: 4, maxLength: 30 },
+                kode_pos: { type: :integer, minimum: 5, maximum: 5 },
+                provinsi: { type: :string, minLength: 4, maxLength: 30 },
+                no_telepon: { type: :integer, minimum: 10, maximum: 13 },
+                kabupaten: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[alamat kelurahan kecamatan kode_pos provinsi no_telepon kabupaten]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -95,15 +105,20 @@ RSpec.describe 'api/v1/addresses', type: :request do
         parameter name: :address, in: :body, schema: {
           type: :object,
           properties: {
-            alamat: {type: :string, minLength: 4, maxLength: 30},
-            kelurahan: {type: :string, minLength: 4, maxLength: 30},
-            kecamatan: {type: :string, minLength: 4, maxLength: 30},
-            kode_pos: {type: :integer, minimum: 5, maximum: 5},
-            provinsi: {type: :string, minLength: 4, maxLength: 30},
-            no_telepon: {type: :integer, minimum: 10, maximum: 13},
-            kabupaten: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[alamat kelurahan kecamatan kode_pos provinsi no_telepon kabupaten]
+            address: {
+              type: :object,
+              properties: {
+                alamat: { type: :string, minLength: 4, maxLength: 30 },
+                kelurahan: { type: :string, minLength: 4, maxLength: 30 },
+                kecamatan: { type: :string, minLength: 4, maxLength: 30 },
+                kode_pos: { type: :integer, minimum: 5, maximum: 5 },
+                provinsi: { type: :string, minLength: 4, maxLength: 30 },
+                no_telepon: { type: :integer, minimum: 10, maximum: 13 },
+                kabupaten: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[alamat kelurahan kecamatan kode_pos provinsi no_telepon kabupaten]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

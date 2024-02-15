@@ -11,9 +11,14 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
         parameter name: :achievement_tingkat_list, in: :body, schema: {
           type: :object,
           properties: {
-            tingkat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          required: %w[tingkat]
+            achievement_tingkat_list: {
+              type: :object,
+              properties: {
+                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              required: %w[tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -55,9 +60,14 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
         parameter name: :achievement_tingkat_list, in: :body, schema: {
           type: :object,
           properties: {
-            tingkat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[tingkat]
+            achievement_tingkat_list: {
+              type: :object,
+              properties: {
+                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -78,9 +88,14 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
         parameter name: :achievement_tingkat_list, in: :body, schema: {
           type: :object,
           properties: {
-            tingkat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[tingkat]
+            achievement_tingkat_list: {
+              type: :object,
+              properties: {
+                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

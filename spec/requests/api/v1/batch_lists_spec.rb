@@ -12,10 +12,15 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
         parameter name: :batch_list, in: :body, schema: {
           type: :object,
           properties: {
-            gelombang: {type: :string, minLength: 4, maxLength: 25},
-            aktif: {type: :boolean},
-          },
-          required: %w[gelombang aktif]
+            batch_list: {
+              type: :object,
+              properties: {
+                gelombang: { type: :string, minLength: 4, maxLength: 25 },
+                aktif: { type: :boolean },
+              },
+              required: %w[gelombang aktif]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -59,10 +64,15 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
         parameter name: :batch_list, in: :body, schema: {
           type: :object,
           properties: {
-            gelombang: {type: :string, minLength: 4, maxLength: 25},
-            aktif: {type: :boolean},
-          },
-          # required: %w[gelombang aktif]
+            batch_list: {
+              type: :object,
+              properties: {
+                gelombang: { type: :string, minLength: 4, maxLength: 25 },
+                aktif: { type: :boolean },
+              },
+              # required: %w[gelombang aktif]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -84,10 +94,15 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
         parameter name: :batch_list, in: :body, schema: {
           type: :object,
           properties: {
-            gelombang: {type: :string, minLength: 4, maxLength: 25},
-            aktif: {type: :boolean},
-          },
-          # required: %w[gelombang aktif]
+            batch_list: {
+              type: :object,
+              properties: {
+                gelombang: { type: :string, minLength: 4, maxLength: 25 },
+                aktif: { type: :boolean },
+              },
+              # required: %w[gelombang aktif]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

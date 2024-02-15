@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
         parameter name: :all_school_list, in: :body, schema: {
           type: :object,
           properties: {
-            sekolah: {type: :string, minLength: 5, maxLength: 35},
-          },
-          required: %w[sekolah]
+            all_school_list: {
+              type: :object,
+              properties: {
+                sekolah: { type: :string, minLength: 5, maxLength: 35 },
+              },
+              required: %w[sekolah]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
         parameter name: :all_school_list, in: :body, schema: {
           type: :object,
           properties: {
-            sekolah: {type: :string, minLength: 5, maxLength: 35},
-          },
-          # required: %w[sekolah]
+            all_school_list: {
+              type: :object,
+              properties: {
+                sekolah: { type: :string, minLength: 5, maxLength: 35 },
+              },
+              # required: %w[sekolah]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
         parameter name: :all_school_list, in: :body, schema: {
           type: :object,
           properties: {
-            sekolah: {type: :string, minLength: 5, maxLength: 35},
-          },
-          # required: %w[sekolah]
+            all_school_list: {
+              type: :object,
+              properties: {
+                sekolah: { type: :string, minLength: 5, maxLength: 35 },
+              },
+              # required: %w[sekolah]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

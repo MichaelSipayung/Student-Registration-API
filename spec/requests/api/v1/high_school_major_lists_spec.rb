@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
         parameter name: :high_school_major, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan: {type: :string, minLength: 3, maxLength: 25},
-          },
-          required: %w[jurusan]
+            high_school_major: {
+              type: :object,
+              properties: {
+                jurusan: { type: :string, minLength: 3, maxLength: 25 },
+              },
+              required: %w[jurusan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
         parameter name: :high_school_major, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan: {type: :string, minLength: 3, maxLength: 25},
-          },
-          # required: %w[jurusan]
+            high_school_major: {
+              type: :object,
+              properties: {
+                jurusan: { type: :string, minLength: 3, maxLength: 25 },
+              },
+              # required: %w[jurusan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
         parameter name: :high_school_major, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan: {type: :string, minLength: 3, maxLength: 25},
-          },
-          # required: %w[jurusan]
+            high_school_major: {
+              type: :object,
+              properties: {
+                jurusan: { type: :string, minLength: 3, maxLength: 25 },
+              },
+              # required: %w[jurusan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

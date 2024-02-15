@@ -12,18 +12,23 @@ RSpec.describe 'api/v1/utbk_scores', type: :request do
         parameter name: :utbk_score, in: :body, schema: {
           type: :object,
           properties: {
-            no_peserta: {type: :string, minLength: 4, maxLength: 30},
-            tanggal_ujian: {type: :string, minLength: 4, maxLength: 10},
-            jumlah_nilai_semester6: {type: :number, minimum: 2, maximum: 2000},
-            jumlah_pelajaran_semester6: {type: :integer, minimum: 2, maximum: 100},
-            nilai_penalaran_umum: {type: :integer, number: 5, maximum: 1000},
-            nilai_pengetahuan_kuantitatif: {type: :number, minimum: 5, maximum: 1000},
-            nilai_kemampuan_memahami_bacaan_dan_menulis: {type: :number, minimum: 5, maximum: 1000},
-            nilai_pengetahuan_dan_pemahaman_umum: {type: :number, minimum: 5, maximum: 1000},
-          },
-          required: %w[no_peserta tanggal_ujian jumlah_nilai_semester6 jumlah_pelajaran_semester6
-                    nilai_penalaran_umum nilai_pengetahuan_kuantitatif
-                    nilai_kemampuan_memahami_bacaan_dan_menulis nilai_pengetahuan_dan_pemahaman_umum]
+            utbk_score: {
+              type: :object,
+              properties: {
+                no_peserta: { type: :string, minLength: 4, maxLength: 30 },
+                tanggal_ujian: { type: :string, minLength: 4, maxLength: 10 },
+                jumlah_nilai_semester6: { type: :number, minimum: 2, maximum: 2000 },
+                jumlah_pelajaran_semester6: { type: :integer, minimum: 2, maximum: 100 },
+                nilai_penalaran_umum: { type: :integer, number: 5, maximum: 1000 },
+                nilai_pengetahuan_kuantitatif: { type: :number, minimum: 5, maximum: 1000 },
+                nilai_kemampuan_memahami_bacaan_dan_menulis: { type: :number, minimum: 5, maximum: 1000 },
+                nilai_pengetahuan_dan_pemahaman_umum: { type: :number, minimum: 5, maximum: 1000 },
+              },
+              required: %w[no_peserta tanggal_ujian jumlah_nilai_semester6 jumlah_pelajaran_semester6
+              nilai_penalaran_umum nilai_pengetahuan_kuantitatif
+              nilai_kemampuan_memahami_bacaan_dan_menulis nilai_pengetahuan_dan_pemahaman_umum]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -67,14 +72,22 @@ RSpec.describe 'api/v1/utbk_scores', type: :request do
         parameter name: :utbk_score, in: :body, schema: {
           type: :object,
           properties: {
-            no_peserta: {type: :string, minLength: 4, maxLength: 30},
-            tanggal_ujian: {type: :string, minLength: 4, maxLength: 10},
-            jumlah_nilai_semester6: {type: :number, minimum: 2, maximum: 2000},
-            jumlah_pelajaran_semester6: {type: :integer, minimum: 2, maximum: 100},
-            nilai_penalaran_umum: {type: :integer, number: 5, maximum: 1000},
-            nilai_pengetahuan_kuantitatif: {type: :number, minimum: 5, maximum: 1000},
-            nilai_kemampuan_memahami_bacaan_dan_menulis: {type: :number, minimum: 5, maximum: 1000},
-            nilai_pengetahuan_dan_pemahaman_umum: {type: :number, minimum: 5, maximum: 1000},
+            utbk_score: {
+              type: :object,
+              properties: {
+                no_peserta: { type: :string, minLength: 4, maxLength: 30 },
+                tanggal_ujian: { type: :string, minLength: 4, maxLength: 10 },
+                jumlah_nilai_semester6: { type: :number, minimum: 2, maximum: 2000 },
+                jumlah_pelajaran_semester6: { type: :integer, minimum: 2, maximum: 100 },
+                nilai_penalaran_umum: { type: :integer, number: 5, maximum: 1000 },
+                nilai_pengetahuan_kuantitatif: { type: :number, minimum: 5, maximum: 1000 },
+                nilai_kemampuan_memahami_bacaan_dan_menulis: { type: :number, minimum: 5, maximum: 1000 },
+                nilai_pengetahuan_dan_pemahaman_umum: { type: :number, minimum: 5, maximum: 1000 },
+              },
+              # required: %w[no_peserta tanggal_ujian jumlah_nilai_semester6 jumlah_pelajaran_semester6
+              # nilai_penalaran_umum nilai_pengetahuan_kuantitatif
+              # nilai_kemampuan_memahami_bacaan_dan_menulis nilai_pengetahuan_dan_pemahaman_umum]
+            }
           }
         }
         after do |example|
@@ -97,14 +110,22 @@ RSpec.describe 'api/v1/utbk_scores', type: :request do
         parameter name: :utbk_score, in: :body, schema: {
           type: :object,
           properties: {
-            no_peserta: {type: :string, minLength: 4, maxLength: 30},
-            tanggal_ujian: {type: :string, minLength: 4, maxLength: 10},
-            jumlah_nilai_semester6: {type: :number, minimum: 2, maximum: 2000},
-            jumlah_pelajaran_semester6: {type: :integer, minimum: 2, maximum: 100},
-            nilai_penalaran_umum: {type: :integer, number: 5, maximum: 1000},
-            nilai_pengetahuan_kuantitatif: {type: :number, minimum: 5, maximum: 1000},
-            nilai_kemampuan_memahami_bacaan_dan_menulis: {type: :number, minimum: 5, maximum: 1000},
-            nilai_pengetahuan_dan_pemahaman_umum: {type: :number, minimum: 5, maximum: 1000},
+            utbk_score: {
+              type: :object,
+              properties: {
+                no_peserta: { type: :string, minLength: 4, maxLength: 30 },
+                tanggal_ujian: { type: :string, minLength: 4, maxLength: 10 },
+                jumlah_nilai_semester6: { type: :number, minimum: 2, maximum: 2000 },
+                jumlah_pelajaran_semester6: { type: :integer, minimum: 2, maximum: 100 },
+                nilai_penalaran_umum: { type: :integer, number: 5, maximum: 1000 },
+                nilai_pengetahuan_kuantitatif: { type: :number, minimum: 5, maximum: 1000 },
+                nilai_kemampuan_memahami_bacaan_dan_menulis: { type: :number, minimum: 5, maximum: 1000 },
+                nilai_pengetahuan_dan_pemahaman_umum: { type: :number, minimum: 5, maximum: 1000 },
+              },
+              # required: %w[no_peserta tanggal_ujian jumlah_nilai_semester6 jumlah_pelajaran_semester6
+              # nilai_penalaran_umum nilai_pengetahuan_kuantitatif
+              # nilai_kemampuan_memahami_bacaan_dan_menulis nilai_pengetahuan_dan_pemahaman_umum]
+            }
           }
         }
         after do |example|

@@ -12,20 +12,25 @@ RSpec.describe 'api/v1/parents', type: :request do
         parameter name: :parent, in: :body, schema: {
           type: :object,
           properties: {
-            nama_ayah: {type: :string, minLength: 4, maxLength: 25},
-            nama_ibu: {type: :string, minLength: 4, maxLength: 25},
-            nik_ayah: {type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999},
-            nik_ibu: {type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999},
-            pendidikan_ayah: {type: :string, minLength: 2, maxLength: 20},
-            pendidikan_ibu: {type: :string, minLength: 2, maxLength: 20},
-            tanggal_lahir_ayah: {type: :string, minLength: 4, maxLength: 20},
-            tanggal_lahir_ibu: {type: :string, minLength: 4, maxLength: 20},
-            pekerjaan_ayah: {type: :string, minLength: 3, maxLength: 20},
-            pekerjaan_ibu: {type: :string, minLength: 3, maxLength: 20},
+            parent: {
+              type: :object,
+              properties: {
+                nama_ayah: { type: :string, minLength: 4, maxLength: 25 },
+                nama_ibu: { type: :string, minLength: 4, maxLength: 25 },
+                nik_ayah: { type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999 },
+                nik_ibu: { type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999 },
+                pendidikan_ayah: { type: :string, minLength: 2, maxLength: 20 },
+                pendidikan_ibu: { type: :string, minLength: 2, maxLength: 20 },
+                tanggal_lahir_ayah: { type: :string, minLength: 4, maxLength: 20 },
+                tanggal_lahir_ibu: { type: :string, minLength: 4, maxLength: 20 },
+                pekerjaan_ayah: { type: :string, minLength: 3, maxLength: 20 },
+                pekerjaan_ibu: { type: :string, minLength: 3, maxLength: 20 },
 
-          },
-          required: %w[nama_ayah nama_ibu pendidikan_ayah pendidikan_ibu
+              },
+              required: %w[nama_ayah nama_ibu pendidikan_ayah pendidikan_ibu
                        tanggal_lahir_ayah tanggal_lahir_ibu pekerjaan_ayah pekerjaan_ibu]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -69,20 +74,25 @@ RSpec.describe 'api/v1/parents', type: :request do
         parameter name: :parent, in: :body, schema: {
           type: :object,
           properties: {
-            nama_ayah: {type: :string, minLength: 4, maxLength: 25},
-            nama_ibu: {type: :string, minLength: 4, maxLength: 25},
-            nik_ayah: {type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999},
-            nik_ibu: {type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999},
-            pendidikan_ayah: {type: :string, minLength: 2, maxLength: 20},
-            pendidikan_ibu: {type: :string, minLength: 2, maxLength: 20},
-            tanggal_lahir_ayah: {type: :string, minLength: 4, maxLength: 20},
-            tanggal_lahir_ibu: {type: :string, minLength: 4, maxLength: 20},
-            pekerjaan_ayah: {type: :string, minLength: 3, maxLength: 20},
-            pekerjaan_ibu: {type: :string, minLength: 3, maxLength: 20},
+            parent: {
+              type: :object,
+              properties: {
+                nama_ayah: { type: :string, minLength: 4, maxLength: 25 },
+                nama_ibu: { type: :string, minLength: 4, maxLength: 25 },
+                nik_ayah: { type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999 },
+                nik_ibu: { type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999 },
+                pendidikan_ayah: { type: :string, minLength: 2, maxLength: 20 },
+                pendidikan_ibu: { type: :string, minLength: 2, maxLength: 20 },
+                tanggal_lahir_ayah: { type: :string, minLength: 4, maxLength: 20 },
+                tanggal_lahir_ibu: { type: :string, minLength: 4, maxLength: 20 },
+                pekerjaan_ayah: { type: :string, minLength: 3, maxLength: 20 },
+                pekerjaan_ibu: { type: :string, minLength: 3, maxLength: 20 },
 
-          },
-          # required: %w[nama_ayah nama_ibu pendidikan_ayah pendidikan_ibu
-          #              tanggal_lahir_ayah tanggal_lahir_ibu pekerjaan_ayah pekerjaan_ibu]
+              },
+              # required: %w[nama_ayah nama_ibu pendidikan_ayah pendidikan_ibu
+              #          tanggal_lahir_ayah tanggal_lahir_ibu pekerjaan_ayah pekerjaan_ibu]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -104,20 +114,25 @@ RSpec.describe 'api/v1/parents', type: :request do
         parameter name: :parent, in: :body, schema: {
           type: :object,
           properties: {
-            nama_ayah: {type: :string, minLength: 4, maxLength: 25},
-            nama_ibu: {type: :string, minLength: 4, maxLength: 25},
-            nik_ayah: {type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999},
-            nik_ibu: {type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999},
-            pendidikan_ayah: {type: :string, minLength: 2, maxLength: 20},
-            pendidikan_ibu: {type: :string, minLength: 2, maxLength: 20},
-            tanggal_lahir_ayah: {type: :string, minLength: 4, maxLength: 20},
-            tanggal_lahir_ibu: {type: :string, minLength: 4, maxLength: 20},
-            pekerjaan_ayah: {type: :string, minLength: 3, maxLength: 20},
-            pekerjaan_ibu: {type: :string, minLength: 3, maxLength: 20},
+            parent: {
+              type: :object,
+              properties: {
+                nama_ayah: { type: :string, minLength: 4, maxLength: 25 },
+                nama_ibu: { type: :string, minLength: 4, maxLength: 25 },
+                nik_ayah: { type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999 },
+                nik_ibu: { type: :integer, minimum: 1111111111111111, maxLength: 9999999999999999 },
+                pendidikan_ayah: { type: :string, minLength: 2, maxLength: 20 },
+                pendidikan_ibu: { type: :string, minLength: 2, maxLength: 20 },
+                tanggal_lahir_ayah: { type: :string, minLength: 4, maxLength: 20 },
+                tanggal_lahir_ibu: { type: :string, minLength: 4, maxLength: 20 },
+                pekerjaan_ayah: { type: :string, minLength: 3, maxLength: 20 },
+                pekerjaan_ibu: { type: :string, minLength: 3, maxLength: 20 },
 
-          },
-          # required: %w[nama_ayah nama_ibu pendidikan_ayah pendidikan_ibu
-          #              tanggal_lahir_ayah tanggal_lahir_ibu pekerjaan_ayah pekerjaan_ibu]
+              },
+              # required: %w[nama_ayah nama_ibu pendidikan_ayah pendidikan_ibu
+              #          tanggal_lahir_ayah tanggal_lahir_ibu pekerjaan_ayah pekerjaan_ibu]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

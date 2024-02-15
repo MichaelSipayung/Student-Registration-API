@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/language_degree_lists', type: :request do
         parameter name: :language_degree_list, in: :body, schema: {
           type: :object,
           properties: {
-            tingkat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          required: %w[tingkat]
+            language_degree_list: {
+              type: :object,
+              properties: {
+                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              required: %w[tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/language_degree_lists', type: :request do
         parameter name: :language_degree_list, in: :body, schema: {
           type: :object,
           properties: {
-            tingkat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[tingkat]
+            language_degree_list: {
+              type: :object,
+              properties: {
+                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/language_degree_lists', type: :request do
         parameter name: :language_degree_list, in: :body, schema: {
           type: :object,
           properties: {
-            tingkat: {type: :string, minLength: 4, maxLength: 15},
-          },
-          # required: %w[tingkat]
+            language_degree_list: {
+              type: :object,
+              properties: {
+                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+              },
+              # required: %w[tingkat]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

@@ -12,13 +12,18 @@ RSpec.describe 'api/v1/organizations', type: :request do
         parameter name: :organization, in: :body, schema: {
           type: :object,
           properties: {
-            nama_organisasi: {type: :string, minLength: 4, maxLength: 20},
-            mulai: {type: :string, minLength: 4, maxLength: 20},
-            berakhir: {type: :string, minLength: 4, maxLength: 20},
-            jabatan: {type: :string, minLength: 4, maxLength: 20},
+            organization: {
+              type: :object,
+              properties: {
+                nama_organisasi: { type: :string, minLength: 4, maxLength: 20 },
+                mulai: { type: :string, minLength: 4, maxLength: 20 },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+                jabatan: { type: :string, minLength: 4, maxLength: 20 },
 
-          },
-          required: %w[nama_organisasi mulai berakhir jabatan ]
+              },
+              required: %w[nama_organisasi mulai berakhir jabatan ]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -62,13 +67,18 @@ RSpec.describe 'api/v1/organizations', type: :request do
         parameter name: :organization, in: :body, schema: {
           type: :object,
           properties: {
-            nama_organisasi: {type: :string, minLength: 4, maxLength: 20},
-            mulai: {type: :string, minLength: 4, maxLength: 20},
-            berakhir: {type: :string, minLength: 4, maxLength: 20},
-            jabatan: {type: :string, minLength: 4, maxLength: 20},
+            organization: {
+              type: :object,
+              properties: {
+                nama_organisasi: { type: :string, minLength: 4, maxLength: 20 },
+                mulai: { type: :string, minLength: 4, maxLength: 20 },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+                jabatan: { type: :string, minLength: 4, maxLength: 20 },
 
-          },
-          # required: %w[nama_organisasi mulai berakhir jabatan ]
+              },
+              # required: %w[nama_organisasi mulai berakhir jabatan ]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -90,13 +100,18 @@ RSpec.describe 'api/v1/organizations', type: :request do
         parameter name: :organization, in: :body, schema: {
           type: :object,
           properties: {
-            nama_organisasi: {type: :string, minLength: 4, maxLength: 20},
-            mulai: {type: :string, minLength: 4, maxLength: 20},
-            berakhir: {type: :string, minLength: 4, maxLength: 20},
-            jabatan: {type: :string, minLength: 4, maxLength: 20},
+            organization: {
+              type: :object,
+              properties: {
+                nama_organisasi: { type: :string, minLength: 4, maxLength: 20 },
+                mulai: { type: :string, minLength: 4, maxLength: 20 },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+                jabatan: { type: :string, minLength: 4, maxLength: 20 },
 
-          },
-          # required: %w[nama_organisasi mulai berakhir jabatan ]
+              },
+              # required: %w[nama_organisasi mulai berakhir jabatan ]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

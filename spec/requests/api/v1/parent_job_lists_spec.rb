@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/parent_job_lists', type: :request do
         parameter name: :parent_job_list, in: :body, schema: {
           type: :object,
           properties: {
-            pekerjaan: {type: :string, minLength: 3, maxLength: 25},
-          },
-          required: %w[pekerjaan]
+            parent_job_list: {
+              type: :object,
+              properties: {
+                pekerjaan: { type: :string, minLength: 3, maxLength: 25 },
+              },
+              required: %w[pekerjaan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/parent_job_lists', type: :request do
         parameter name: :parent_job_list, in: :body, schema: {
           type: :object,
           properties: {
-            pekerjaan: {type: :string, minLength: 3, maxLength: 25},
-          },
-          # required: %w[pekerjaan]
+            parent_job_list: {
+              type: :object,
+              properties: {
+                pekerjaan: { type: :string, minLength: 3, maxLength: 25 },
+              },
+              # required: %w[pekerjaan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/parent_job_lists', type: :request do
         parameter name: :parent_job_list, in: :body, schema: {
           type: :object,
           properties: {
-            pekerjaan: {type: :string, minLength: 3, maxLength: 25},
-          },
-          # required: %w[pekerjaan]
+            parent_job_list: {
+              type: :object,
+              properties: {
+                pekerjaan: { type: :string, minLength: 3, maxLength: 25 },
+              },
+              # required: %w[pekerjaan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

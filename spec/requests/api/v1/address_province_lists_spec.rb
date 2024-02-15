@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
         parameter name: :address_province_list, in: :body, schema: {
           type: :object,
           properties: {
-            provinsi: {type: :string, minLength: 3, maxLength: 35},
-          },
-          required: %w[provinsi]
+            address_province_list: {
+              type: :object,
+              properties: {
+                provinsi: { type: :string, minLength: 3, maxLength: 35 },
+              },
+              required: %w[provinsi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -54,7 +59,19 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
 
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :address_province_list, in: :body, schema: {
+          type: :object,
+          properties: {
+            address_province_list: {
+              type: :object,
+              properties: {
+                provinsi: { type: :string, minLength: 3, maxLength: 35 },
+              },
+              # required: %w[provinsi]
+            }
+          }
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -75,9 +92,14 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
         parameter name: :address_province_list, in: :body, schema: {
           type: :object,
           properties: {
-            provinsi: {type: :string, minLength: 3, maxLength: 35},
-          },
-          # required: %w[provinsi]
+            address_province_list: {
+              type: :object,
+              properties: {
+                provinsi: { type: :string, minLength: 3, maxLength: 35 },
+              },
+              # required: %w[provinsi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -99,7 +121,7 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
         parameter name: :address_province_list, in: :body, schema: {
           type: :object,
           properties: {
-            provinsi: {type: :string, minLength: 3, maxLength: 35},
+            provinsi: { type: :string, minLength: 3, maxLength: 35 },
           },
           # required: %w[provinsi]
         }

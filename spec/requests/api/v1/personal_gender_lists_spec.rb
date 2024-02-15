@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
         parameter name: :personal_gender_list, in: :body, schema: {
           type: :object,
           properties: {
-            jenis_kelamin: {type: :string, minLength: 4, maxLength: 10},
-          },
-          required: %w[jenis_kelamin]
+            personal_gender_list: {
+              type: :object,
+              properties: {
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10 },
+              },
+              required: %w[jenis_kelamin]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
         parameter name: :personal_gender_list, in: :body, schema: {
           type: :object,
           properties: {
-            jenis_kelamin: {type: :string, minLength: 4, maxLength: 10},
-          },
-          # required: %w[jenis_kelamin]
+            personal_gender_list: {
+              type: :object,
+              properties: {
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10 },
+              },
+              # required: %w[jenis_kelamin]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
         parameter name: :personal_gender_list, in: :body, schema: {
           type: :object,
           properties: {
-            jenis_kelamin: {type: :string, minLength: 4, maxLength: 10},
-          },
-          # required: %w[jenis_kelamin]
+            personal_gender_list: {
+              type: :object,
+              properties: {
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10 },
+              },
+              # required: %w[jenis_kelamin]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

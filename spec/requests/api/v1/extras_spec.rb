@@ -12,12 +12,17 @@ RSpec.describe 'api/v1/extras', type: :request do
         parameter name: :extra, in: :body, schema: {
           type: :object,
           properties: {
-            nama_kegiatan: {type: :string, minLength: 4, maxLength: 20},
-            predikat: {type: :string, minLength: 4, maxLength: 20},
-            mulai: {type: :string, minLength: 4, maxLength: 20},
-            berakhir: {type: :string, minLength: 4, maxLength: 20},
-          },
-          required: %w[nama_kegiatan predikat mulai berakhir]
+            extra: {
+              type: :object,
+              properties: {
+                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20 },
+                predikat: { type: :string, minLength: 4, maxLength: 20 },
+                mulai: { type: :string, minLength: 4, maxLength: 20 },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              required: %w[nama_kegiatan predikat mulai berakhir]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -61,12 +66,17 @@ RSpec.describe 'api/v1/extras', type: :request do
         parameter name: :extra, in: :body, schema: {
           type: :object,
           properties: {
-            nama_kegiatan: {type: :string, minLength: 4, maxLength: 20},
-            predikat: {type: :string, minLength: 4, maxLength: 20},
-            mulai: {type: :string, minLength: 4, maxLength: 20},
-            berakhir: {type: :string, minLength: 4, maxLength: 20},
-          },
-          # required: %w[nama_kegiatan predikat mulai berakhir]
+            extra: {
+              type: :object,
+              properties: {
+                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20 },
+                predikat: { type: :string, minLength: 4, maxLength: 20 },
+                mulai: { type: :string, minLength: 4, maxLength: 20 },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              # required: %w[nama_kegiatan predikat mulai berakhir]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -88,12 +98,17 @@ RSpec.describe 'api/v1/extras', type: :request do
         parameter name: :extra, in: :body, schema: {
           type: :object,
           properties: {
-            nama_kegiatan: {type: :string, minLength: 4, maxLength: 20},
-            predikat: {type: :string, minLength: 4, maxLength: 20},
-            mulai: {type: :string, minLength: 4, maxLength: 20},
-            berakhir: {type: :string, minLength: 4, maxLength: 20},
-          },
-          # required: %w[nama_kegiatan predikat mulai berakhir]
+            extra: {
+              type: :object,
+              properties: {
+                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20 },
+                predikat: { type: :string, minLength: 4, maxLength: 20 },
+                mulai: { type: :string, minLength: 4, maxLength: 20 },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+              },
+              # required: %w[nama_kegiatan predikat mulai berakhir]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

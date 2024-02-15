@@ -11,9 +11,14 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
         parameter name: :accreditation_school_list, in: :body, schema: {
           type: :object,
           properties: {
-            akreditasi: {type: :string, minLength: 1, maxLength: 15},
-          },
-          required: %w[akreditasi]
+            accreditation_school_list: {
+              type: :object,
+              properties: {
+                akreditasi: { type: :string, minLength: 1, maxLength: 15 },
+              },
+              required: %w[akreditasi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -55,9 +60,14 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
         parameter name: :accreditation_school_list, in: :body, schema: {
           type: :object,
           properties: {
-            akreditasi: {type: :string, minLength: 1, maxLength: 15},
-          },
-          # required: %w[akreditasi]
+            accreditation_school_list: {
+              type: :object,
+              properties: {
+                akreditasi: { type: :string, minLength: 1, maxLength: 15 },
+              },
+              # required: %w[akreditasi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -78,9 +88,14 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
         parameter name: :accreditation_school_list, in: :body, schema: {
           type: :object,
           properties: {
-            akreditasi: {type: :string, minLength: 1, maxLength: 15},
-          },
-          # required: %w[akreditasi]
+            accreditation_school_list: {
+              type: :object,
+              properties: {
+                akreditasi: { type: :string, minLength: 1, maxLength: 15 },
+              },
+              # required: %w[akreditasi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

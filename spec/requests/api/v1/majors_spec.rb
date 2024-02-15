@@ -12,12 +12,17 @@ RSpec.describe 'api/v1/majors', type: :request do
         parameter name: :major, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan1: {type: :string, minLength: 4, maxLength: 30},
-            jurusan2: {type: :string, minLength: 4, maxLength: 30},
-            jurusan3: {type: :string, minLength: 4, maxLength: 30},
-            gelombang: {type: :string, minLength: 4, maxLength: 30},
-          },
-          required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+            major: {
+              type: :object,
+              properties: {
+                jurusan1: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan2: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan3: { type: :string, minLength: 4, maxLength: 30 },
+                gelombang: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -61,12 +66,17 @@ RSpec.describe 'api/v1/majors', type: :request do
         parameter name: :major, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan1: {type: :string, minLength: 4, maxLength: 30},
-            jurusan2: {type: :string, minLength: 4, maxLength: 30},
-            jurusan3: {type: :string, minLength: 4, maxLength: 30},
-            gelombang: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+            major: {
+              type: :object,
+              properties: {
+                jurusan1: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan2: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan3: { type: :string, minLength: 4, maxLength: 30 },
+                gelombang: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -88,12 +98,17 @@ RSpec.describe 'api/v1/majors', type: :request do
         parameter name: :major, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan1: {type: :string, minLength: 4, maxLength: 30},
-            jurusan2: {type: :string, minLength: 4, maxLength: 30},
-            jurusan3: {type: :string, minLength: 4, maxLength: 30},
-            gelombang: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+            major: {
+              type: :object,
+              properties: {
+                jurusan1: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan2: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan3: { type: :string, minLength: 4, maxLength: 30 },
+                gelombang: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

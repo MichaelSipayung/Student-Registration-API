@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
         parameter name: :source_information_list, in: :body, schema: {
           type: :object,
           properties: {
-            informasi: {type: :string, minLength: 4, maxLength: 25},
-          },
-          required: %w[informasi]
+            source_information_list: {
+              type: :object,
+              properties: {
+                informasi: { type: :string, minLength: 4, maxLength: 25 },
+              },
+              required: %w[informasi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
         parameter name: :source_information_list, in: :body, schema: {
           type: :object,
           properties: {
-            informasi: {type: :string, minLength: 4, maxLength: 25},
-          },
-          # required: %w[informasi]
+            source_information_list: {
+              type: :object,
+              properties: {
+                informasi: { type: :string, minLength: 4, maxLength: 25 },
+              },
+              # required: %w[informasi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
         parameter name: :source_information_list, in: :body, schema: {
           type: :object,
           properties: {
-            informasi: {type: :string, minLength: 4, maxLength: 25},
-          },
-          # required: %w[informasi]
+            source_information_list: {
+              type: :object,
+              properties: {
+                informasi: { type: :string, minLength: 4, maxLength: 25 },
+              },
+              # required: %w[informasi]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

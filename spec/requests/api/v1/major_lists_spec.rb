@@ -12,9 +12,14 @@ RSpec.describe 'api/v1/major_lists', type: :request do
         parameter name: :major_list, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan: {type: :string, minLength: 4, maxLength: 30},
-          },
-          required: %w[jurusan]
+            major_list: {
+              type: :object,
+              properties: {
+                jurusan: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              required: %w[jurusan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -58,9 +63,14 @@ RSpec.describe 'api/v1/major_lists', type: :request do
         parameter name: :major_list, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[jurusan]
+            major_list: {
+              type: :object,
+              properties: {
+                jurusan: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[jurusan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -82,9 +92,14 @@ RSpec.describe 'api/v1/major_lists', type: :request do
         parameter name: :major_list, in: :body, schema: {
           type: :object,
           properties: {
-            jurusan: {type: :string, minLength: 4, maxLength: 30},
-          },
-          # required: %w[jurusan]
+            major_list: {
+              type: :object,
+              properties: {
+                jurusan: { type: :string, minLength: 4, maxLength: 30 },
+              },
+              # required: %w[jurusan]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {
