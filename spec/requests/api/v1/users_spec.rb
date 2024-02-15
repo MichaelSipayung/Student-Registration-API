@@ -1,6 +1,6 @@
 require 'swagger_helper'
 
-RSpec.describe 'api/v1/users', type: :request do
+RSpec.describe 'api/v1/users', type: :request, tags: ['User'] do
 
   path '/api/v1/users' do
 
