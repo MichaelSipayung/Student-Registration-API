@@ -30,6 +30,14 @@ RSpec.configure do |config|
               default: '127.0.0.1:3000/'
             }
           }
+        },
+        {
+          url: 'https://{herokuHost}',
+          variables: {
+            herokuHost: {
+              default: 'spmb-api-c3753c42f80c.herokuapp.com/'
+            }
+          }
         }
       ],
       components: {
