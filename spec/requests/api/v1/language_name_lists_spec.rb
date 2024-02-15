@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
   path '/api/v1/language_name_lists' do
 
     post('create language_name_list') do
+      tags 'Language name list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :language_name_list, in: :body, schema: {
@@ -31,6 +33,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show language_name_list') do
+      tags 'Language name list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -46,6 +50,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
     end
 
     patch('update language_name_list') do
+      tags 'Language name list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -68,6 +74,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
     end
 
     put('update language_name_list') do
+      tags 'Language name list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -90,6 +98,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
     end
 
     delete('delete language_name_list') do
+      tags 'Language name list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 

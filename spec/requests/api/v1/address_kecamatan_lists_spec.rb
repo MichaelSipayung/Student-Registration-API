@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
   path '/api/v1/address_kecamatan_lists' do
 
     post('create address_kecamatan_list') do
+      tags 'Address kecamatan list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :address_kecamatan_list, in: :body, schema: {
@@ -32,6 +34,8 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show address_kecamatan_list') do
+      tags 'Address kecamatan list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -47,6 +51,8 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
     end
 
     patch('update address_kecamatan_list') do
+      tags 'Address kecamatan list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -70,6 +76,8 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
     end
 
     put('update address_kecamatan_list') do
+      tags 'Address kecamatan list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -93,6 +101,8 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
     end
 
     delete('delete address_kecamatan_list') do
+      tags 'Address kecamatan list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 

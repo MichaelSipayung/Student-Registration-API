@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/utbk_scores', type: :request do
   path '/api/v1/utbk_scores' do
 
     post('create utbk_score') do
+      tags 'Utbk score endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :utbk_score, in: :body, schema: {
@@ -40,6 +42,8 @@ RSpec.describe 'api/v1/utbk_scores', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show utbk_score') do
+      tags 'Utbk score endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -55,6 +59,8 @@ RSpec.describe 'api/v1/utbk_scores', type: :request do
     end
 
     patch('update utbk_score') do
+      tags 'Utbk score endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -83,6 +89,8 @@ RSpec.describe 'api/v1/utbk_scores', type: :request do
     end
 
     put('update utbk_score') do
+      tags 'Utbk score endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'

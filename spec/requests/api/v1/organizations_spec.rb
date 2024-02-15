@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/organizations', type: :request do
   path '/api/v1/organizations' do
 
     post('create organization') do
+      tags 'Organization endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :organization, in: :body, schema: {
@@ -35,6 +37,8 @@ RSpec.describe 'api/v1/organizations', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show organization') do
+      tags 'Organization endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -50,6 +54,8 @@ RSpec.describe 'api/v1/organizations', type: :request do
     end
 
     patch('update organization') do
+      tags 'Organization endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -76,6 +82,8 @@ RSpec.describe 'api/v1/organizations', type: :request do
     end
 
     put('update organization') do
+      tags 'Organization endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'

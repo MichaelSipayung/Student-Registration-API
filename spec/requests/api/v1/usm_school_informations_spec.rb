@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/usm_school_informations', type: :request do
   path '/api/v1/usm_school_informations' do
 
     post('create usm_school_information') do
+      tags 'Usm school information endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :usm_school_information, in: :body, schema: {
@@ -38,6 +40,8 @@ RSpec.describe 'api/v1/usm_school_informations', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show usm_school_information') do
+      tags 'Usm school information endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -53,6 +57,8 @@ RSpec.describe 'api/v1/usm_school_informations', type: :request do
     end
 
     patch('update usm_school_information') do
+      tags 'Usm school information endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -80,6 +86,8 @@ RSpec.describe 'api/v1/usm_school_informations', type: :request do
     end
 
     put('update usm_school_information') do
+      tags 'Usm school information endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'

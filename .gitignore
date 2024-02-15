@@ -31,3 +31,18 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+.ruby-version
+.idea/ApiExperiment.iml
+.idea/dataSources.xml
+.idea/vcs.xml
+.idea/modules/.iml
+bin/docker-entrypoint
+log/.keep
+lib/tasks/.keep
+public/robots.txt
+.idea/.gitignore
+storage/.keep
+tmp/.keep
+tmp/pids/.keep
+tmp/storage/.keep
+vendor/.keep

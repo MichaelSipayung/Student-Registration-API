@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
   path '/api/v1/batch_lists' do
 
     post('create batch_list') do
+      tags 'Batch list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :batch_list, in: :body, schema: {
@@ -32,6 +34,8 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show batch_list') do
+      tags 'Batch list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -47,6 +51,8 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
     end
 
     patch('update batch_list') do
+      tags 'Batch list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -70,6 +76,8 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
     end
 
     put('update batch_list') do
+      tags 'Batch list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -93,6 +101,8 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
     end
 
     delete('delete batch_list') do
+      tags 'Batch list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 

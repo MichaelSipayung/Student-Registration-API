@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/majors', type: :request do
   path '/api/v1/majors' do
 
     post('create major') do
+      tags 'Major endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :major, in: :body, schema: {
@@ -34,6 +36,8 @@ RSpec.describe 'api/v1/majors', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show major') do
+      tags 'Major endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -49,6 +53,8 @@ RSpec.describe 'api/v1/majors', type: :request do
     end
 
     patch('update major') do
+      tags 'Major endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -74,6 +80,8 @@ RSpec.describe 'api/v1/majors', type: :request do
     end
 
     put('update major') do
+      tags 'Major endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'

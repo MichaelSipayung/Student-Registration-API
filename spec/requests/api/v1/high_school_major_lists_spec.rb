@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
   path '/api/v1/high_school_major_lists' do
 
     post('create high_school_major_list') do
+      tags 'High school major list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :high_school_major, in: :body, schema: {
@@ -31,6 +33,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show high_school_major_list') do
+      tags 'High school major list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -46,6 +50,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
     end
 
     patch('update high_school_major_list') do
+      tags 'High school major list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -68,6 +74,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
     end
 
     put('update high_school_major_list') do
+      tags 'High school major list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -90,6 +98,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
     end
 
     delete('delete high_school_major_list') do
+      tags 'High school major list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 

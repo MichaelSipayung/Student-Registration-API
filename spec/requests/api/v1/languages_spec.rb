@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/languages', type: :request do
   path '/api/v1/languages' do
 
     post('create language') do
+      tags 'Language endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :language, in: :body, schema: {
@@ -32,6 +34,8 @@ RSpec.describe 'api/v1/languages', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show language') do
+      tags 'Language endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -47,6 +51,8 @@ RSpec.describe 'api/v1/languages', type: :request do
     end
 
     patch('update language') do
+      tags 'Language endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -70,6 +76,8 @@ RSpec.describe 'api/v1/languages', type: :request do
     end
 
     put('update language') do
+      tags 'Language endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'

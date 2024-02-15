@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
   path '/api/v1/source_motivation_lists' do
 
     post('create source_motivation_list') do
+      tags 'Source motivation list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :source_motivation_list, in: :body, schema: {
@@ -31,6 +33,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show source_motivation_list') do
+      tags 'Source motivation list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -46,6 +50,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
     end
 
     patch('update source_motivation_list') do
+      tags 'Source motivation list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -68,6 +74,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
     end
 
     put('update source_motivation_list') do
+      tags 'Source motivation list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -90,6 +98,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
     end
 
     delete('delete source_motivation_list') do
+      tags 'Source motivation list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 

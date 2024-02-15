@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
   path '/api/v1/organization_degree_lists' do
 
     post('create organization_degree_list') do
+      tags 'Organization degree list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :organization_degree_list, in: :body, schema: {
@@ -31,6 +33,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show organization_degree_list') do
+      tags 'Organization degree list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -46,6 +50,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
     end
 
     patch('update organization_degree_list') do
+      tags 'Organization degree list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -68,6 +74,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
     end
 
     put('update organization_degree_list') do
+      tags 'Organization degree list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -90,6 +98,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
     end
 
     delete('delete organization_degree_list') do
+      tags 'Organization degree list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 

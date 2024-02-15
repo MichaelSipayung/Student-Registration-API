@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
   path '/api/v1/parent_education_lists' do
 
     post('create parent_education_list') do
+      tags 'Parent education list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :parent_education_list, in: :body, schema: {
@@ -31,6 +33,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show parent_education_list') do
+      tags 'Parent education list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -46,6 +50,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
     end
 
     patch('update parent_education_list') do
+      tags 'Parent education list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -68,6 +74,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
     end
 
     put('update parent_education_list') do
+      tags 'Parent education list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -90,6 +98,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
     end
 
     delete('delete parent_education_list') do
+      tags 'Parent education list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 

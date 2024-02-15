@@ -5,6 +5,7 @@ RSpec.describe 'api/v1/achievements', type: :request do
   path '/api/v1/achievements' do
 
     post('create achievement') do
+      tags 'Achievement endpoint'
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :achievement, in: :body, schema: {
@@ -35,6 +36,7 @@ RSpec.describe 'api/v1/achievements', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show achievement') do
+      tags 'Achievement endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -50,6 +52,7 @@ RSpec.describe 'api/v1/achievements', type: :request do
     end
 
     patch('update achievement') do
+      tags 'Achievement endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -76,6 +79,7 @@ RSpec.describe 'api/v1/achievements', type: :request do
     end
 
     put('update achievement') do
+      tags 'Achievement endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'

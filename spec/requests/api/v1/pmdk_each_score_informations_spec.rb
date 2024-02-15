@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/pmdk_each_score_informations', type: :request do
   path '/api/v1/pmdk_each_score_informations' do
 
     post('create pmdk_each_score_information') do
+      tags 'Pmdk each score information endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :pmdk_each_score_information, in: :body, schema: {
@@ -53,6 +55,8 @@ RSpec.describe 'api/v1/pmdk_each_score_informations', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show pmdk_each_score_information') do
+      tags 'Pmdk each score information endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -68,6 +72,8 @@ RSpec.describe 'api/v1/pmdk_each_score_informations', type: :request do
     end
 
     patch('update pmdk_each_score_information') do
+      tags 'Pmdk each score information endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -108,6 +114,8 @@ RSpec.describe 'api/v1/pmdk_each_score_informations', type: :request do
     end
 
     put('update pmdk_each_score_information') do
+      tags 'Pmdk each score information endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'

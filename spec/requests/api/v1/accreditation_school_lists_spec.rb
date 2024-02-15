@@ -5,6 +5,7 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
   path '/api/v1/accreditation_school_lists' do
 
     post('create accreditation_school_list') do
+      tags 'Accreditation school list endpoint'
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :accreditation_school_list, in: :body, schema: {
@@ -31,6 +32,7 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show accreditation_school_list') do
+      tags 'Accreditation school list endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -46,6 +48,7 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
     end
 
     patch('update accreditation_school_list') do
+      tags 'Accreditation school list endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -68,6 +71,7 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
     end
 
     put('update accreditation_school_list') do
+      tags 'Accreditation school list endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -90,6 +94,7 @@ RSpec.describe 'api/v1/accreditation_school_lists', type: :request do
     end
 
     delete('delete accreditation_school_list') do
+      tags 'Accreditation school list endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
 

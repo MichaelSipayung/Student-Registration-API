@@ -5,6 +5,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
   path '/api/v1/personal_religion_lists' do
 
     post('create personal_religion_list') do
+      tags 'Personal religion list endpoint'
+
       response(200, 'successful') do
         consumes 'application/json'
         parameter name: :personal_religion_list, in: :body, schema: {
@@ -31,6 +33,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show personal_religion_list') do
+      tags 'Personal religion list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -46,6 +50,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
     end
 
     patch('update personal_religion_list') do
+      tags 'Personal religion list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -68,6 +74,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
     end
 
     put('update personal_religion_list') do
+      tags 'Personal religion list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'application/json'
@@ -90,6 +98,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
     end
 
     delete('delete personal_religion_list') do
+      tags 'Personal religion list endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
 
