@@ -20,7 +20,6 @@ RSpec.describe 'api/v1/users', type: :request do
     end
 
     post('create user') do
-      tags 'User endpoint'
       response(201, 'successful') do
         consumes 'application/json'
         parameter name: :user, in: :body, schema: {
@@ -55,7 +54,6 @@ RSpec.describe 'api/v1/users', type: :request do
     parameter name: '_username', in: :path, type: :string, description: '_username'
 
     get('show user') do
-      tags 'User endpoint'
       response(200, 'successful') do
         let(:_username) { '123' }
 
@@ -71,7 +69,6 @@ RSpec.describe 'api/v1/users', type: :request do
     end
 
     patch('update user') do
-      tags 'User endpoint'
       response(200, 'successful') do
         let(:_username) { '123' }
         consumes 'application/json'
@@ -102,7 +99,6 @@ RSpec.describe 'api/v1/users', type: :request do
     end
 
     put('update user') do
-      tags 'User endpoint'
       response(200, 'successful') do
         let(:_username) { '123' }
         consumes 'application/json'
@@ -133,7 +129,6 @@ RSpec.describe 'api/v1/users', type: :request do
     end
 
     delete('delete user') do
-      tags 'User endpoint'
       response(200, 'successful') do
         let(:_username) { '123' }
 
