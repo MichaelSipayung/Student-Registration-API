@@ -1,8 +1,10 @@
 module Api
   module V1
     class AchievementTingkatListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_achievement_tingkat_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
       def create
         @achievement_tingkat_list =
           AchievementTingkatList.new(achievement_tingkat_list_params)
@@ -29,7 +31,13 @@ module Api
       end
 
       def destroy
-
+        @achievement_tingkat_list = AchievementTingkatList.find(params[:id])
+        if @achievement_tingkat_list.destroy
+          render json: {message: 'Achievement tingkat deleted'}, status: :ok
+        else
+          render json: {errors: @achievement_tingkat_list.errors.full_messages},
+                 status: :unprocessable_entity
+        end
       end
 
       private

@@ -3,7 +3,7 @@ require "test_helper"
 class Api::V1::AccreditationSchoolListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
@@ -29,9 +29,15 @@ class Api::V1::AccreditationSchoolListsControllerTest < ActionDispatch::Integrat
     assert_equal 'sempurna', accreditation_school_lists(:one).akreditasi
   end
 
-  test 'should show accreditasion list' do
+  test 'should show accreditation list' do
     get api_v1_accreditation_school_list_url(accreditation_school_lists(:one)),
         headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
   end
 
+  test 'should destroy accreditation list' do
+    assert_difference 'AccreditationSchoolList.count', -1 do
+      delete api_v1_accreditation_school_list_url(accreditation_school_lists(:one)),
+             headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+    end
+  end
 end

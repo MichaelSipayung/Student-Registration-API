@@ -1,8 +1,10 @@
 module Api
   module V1
     class AccreditationSchoolListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_accreditation_school_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
       def create
         @accreditation_school_list =
           AccreditationSchoolList.new(accreditation_school_list_params)
@@ -29,7 +31,13 @@ module Api
       end
 
       def destroy
-
+        @accreditation_school_list = AccreditationSchoolList.find(params[:id])
+        if @accreditation_school_list.destroy
+          render json: {message: 'accreditation deleted'}, status: :ok
+        else
+          render json: {errors: @accreditation_school_list.errors.full_messages},
+                 status: :unprocessable_entity
+        end
       end
 
       private

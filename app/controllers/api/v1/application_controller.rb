@@ -25,6 +25,12 @@ module Api
                  status: :unauthorized
         end
       end
+
+      def authorize_admin # reject access for non admin
+        unless @current_user.admin?
+          render  json: {error: 'You are not authorized to perform this action'}
+        end
+      end
     end
   end
 end

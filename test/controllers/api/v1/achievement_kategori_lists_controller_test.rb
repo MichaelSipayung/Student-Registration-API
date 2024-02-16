@@ -3,7 +3,7 @@ require "test_helper"
 class AchievementKategoriListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
@@ -33,5 +33,12 @@ class AchievementKategoriListsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_achievement_kategori_list_url(achievement_kategori_lists(:one)),
         headers: {'Authorization' => "Bearer #{@token}" }, as: :json
     assert_response :success
+  end
+
+  test 'should destroy achievement category' do
+    assert_difference 'AchievementKategoriList.count', -1 do
+      delete api_v1_achievement_kategori_list_url(achievement_kategori_lists(:one)),
+             headers: {'Authorization' => "Bearer #{@token}" }, as: :json
+    end
   end
 end
