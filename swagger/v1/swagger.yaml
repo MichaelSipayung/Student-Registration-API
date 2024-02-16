@@ -100,6 +100,13 @@ paths:
         '200':
           description: successful
   "/api/v1/achievement_kategori_lists":
+    get:
+      summary: show all achievement kategori lists
+      tags:
+      - Achievement category list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create achievement_kategori_list
       tags:
@@ -188,6 +195,13 @@ paths:
         '200':
           description: successful
   "/api/v1/achievement_tingkat_lists":
+    get:
+      summary: show all achievement_tingkat_lists
+      tags:
+      - Achievement grade list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create achievement_tingkat_list
       tags:
@@ -396,6 +410,13 @@ paths:
                       minLength: 4
                       maxLength: 20
   "/api/v1/address_kabupaten_lists":
+    get:
+      summary: show all address_kabupaten_lists
+      tags:
+      - Address kabupaten list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create address_kabupaten_list
       tags:
@@ -491,6 +512,13 @@ paths:
         '200':
           description: successful
   "/api/v1/address_kecamatan_lists":
+    get:
+      summary: show all address_kecamatan_lists
+      tags:
+      - Address kecamatan list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create address_kecamatan_list
       tags:
@@ -586,6 +614,13 @@ paths:
         '200':
           description: successful
   "/api/v1/address_province_lists":
+    get:
+      summary: show all address_province_lists
+      tags:
+      - Address province list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create address_province_list
       tags:
@@ -844,6 +879,13 @@ paths:
                       minLength: 4
                       maxLength: 30
   "/api/v1/all_school_lists":
+    get:
+      summary: show all all_school_lists
+      tags:
+      - All school list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create all_school_list
       tags:
@@ -957,6 +999,13 @@ paths:
               - email
               - password
   "/api/v1/batch_lists":
+    get:
+      summary: show all batch_lists
+      tags:
+      - Batch list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create batch_list
       tags:
@@ -1052,6 +1101,13 @@ paths:
         '200':
           description: successful
   "/api/v1/extra_lists":
+    get:
+      summary: show all extra_lists
+      tags:
+      - Extra list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create extra_list
       tags:
@@ -1271,6 +1327,13 @@ paths:
                       minLength: 4
                       maxLength: 20
   "/api/v1/high_school_major_lists":
+    get:
+      summary: show all high_school_major_lists
+      tags:
+      - High school major list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create high_school_major_list
       tags:
@@ -1359,6 +1422,13 @@ paths:
         '200':
           description: successful
   "/api/v1/language_degree_lists":
+    get:
+      summary: show all language_degree_lists
+      tags:
+      - Language degree list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create language_degree_list
       tags:
@@ -1447,6 +1517,13 @@ paths:
         '200':
           description: successful
   "/api/v1/language_name_lists":
+    get:
+      summary: show all language_name_lists
+      tags:
+      - Language name list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create language_name_list
       tags:
@@ -1629,6 +1706,13 @@ paths:
                       minLength: 4
                       maxLength: 20
   "/api/v1/major_lists":
+    get:
+      summary: show all major_lists
+      tags:
+      - Major list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create major_list
       tags:
@@ -1837,6 +1921,13 @@ paths:
                       minLength: 4
                       maxLength: 30
   "/api/v1/organization_degree_lists":
+    get:
+      summary: show all organization_degree_lists
+      tags:
+      - Organization degree list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create organization_degree_list
       tags:
@@ -2045,6 +2136,13 @@ paths:
                       minLength: 4
                       maxLength: 20
   "/api/v1/parent_education_lists":
+    get:
+      summary: show all parent_education_lists
+      tags:
+      - Parent education list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create parent_education_list
       tags:
@@ -2133,6 +2231,13 @@ paths:
         '200':
           description: successful
   "/api/v1/parent_job_lists":
+    get:
+      summary: show all parent_job_lists
+      tags:
+      - Parent job list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create parent_job_list
       tags:
@@ -2417,6 +2522,13 @@ paths:
                       minLength: 3
                       maxLength: 20
   "/api/v1/personal_gender_lists":
+    get:
+      summary: show all personal_gender_lists
+      tags:
+      - Personal gender list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create personal_gender_list
       tags:
@@ -2505,6 +2617,13 @@ paths:
         '200':
           description: successful
   "/api/v1/personal_religion_lists":
+    get:
+      summary: show all personal_religion_lists
+      tags:
+      - Personal religion list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create personal_religion_list
       tags:
@@ -3234,6 +3353,13 @@ paths:
                       minimum: 2
                       maximum: 10
   "/api/v1/pmdk_school_lists":
+    get:
+      summary: show all pmdk_school_lists
+      tags:
+      - Pmdk school list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create pmdk_school_list
       tags:
@@ -3520,6 +3646,13 @@ paths:
                       minimum: 2
                       maximum: 30
   "/api/v1/source_information_lists":
+    get:
+      summary: show all source_information_lists
+      tags:
+      - Source information list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create source_information_list
       tags:
@@ -3608,6 +3741,13 @@ paths:
         '200':
           description: successful
   "/api/v1/source_motivation_lists":
+    get:
+      summary: show all source_motivation_lists
+      tags:
+      - Source motivation list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create source_motivation_list
       tags:

@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/language_name_lists', type: :request do
 
   path '/api/v1/language_name_lists' do
+    get('show all language_name_lists') do
+      tags 'Language name list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create language_name_list') do
       tags 'Language name list endpoint'

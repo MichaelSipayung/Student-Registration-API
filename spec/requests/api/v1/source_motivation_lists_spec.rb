@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/source_motivation_lists', type: :request do
 
   path '/api/v1/source_motivation_lists' do
+    get('show all source_motivation_lists') do
+      tags 'Source motivation list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create source_motivation_list') do
       tags 'Source motivation list endpoint'

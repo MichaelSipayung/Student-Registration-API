@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
 
   path '/api/v1/address_kecamatan_lists' do
+    get('show all address_kecamatan_lists') do
+      tags 'Address kecamatan list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create address_kecamatan_list') do
       tags 'Address kecamatan list endpoint'

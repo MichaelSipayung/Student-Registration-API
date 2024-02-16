@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/all_school_lists', type: :request do
 
   path '/api/v1/all_school_lists' do
+    get('show all all_school_lists') do
+      tags 'All school list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create all_school_list') do
       tags 'All school list endpoint'

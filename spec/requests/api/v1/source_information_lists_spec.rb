@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/source_information_lists', type: :request do
 
   path '/api/v1/source_information_lists' do
+    get('show all source_information_lists') do
+      tags 'Source information list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create source_information_list') do
       tags 'Source information list endpoint'
