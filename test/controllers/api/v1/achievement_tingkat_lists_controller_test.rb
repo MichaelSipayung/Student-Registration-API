@@ -3,11 +3,16 @@ require "test_helper"
 class AchievementTingkatListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
+  end
+
+  test 'should show all achievement tingkat' do
+    get api_v1_achievement_tingkat_lists_url, as: :json
+    assert_response :success
   end
 
   test 'should create achievement tingkat' do
@@ -33,5 +38,13 @@ class AchievementTingkatListsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_achievement_tingkat_list_url(achievement_tingkat_lists(:one)),
         headers: {'Authorization' => "Bearer #{@token}" }, as: :json
     assert_response :success
+  end
+
+  test 'should delete achievement tingkat' do
+    assert_difference 'AchievementTingkatList.count', -1 do
+      delete api_v1_achievement_tingkat_list_url(achievement_tingkat_lists(:one)),
+             headers: {'Authorization' => "Bearer #{@token}" }, as: :json
+      assert_response :success
+    end
   end
 end

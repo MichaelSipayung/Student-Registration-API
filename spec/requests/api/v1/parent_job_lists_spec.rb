@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/parent_job_lists', type: :request do
 
   path '/api/v1/parent_job_lists' do
+    get('show all parent_job_lists') do
+      tags 'Parent job list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create parent_job_list') do
       tags 'Parent job list endpoint'

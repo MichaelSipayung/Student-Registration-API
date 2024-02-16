@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/organization_degree_lists', type: :request do
 
   path '/api/v1/organization_degree_lists' do
+    get('show all organization_degree_lists') do
+      tags 'Organization degree list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create organization_degree_list') do
       tags 'Organization degree list endpoint'

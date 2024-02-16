@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/parent_education_lists', type: :request do
 
   path '/api/v1/parent_education_lists' do
+    get('show all parent_education_lists') do
+      tags 'Parent education list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create parent_education_list') do
       tags 'Parent education list endpoint'

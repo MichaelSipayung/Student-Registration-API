@@ -3,11 +3,16 @@ require "test_helper"
 class MajorListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
+  end
+
+  test 'should show all major list' do
+    get api_v1_major_lists_url, as: :json
+    assert_response :success
   end
 
   test 'should create major list' do
@@ -35,5 +40,13 @@ class MajorListsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_major_list_url(major_lists(:one)),
         headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
+  end
+
+  test 'should destroy major list' do
+    assert_difference 'MajorList.count', -1 do
+      delete api_v1_major_list_url(major_lists(:one)),
+        headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+      assert_response :success
+    end
   end
 end

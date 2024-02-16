@@ -1,8 +1,15 @@
 module Api
   module V1
     class AchievementKategoriListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_achievement_kategori_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
+      def index
+        @achievement_kategori_lists = AchievementKategoriList.all
+        render json: @achievement_kategori_lists, status: :ok
+      end
+
       def create
         @achievement_kategori_list =
           AchievementKategoriList.new(achievement_kategori_list_params)
@@ -29,7 +36,13 @@ module Api
       end
 
       def destroy
-
+        @achievement_kategori_list = AchievementKategoriList.find(params[:id])
+        if @achievement_kategori_list.destroy
+          render json: {message: 'achievement category deleted'}, status: :ok
+        else
+          render json: {errors: @achievement_kategori_list.errors.full_messages},
+                 status: :unprocessable_entity
+        end
       end
 
       private

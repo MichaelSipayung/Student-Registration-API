@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/extra_lists', type: :request do
 
   path '/api/v1/extra_lists' do
+    get('show all extra_lists') do
+      tags 'Extra list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create extra_list') do
       tags 'Extra list endpoint'

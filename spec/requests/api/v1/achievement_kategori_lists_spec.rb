@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/achievement_kategori_lists', type: :request do
 
   path '/api/v1/achievement_kategori_lists' do
+    get('show all achievement kategori lists') do
+      tags 'Achievement category list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create achievement_kategori_list') do
       tags 'Achievement category list endpoint'

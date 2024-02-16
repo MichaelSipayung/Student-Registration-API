@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/personal_gender_lists', type: :request do
 
   path '/api/v1/personal_gender_lists' do
+    get('show all personal_gender_lists') do
+      tags 'Personal gender list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create personal_gender_list') do
       tags 'Personal gender list endpoint'

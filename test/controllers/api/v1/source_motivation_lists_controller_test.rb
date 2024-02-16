@@ -3,11 +3,16 @@ require "test_helper"
 class SourceMotivationListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
+  end
+
+  test 'should show all source motivation list' do
+    get api_v1_source_motivation_lists_url, as: :json
+    assert_response :success
   end
 
   test 'should create source motivation list' do
@@ -35,5 +40,13 @@ class SourceMotivationListsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_source_motivation_list_url(source_motivation_lists(:one)),
         headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
+  end
+
+  test 'should destroy source motivation list' do
+    assert_difference 'SourceMotivationList.count', -1 do
+      delete api_v1_source_motivation_list_url(source_motivation_lists(:one)),
+        headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+      assert_response :success
+    end
   end
 end

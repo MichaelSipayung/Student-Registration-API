@@ -3,11 +3,16 @@ require "test_helper"
 class PersonalReligionListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
+  end
+
+  test 'should show all religion list' do
+    get api_v1_personal_religion_lists_url, as: :json
+    assert_response :success
   end
 
   test 'should create personal religion list' do
@@ -35,5 +40,13 @@ class PersonalReligionListsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_personal_religion_list_url(personal_religion_lists(:one)),
          headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
+  end
+
+  test 'should destroy personal religion list' do
+    assert_difference 'PersonalReligionList.count', -1 do
+      delete api_v1_personal_religion_list_url(personal_religion_lists(:one)),
+        headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+      assert_response :success
+    end
   end
 end

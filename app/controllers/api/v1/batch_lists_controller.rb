@@ -1,8 +1,14 @@
 module Api
   module V1
     class BatchListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_batch_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
+      def index
+        @batch_lists = BatchList.all
+        render json: @batch_lists, status: :ok
+      end
 
       def create
         @batch_list =
@@ -30,7 +36,13 @@ module Api
       end
 
       def destroy
-
+        @batch_list = BatchList.find(params[:id])
+        if @batch_list.destroy
+          render json: { message: 'batch list deleted' }, status: :ok
+        else
+          render json: { errors: @batch_list.errors.full_messages },
+                 status: :unprocessable_entity
+        end
       end
 
       private

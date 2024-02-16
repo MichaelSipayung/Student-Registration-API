@@ -3,11 +3,16 @@ require "test_helper"
 class AllSchoolListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
+  end
+
+  test 'should show all school list' do
+    get api_v1_all_school_lists_url, as: :json
+    assert_response :success
   end
 
   test 'should create school list' do
@@ -31,9 +36,17 @@ class AllSchoolListsControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'SMK Agung', all_school_lists(:one).sekolah
   end
 
-  test 'should show province list' do
+  test 'should show school list' do
     get api_v1_all_school_list_url(all_school_lists(:one)),
         headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
+  end
+
+  test 'should destroy school list' do
+    assert_difference 'AllSchoolList.count', -1 do
+      delete api_v1_all_school_list_url(all_school_lists(:one)),
+          headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+      assert_response :success
+    end
   end
 end

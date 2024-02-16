@@ -3,6 +3,20 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/major_lists', type: :request do
 
   path '/api/v1/major_lists' do
+    get('show all major_lists') do
+      tags 'Major list endpoint'
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
     post('create major_list') do
       tags 'Major list endpoint'

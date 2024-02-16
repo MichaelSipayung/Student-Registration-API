@@ -3,11 +3,16 @@ require "test_helper"
 class AddressKecamatanListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
+  end
+
+  test 'should show all kabupaten list' do
+    get api_v1_address_kecamatan_lists_url, as: :json
+    assert_response :success
   end
 
   test 'should create kabupaten list' do
@@ -36,5 +41,13 @@ class AddressKecamatanListsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_address_kecamatan_list_url(address_kecamatan_lists(:kecacehtengah)),
         headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
+  end
+
+  test 'should destroy kabupaten list' do
+    assert_difference 'AddressKecamatanList.count', -1 do
+      delete api_v1_address_kecamatan_list_url(address_kecamatan_lists(:kecacehtengah)),
+      headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+      assert_response :success
+    end
   end
 end

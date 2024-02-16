@@ -16,3 +16,24 @@ john:
   username: john
   email: john@gmail.com
   password_digest: <%=User.digest('password') %>
+
+admin_michael:
+  name: Admin Michael
+  username: admin_michael
+  email: admin_michael@gmail.com
+  admin: true
+  password_digest: <%=User.digest('password') %>
+
+admin_nina:
+  name: Admin Nina
+  username: admin_nina
+  email: admin_nina@gmail.com
+  admin: true
+  password_digest: <%=User.digest('password') %>
+
+admin_john:
+  name: Admin John
+  username: admin_john
+  email: admin_john@gmail.com
+  admin: true
+  password_digest: <%=User.digest('password') %>
