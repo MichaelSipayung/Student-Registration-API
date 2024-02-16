@@ -3,11 +3,16 @@ require "test_helper"
 class LanguageNameListsControllerTest < ActionDispatch::IntegrationTest
   def setup
     post api_v1_auth_login_url, params: {
-      email: users(:michael).email,
+      email: users(:admin_michael).email,
       password: 'password'
     }, as: :json
     body = JSON.parse(response.body)
     @token = body['token']
+  end
+
+  test 'should show all language name list' do
+    get api_v1_language_name_lists_url, as: :json
+    assert_response :success
   end
 
   test 'should create language name list' do
@@ -35,5 +40,13 @@ class LanguageNameListsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_language_name_list_url(language_name_lists(:one)),
         headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
     assert_response :success
+  end
+
+  test 'should delete language name list' do
+    assert_difference 'LanguageNameList.count', -1 do
+      delete api_v1_language_name_list_url(language_name_lists(:one)),
+        headers: {'Authorization'=>"Bearer #{@token}"}, as: :json
+      assert_response :success
+    end
   end
 end

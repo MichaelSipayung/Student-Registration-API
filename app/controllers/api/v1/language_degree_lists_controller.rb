@@ -1,8 +1,14 @@
 module Api
   module V1
     class LanguageDegreeListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_language_degree_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
+      def index
+        @language_degree_lists = LanguageDegreeList.all
+        render json: @language_degree_lists, status: :ok
+      end
 
       def create
         @language_degree_list =
@@ -30,7 +36,13 @@ module Api
       end
 
       def destroy
-
+        @language_degree_list = LanguageDegreeList.find(params[:id])
+        if @language_degree_list.destroy
+          render json: { message: 'language degree list deleted' }, status: :ok
+        else
+          render json: { errors: @language_degree_list.errors.full_messages },
+                 status: :unprocessable_entity
+        end
       end
 
       private

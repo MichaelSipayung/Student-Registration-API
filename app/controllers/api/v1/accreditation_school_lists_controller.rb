@@ -5,6 +5,11 @@ module Api
       before_action :set_accreditation_school_list, only: %i[show update destroy]
       before_action :authorize_admin, only: %i[update destroy create]
 
+      def index
+        @accreditation_school_lists = AccreditationSchoolList.all
+        render json: @accreditation_school_lists, status: :ok
+      end
+
       def create
         @accreditation_school_list =
           AccreditationSchoolList.new(accreditation_school_list_params)
@@ -55,4 +60,3 @@ module Api
     end
   end
 end
-

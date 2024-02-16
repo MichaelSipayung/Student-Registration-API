@@ -1,8 +1,14 @@
 module Api
   module V1
     class AddressKecamatanListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_address_kecamatan_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
+      def index
+        @address_kecamatan_lists = AddressKecamatanList.all
+        render json: @address_kecamatan_lists, status: :ok
+      end
 
       def create
         @address_kecamatan_list =
@@ -30,7 +36,13 @@ module Api
       end
 
       def destroy
-
+        @address_kecamatan_list = AddressKecamatanList.find(params[:id])
+        if @address_kecamatan_list.destroy
+          render json: { message: 'Kecamatan deleted' }, status: :ok
+        else
+          render json: { errors: @address_kecamatan_list.errors.full_messages },
+                 status: :unprocessable_entity
+        end
       end
 
       private

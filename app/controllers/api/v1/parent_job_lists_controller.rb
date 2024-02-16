@@ -1,8 +1,14 @@
 module Api
   module V1
     class ParentJobListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_parent_job_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
+      def index
+        @parent_job_lists = ParentJobList.all
+        render json: @parent_job_lists, status: :ok
+      end
 
       def create
         @parent_job_list =
@@ -30,7 +36,13 @@ module Api
       end
 
       def destroy
-
+        @parent_job_list = ParentJobList.find(params[:id])
+        if @parent_job_list.destroy
+          render json: { message: 'parent job list deleted' }, status: :ok
+        else
+          render json: { errors: @parent_job_list.errors.full_messages },
+                 status: :unprocessable_entity
+        end
       end
 
       private

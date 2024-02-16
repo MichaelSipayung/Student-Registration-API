@@ -5,6 +5,11 @@ module Api
       before_action :set_achievement_tingkat_list, only: %i[show update destroy]
       before_action :authorize_admin, only: %i[update destroy create]
 
+      def index
+        @achievement_tingkat_lists = AchievementTingkatList.all
+        render json: @achievement_tingkat_lists
+      end
+
       def create
         @achievement_tingkat_list =
           AchievementTingkatList.new(achievement_tingkat_list_params)

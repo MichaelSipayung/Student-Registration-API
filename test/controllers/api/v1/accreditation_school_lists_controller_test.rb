@@ -9,6 +9,10 @@ class Api::V1::AccreditationSchoolListsControllerTest < ActionDispatch::Integrat
     body = JSON.parse(response.body)
     @token = body['token']
   end
+  test 'should show all acreditation list' do
+    get api_v1_accreditation_school_lists_url, as: :json
+    assert_response :success
+  end
 
   test 'should create accreditation list' do
     assert_difference 'AccreditationSchoolList.count' do

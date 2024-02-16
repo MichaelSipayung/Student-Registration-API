@@ -5,6 +5,13 @@ info:
   version: v1
 paths:
   "/api/v1/accreditation_school_lists":
+    get:
+      summary: accreditation school lists
+      tags:
+      - Accreditation school list endpoint
+      responses:
+        '200':
+          description: successful
     post:
       summary: create accreditation_school_list
       tags:

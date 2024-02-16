@@ -10,6 +10,11 @@ class AchievementTingkatListsControllerTest < ActionDispatch::IntegrationTest
     @token = body['token']
   end
 
+  test 'should show all achievement tingkat' do
+    get api_v1_achievement_tingkat_lists_url, as: :json
+    assert_response :success
+  end
+
   test 'should create achievement tingkat' do
     assert_difference('AchievementTingkatList.count') do
       post api_v1_achievement_tingkat_lists_url, params: {

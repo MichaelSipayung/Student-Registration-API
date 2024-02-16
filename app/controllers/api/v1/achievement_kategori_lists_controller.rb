@@ -5,6 +5,11 @@ module Api
       before_action :set_achievement_kategori_list, only: %i[show update destroy]
       before_action :authorize_admin, only: %i[update destroy create]
 
+      def index
+        @achievement_kategori_lists = AchievementKategoriList.all
+        render json: @achievement_kategori_lists, status: :ok
+      end
+
       def create
         @achievement_kategori_list =
           AchievementKategoriList.new(achievement_kategori_list_params)

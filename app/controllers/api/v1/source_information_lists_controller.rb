@@ -1,8 +1,14 @@
 module Api
   module V1
     class SourceInformationListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_source_information_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
+      def index
+        @source_information_lists = SourceInformationList.all
+        render json: @source_information_lists, status: :ok
+      end
 
       def create
         @source_information_list =
@@ -16,7 +22,6 @@ module Api
       end
 
       def update
-
         if @source_information_list.update(source_information_list_params)
           render json: { message: 'source information list updated' }, status: :ok
         else
@@ -31,7 +36,13 @@ module Api
       end
 
       def destroy
-
+        @source_information_list = SourceInformationList.find(params[:id])
+        if @source_information_list.destroy
+          render json: { message: 'source information list deleted' }, status: :ok
+        else
+          render json: { errors: @source_information_list.errors.full_messages },
+                 status: :unprocessable_entity
+        end
       end
 
       private

@@ -1,8 +1,14 @@
 module Api
   module V1
     class MajorListsController < ApplicationController
-      before_action :authorize_request, only: %i[create update show]
+      before_action :authorize_request, only: %i[create update show destroy]
       before_action :set_major_list, only: %i[show update destroy]
+      before_action :authorize_admin, only: %i[update destroy create]
+
+      def index
+        @major_lists = MajorList.all
+        render json: @major_lists, status: :ok
+      end
 
       def create
         @major_list =
@@ -30,7 +36,13 @@ module Api
       end
 
       def destroy
-
+        @major_list = MajorList.find(params[:id])
+        if @major_list.destroy
+          render json: { message: 'major list deleted' }, status: :ok
+        else
+          render json: { errors: @major_list.errors.full_messages },
+                 status: :unprocessable_entity
+        end
       end
 
       private

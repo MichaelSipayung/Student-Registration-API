@@ -10,6 +10,11 @@ class AchievementKategoriListsControllerTest < ActionDispatch::IntegrationTest
     @token = body['token']
   end
 
+  test 'should show all achievement category' do
+    get api_v1_achievement_kategori_lists_url, as: :json
+    assert_response :success
+  end
+
   test 'should create achievement kategori' do
     assert_difference('AchievementKategoriList.count') do
       post api_v1_achievement_kategori_lists_url, params: {
