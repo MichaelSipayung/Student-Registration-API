@@ -1,7 +1,7 @@
 
 # University Student Registration API
 
-This is a Rails API application designed to handle student registration for universities. It provides endpoints for creating, updating, and retrieving student registration data.
+This is a Rails API application designed to handle student registration for universities. It provides endpoints for creating, updating, and retrieving student registration data. Alternative API documentation on bumb.sh click link below https://bump.sh/decryptcoder/doc/spmb-del.
 
 ## Features
 
