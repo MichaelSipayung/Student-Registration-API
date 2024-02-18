@@ -23,6 +23,7 @@ class User < ApplicationRecord
   has_one :usm_school_information
   has_one :utbk_school_information
   has_one :utbk_score
+  has_one :pmdk_file_upload
 
   def self.digest(string)
     # cost : the cost of hashing
