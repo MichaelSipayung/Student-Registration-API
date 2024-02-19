@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_17_135847) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_19_012945) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -370,6 +370,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_135847) do
     t.index ["user_id"], name: "index_usm_school_informations_on_user_id"
   end
 
+  create_table "utbk_file_uploads", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_utbk_file_uploads_on_user_id"
+  end
+
   create_table "utbk_school_informations", force: :cascade do |t|
     t.string "asal_sekolah"
     t.string "akreditas"
@@ -415,6 +422,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_135847) do
   add_foreign_key "pmdk_total_score_informations", "users"
   add_foreign_key "sources", "users"
   add_foreign_key "usm_school_informations", "users"
+  add_foreign_key "utbk_file_uploads", "users"
   add_foreign_key "utbk_school_informations", "users"
   add_foreign_key "utbk_scores", "users"
 end
