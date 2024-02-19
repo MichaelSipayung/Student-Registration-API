@@ -53,3 +53,6 @@ group :production do
   gem 'mysql2'
   # gem 'activerecord-mysql2-adapter'
 end
+
+# add gem for uploading file : format, validation, etc
+gem 'active_storage_validations', '~> 0.9.2'

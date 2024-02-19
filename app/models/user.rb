@@ -13,16 +13,18 @@ class User < ApplicationRecord
   has_many :languages
   has_many :organizations
 
-  has_one :major
-  has_one :personal
-  has_one :parent
-  has_one :pmdk_each_score_information
-  has_one :pmdk_school_information
-  has_one :pmdk_total_score_information
-  has_one :source
-  has_one :usm_school_information
-  has_one :utbk_school_information
-  has_one :utbk_score
+  has_one :major, dependent: :destroy
+  has_one :personal, dependent: :destroy
+  has_one :parent, dependent: :destroy
+  has_one :pmdk_each_score_information, dependent: :destroy
+  has_one :pmdk_school_information, dependent: :destroy
+  has_one :pmdk_total_score_information, dependent: :destroy
+  has_one :source, dependent: :destroy
+  has_one :usm_school_information, dependent: :destroy
+  has_one :utbk_school_information, dependent: :destroy
+  has_one :utbk_score, dependent: :destroy
+  has_one :pmdk_file_upload, dependent: :destroy
+  has_one :utbk_file_upload, dependent: :destroy
 
   def self.digest(string)
     # cost : the cost of hashing

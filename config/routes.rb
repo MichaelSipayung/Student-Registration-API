@@ -29,6 +29,9 @@ Rails.application.routes.draw do
       resources :languages, only: %i[create update show]
       resources :achievements, only: %i[create update show]
       resources :addresses, only: %i[create update show]
+      # handling file upload
+      resources :pmdk_file_uploads, only: %i[update create]
+      resources :utbk_file_uploads, only: %i[update create]
       # for list data
       resources :accreditation_school_lists, only: %i[create update show destroy index]
       resources :achievement_kategori_lists, only: %i[create update show destroy index]
