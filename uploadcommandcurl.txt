@@ -1,1 +1,30 @@
 curl -X POST -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzA4MzI1MTczfQ.JwDjdGe7BawktbBOgLAHvNBx8qGwjm_iPBes1Ru978c" -F "pmdk_file_upload[sertifikat]=@C:\Users\ASUS\RubymineProjects\ApiExperiment\test\fixtures\kitten.jpg" -F "pmdk_file_upload[surat_rekomendasi]=@C:\Users\ASUS\RubymineProjects\ApiExperiment\test\fixtures\kitten.jpg" -F "pmdk_file_upload[nilai_rapor]=@C:\Users\ASUS\RubymineProjects\ApiExperiment\test\fixtures\kitten.jpg" http://localhost:3000/api/v1/pmdk_file_uploads
+  "/api/v1/pmdk_file_uploads":
+    post:
+      summary: create pmdk_file_upload
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                pmdk_file_upload[sertifikat]:
+                  type: string
+                  format: binary
+                  description: Upload file sertifikat (.pdf)
+                pmdk_file_upload[surat_rekomendasi]:
+                  type: string
+                  format: binary
+                  description: Upload surat rekomendasi (.pdf)
+                pmdk_file_upload[nilai_rapor]:
+                  type: string
+                  format: binary
+                  description: Upload nilai rapor (.pdf)
+              required:
+                - pmdk_file_upload[sertifikat]
+                - pmdk_file_upload[surat_rekomendasi]
+                - pmdk_file_upload[nilai_rapor]

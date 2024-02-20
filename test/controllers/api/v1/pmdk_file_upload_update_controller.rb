@@ -10,18 +10,17 @@ class PmdkFileUploadControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update pmdk file upload' do
-    image = fixture_file_upload('test/fixtures/files/kpm.png', 'image/png')
+    image = fixture_file_upload('test/fixtures/files/Berlian.pdf', 'application/pdf')
     image1 = fixture_file_upload('test/fixtures/files/thumnail.jpg', 'image/jpeg')
     image2 = fixture_file_upload('test/fixtures/files/tpa.jpg', 'image/jpeg')
     assert_difference 'PmdkFileUpload.count' do
       assert_difference 'ActiveStorage::Attachment.count', 3 do
         assert_difference 'ActiveStorage::Blob.count', 3 do
           post api_v1_pmdk_file_uploads_url, params: {
-            pmdk_file_upload: {
               sertifikat: image,
               surat_rekomendasi: image1,
-              nilai_rapor: image2
-            }
+              nilai_rapor: image2,
+              # created_at: 100.day.ago
           }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :multipart
         end
       end
@@ -32,11 +31,9 @@ class PmdkFileUploadControllerTest < ActionDispatch::IntegrationTest
     image1 = fixture_file_upload('test/fixtures/files/download.png', 'image/png')
     image2 = fixture_file_upload('test/fixtures/files/kpm.png', 'image/png')
     patch api_v1_pmdk_file_upload_url(PmdkFileUpload.last.id), params: {
-      pmdk_file_upload: {
-        sertifikat: image,
+        sertifikat: nil,
         surat_rekomendasi: image1,
-        nilai_rapor: image2
-      }
+        nilai_rapor: nil
     }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :multipart
     assert_response :success
     assert_equal true, PmdkFileUpload.last.sertifikat.attached?
@@ -46,6 +43,11 @@ class PmdkFileUploadControllerTest < ActionDispatch::IntegrationTest
     # compare the old active_storange_blob filenames with the new one
     assert_equal 'Berlian.pdf', PmdkFileUpload.last.sertifikat.filename.to_s
     assert_equal 'download.png', PmdkFileUpload.last.surat_rekomendasi.filename.to_s
-    assert_equal 'kpm.png', PmdkFileUpload.last.nilai_rapor.filename.to_s
+    assert_equal 'tpa.jpg', PmdkFileUpload.last.nilai_rapor.filename.to_s
+    # compare the old active_storange_atatchment names with the new one
+    assert_equal 'sertifikat', PmdkFileUpload.last.sertifikat.name.to_s
+    assert_equal 'surat_rekomendasi', PmdkFileUpload.last.surat_rekomendasi.name.to_s
+    assert_equal 'nilai_rapor', PmdkFileUpload.last.nilai_rapor.name.to_s
+
   end
 end

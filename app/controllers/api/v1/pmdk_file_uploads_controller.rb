@@ -26,7 +26,16 @@ module Api
 
       def update
         @pmdk_file_upload = @current_user.pmdk_file_upload
-        if @pmdk_file_upload.update(pmdk_file_upload_params)
+        if params[:sertifikat].present?
+          @pmdk_file_upload.sertifikat.attach(params[:sertifikat])
+        end
+        if params[:surat_rekomendasi].present?
+          @pmdk_file_upload.surat_rekomendasi.attach(params[:surat_rekomendasi])
+        end
+        if params[:nilai_rapor].present?
+          @pmdk_file_upload.nilai_rapor.attach(params[:nilai_rapor])
+        end
+        if @pmdk_file_upload.save
           render json: {
             message: 'pmdk file upload updated',
             sertifikat_uploaded: @pmdk_file_upload.sertifikat.attached?,
@@ -42,8 +51,7 @@ module Api
       private
 
         def pmdk_file_upload_params
-          params.require(:pmdk_file_upload).permit(:sertifikat,
-            :surat_rekomendasi, :nilai_rapor)
+          params.permit(:sertifikat,:surat_rekomendasi, :nilai_rapor)
         end
 
         # reject to upload if already exist
