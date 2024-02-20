@@ -5,7 +5,9 @@ RSpec.describe 'api/v1/pmdk_file_uploads', type: :request, rswag: true do
   path '/api/v1/pmdk_file_uploads' do
 
     post('create pmdk_file_upload') do
+      tags 'Pmdk file upload endpoint'
       response(200, 'successful') do
+
         consumes 'multipart/form-data'
         parameter name: :pmdk_file_upload, in: :formData, schema: {
           type: :object,
@@ -32,6 +34,8 @@ RSpec.describe 'api/v1/pmdk_file_uploads', type: :request, rswag: true do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     patch('update pmdk_file_upload') do
+      tags 'Pmdk file upload endpoint'
+
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'multipart/form-data'
@@ -56,6 +60,7 @@ RSpec.describe 'api/v1/pmdk_file_uploads', type: :request, rswag: true do
     end
 
     put('update pmdk_file_upload') do
+      tags 'Pmdk file upload endpoint'
       response(200, 'successful') do
         let(:id) { '123' }
         consumes 'multipart/form-data'

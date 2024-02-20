@@ -3226,6 +3226,8 @@ paths:
   "/api/v1/pmdk_file_uploads":
     post:
       summary: create pmdk_file_upload
+      tags:
+      - Pmdk file upload endpoint
       parameters: []
       responses:
         '200':
@@ -3262,6 +3264,8 @@ paths:
         type: string
     patch:
       summary: update pmdk_file_upload
+      tags:
+      - Pmdk file upload endpoint
       parameters: []
       responses:
         '200':
@@ -3286,6 +3290,8 @@ paths:
                   description: Upload surat rekomendasi
     put:
       summary: update pmdk_file_upload
+      tags:
+      - Pmdk file upload endpoint
       parameters: []
       responses:
         '200':
@@ -4312,6 +4318,78 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 2000
+  "/api/v1/utbk_file_uploads/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show utbk_file_upload
+      tags:
+      - UTBK file upload endpoint
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update utbk_file_upload
+      tags:
+      - UTBK file upload endpoint
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                sertifikat_utbk:
+                  type: string
+                  format: binary
+                  description: Upload sertifikat UTBK
+    put:
+      summary: update utbk_file_upload
+      tags:
+      - UTBK file upload endpoint
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                sertifikat_utbk:
+                  type: string
+                  format: binary
+                  description: Upload sertifikat UTBK
+  "/api/v1/utbk_file_uploads":
+    post:
+      summary: create utbk_file_upload
+      tags:
+      - UTBK file upload endpoint
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                sertifikat_utbk:
+                  type: string
+                  format: binary
+                  description: Upload sertifikat UTBK
+              required:
+              - sertifikat_utbk
   "/api/v1/utbk_school_informations":
     post:
       summary: create utbk_school_information
