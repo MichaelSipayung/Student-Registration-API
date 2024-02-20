@@ -16,9 +16,9 @@ class UtbkFileUploadControllerTest < ActionDispatch::IntegrationTest
       assert_difference 'ActiveStorage::Attachment.count', 1 do
         assert_difference 'ActiveStorage::Blob.count', 1 do
           post api_v1_utbk_file_uploads_url, params: {
-            utbk_file_upload: {
+            # utbk_file_upload: {
               sertifikat_utbk: image
-            }
+            # }
           }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :multipart
         end
       end
@@ -37,9 +37,9 @@ class UtbkFileUploadControllerTest < ActionDispatch::IntegrationTest
       assert_difference 'ActiveStorage::Attachment.count', 1 do
         assert_difference 'ActiveStorage::Blob.count', 1 do
           post api_v1_utbk_file_uploads_url, params: {
-            utbk_file_upload: {
+            # utbk_file_upload: {
               sertifikat_utbk: image
-            }
+            # }
           }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :multipart
         end
       end
@@ -55,9 +55,9 @@ class UtbkFileUploadControllerTest < ActionDispatch::IntegrationTest
       assert_no_difference 'ActiveStorage::Attachment.count' do
         assert_no_difference 'ActiveStorage::Blob.count' do
           post api_v1_utbk_file_uploads_url, params: {
-            utbk_file_upload: {
+            # utbk_file_upload: {
               sertifikat_utbk: image
-            }
+            # }
           }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :multipart
         end
       end

@@ -3223,6 +3223,91 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 100
+  "/api/v1/pmdk_file_uploads":
+    post:
+      summary: create pmdk_file_upload
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                sertifikat:
+                  type: string
+                  format: binary
+                  description: Upload sertifikat
+                nilai_rapor:
+                  type: string
+                  format: binary
+                  description: Upload nilai rapor
+                surat_rekomendasi:
+                  type: string
+                  format: binary
+                  description: Upload surat rekomendasi
+              required:
+              - sertifikat
+              - surat_rekomendasi
+              - nilai_rapor
+  "/api/v1/pmdk_file_uploads/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    patch:
+      summary: update pmdk_file_upload
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                sertifikat:
+                  type: string
+                  format: binary
+                  description: Upload sertifikat
+                nilai_rapor:
+                  type: string
+                  format: binary
+                  description: Upload nilai rapor
+                surat_rekomendasi:
+                  type: string
+                  format: binary
+                  description: Upload surat rekomendasi
+    put:
+      summary: update pmdk_file_upload
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                sertifikat:
+                  type: string
+                  format: binary
+                  description: Upload sertifikat
+                nilai_rapor:
+                  type: string
+                  format: binary
+                  description: Upload nilai rapor
+                surat_rekomendasi:
+                  type: string
+                  format: binary
+                  description: Upload surat rekomendasi
   "/api/v1/pmdk_school_informations":
     post:
       summary: create pmdk_school_information

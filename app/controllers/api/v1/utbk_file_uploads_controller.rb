@@ -21,7 +21,11 @@ module Api
 
       def update
         @utbk_file_upload = @current_user.utbk_file_upload
-        if @utbk_file_upload.update(utbk_file_upload_params)
+        if utbk_file_upload_params[:sertifikat_utbk].present?
+          @utbk_file_upload.sertifikat_utbk.attach(utbk_file_upload_params[:sertifikat_utbk])
+        end
+
+        if @utbk_file_upload.save
           render json: {
             message: 'utbk file upload updated',
             sertifikat_utbk_uploaded: @utbk_file_upload.sertifikat_utbk.attached?
@@ -34,8 +38,8 @@ module Api
 
       private
 
-      def utbk_file_upload_params
-        params.require(:utbk_file_upload).permit(:sertifikat_utbk)
+      def utbk_file_upload_params #refactoring to use strong params
+        params.permit(:sertifikat_utbk)
       end
 
       def fill_utbk_file_upload
