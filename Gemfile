@@ -49,7 +49,7 @@ group :development do
 end
 
 group :production do
-  # gem 'aws-sdk-s3', '~> 1.142', require: false
+  gem 'aws-sdk-s3', '~> 1.142', require: false
   gem 'mysql2'
   # gem 'activerecord-mysql2-adapter'
 end
