@@ -12,9 +12,12 @@ RSpec.describe 'api/v1/pmdk_file_uploads', type: :request, rswag: true do
         parameter name: :pmdk_file_upload, in: :formData, schema: {
           type: :object,
           properties: {
-            sertifikat: {type: :string, format: :binary, description: 'Upload sertifikat'},
-            nilai_rapor: {type: :string, format: :binary, description: 'Upload nilai rapor'},
-            surat_rekomendasi: {type: :string, format: :binary, description: 'Upload surat rekomendasi'},
+            sertifikat: {type: :string, format: :binary,
+            description: 'Upload sertifikat [pdf, png, jpg, jpeg]'},
+            nilai_rapor: {type: :string, format: :binary,
+            description: 'Upload nilai rapor [pdf, png, jpg, jpeg]'},
+            surat_rekomendasi: {type: :string, format: :binary,
+            description: 'Upload surat rekomendasi [pdf, png, jpg, jpeg]'},
           }, required: %w[sertifikat surat_rekomendasi nilai_rapor]
         }
         after do |example|
@@ -55,9 +58,12 @@ RSpec.describe 'api/v1/pmdk_file_uploads', type: :request, rswag: true do
         parameter name: :pmdk_file_upload, in: :formData, schema: {
           type: :object,
           properties: {
-            sertifikat: {type: :string, format: :binary, description: 'Upload sertifikat'},
-            nilai_rapor: {type: :string, format: :binary, description: 'Upload nilai rapor'},
-            surat_rekomendasi: {type: :string, format: :binary, description: 'Upload surat rekomendasi'},
+            sertifikat: {type: :string, format: :binary,
+            description: 'Upload sertifikat [pdf, png, jpg, jpeg]'},
+            nilai_rapor: {type: :string, format: :binary,
+            description: 'Upload nilai rapor [pdf, png, jpg, jpeg]'},
+            surat_rekomendasi: {type: :string, format: :binary,
+            description: 'Upload surat rekomendasi [pdf, png, jpg, jpeg]'},
           },
           #required: %w[sertifikat surat_rekomendasi nilai_rapor]
         }
@@ -80,9 +86,12 @@ RSpec.describe 'api/v1/pmdk_file_uploads', type: :request, rswag: true do
         parameter name: :pmdk_file_upload, in: :formData, schema: {
           type: :object,
           properties: {
-            sertifikat: {type: :string, format: :binary, description: 'Upload sertifikat'},
-            nilai_rapor: {type: :string, format: :binary, description: 'Upload nilai rapor'},
-            surat_rekomendasi: {type: :string, format: :binary, description: 'Upload surat rekomendasi'},
+            sertifikat: {type: :string, format: :binary,
+            description: 'Upload sertifikat [pdf, png, jpg, jpeg]'},
+            nilai_rapor: {type: :string, format: :binary,
+            description: 'Upload nilai rapor [pdf, png, jpg, jpeg]'},
+            surat_rekomendasi: {type: :string, format: :binary,
+            description: 'Upload surat rekomendasi [pdf, png, jpg, jpeg]'},
           },
           #required: %w[sertifikat surat_rekomendasi nilai_rapor]
         }

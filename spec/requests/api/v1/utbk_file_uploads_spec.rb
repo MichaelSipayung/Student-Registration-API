@@ -21,7 +21,7 @@ RSpec.describe 'api/v1/utbk_file_uploads', type: :request do
       end
     end
   end
-  
+
   path '/api/v1/utbk_file_uploads' do
 
     post('create utbk_file_upload') do
@@ -31,7 +31,8 @@ RSpec.describe 'api/v1/utbk_file_uploads', type: :request do
         parameter name: :utbk_file_upload, in: :formData, schema: {
           type: :object,
           properties: {
-            sertifikat_utbk: {type: :string, format: :binary, description: 'Upload sertifikat UTBK'}
+            sertifikat_utbk: {type: :string, format: :binary,
+            description: 'Upload sertifikat UTBK [pdf, png, jpg, jpeg]'}
           }, required: %w[sertifikat_utbk]
         }
         after do |example|
@@ -58,7 +59,8 @@ RSpec.describe 'api/v1/utbk_file_uploads', type: :request do
         parameter name: :utbk_file_upload, in: :formData, schema: {
           type: :object,
           properties: {
-            sertifikat_utbk: {type: :string, format: :binary, description: 'Upload sertifikat UTBK'}
+            sertifikat_utbk: {type: :string, format: :binary,
+            description: 'Upload sertifikat UTBK [pdf, png, jpg, jpeg]'}
           },
           # required: %w[sertifikat_utbk]
         }
@@ -81,7 +83,8 @@ RSpec.describe 'api/v1/utbk_file_uploads', type: :request do
         parameter name: :utbk_file_upload, in: :formData, schema: {
           type: :object,
           properties: {
-            sertifikat_utbk: {type: :string, format: :binary, description: 'Upload sertifikat UTBK'}
+            sertifikat_utbk: {type: :string, format: :binary,
+            description: 'Upload sertifikat UTBK [pdf, png, jpg, jpeg]'}
           },
           # required: %w[sertifikat_utbk]
         }

@@ -3241,15 +3241,15 @@ paths:
                 sertifikat:
                   type: string
                   format: binary
-                  description: Upload sertifikat
+                  description: Upload sertifikat [pdf, png, jpg, jpeg]
                 nilai_rapor:
                   type: string
                   format: binary
-                  description: Upload nilai rapor
+                  description: Upload nilai rapor [pdf, png, jpg, jpeg]
                 surat_rekomendasi:
                   type: string
                   format: binary
-                  description: Upload surat rekomendasi
+                  description: Upload surat rekomendasi [pdf, png, jpg, jpeg]
               required:
               - sertifikat
               - surat_rekomendasi
@@ -3286,15 +3286,15 @@ paths:
                 sertifikat:
                   type: string
                   format: binary
-                  description: Upload sertifikat
+                  description: Upload sertifikat [pdf, png, jpg, jpeg]
                 nilai_rapor:
                   type: string
                   format: binary
-                  description: Upload nilai rapor
+                  description: Upload nilai rapor [pdf, png, jpg, jpeg]
                 surat_rekomendasi:
                   type: string
                   format: binary
-                  description: Upload surat rekomendasi
+                  description: Upload surat rekomendasi [pdf, png, jpg, jpeg]
     put:
       summary: update pmdk_file_upload
       tags:
@@ -3312,15 +3312,15 @@ paths:
                 sertifikat:
                   type: string
                   format: binary
-                  description: Upload sertifikat
+                  description: Upload sertifikat [pdf, png, jpg, jpeg]
                 nilai_rapor:
                   type: string
                   format: binary
-                  description: Upload nilai rapor
+                  description: Upload nilai rapor [pdf, png, jpg, jpeg]
                 surat_rekomendasi:
                   type: string
                   format: binary
-                  description: Upload surat rekomendasi
+                  description: Upload surat rekomendasi [pdf, png, jpg, jpeg]
   "/api/v1/pmdk_school_informations":
     post:
       summary: create pmdk_school_information
@@ -4357,7 +4357,7 @@ paths:
                 sertifikat_utbk:
                   type: string
                   format: binary
-                  description: Upload sertifikat UTBK
+                  description: Upload sertifikat UTBK [pdf, png, jpg, jpeg]
     put:
       summary: update utbk_file_upload
       tags:
@@ -4375,7 +4375,7 @@ paths:
                 sertifikat_utbk:
                   type: string
                   format: binary
-                  description: Upload sertifikat UTBK
+                  description: Upload sertifikat UTBK [pdf, png, jpg, jpeg]
   "/api/v1/utbk_file_uploads":
     post:
       summary: create utbk_file_upload
@@ -4394,7 +4394,7 @@ paths:
                 sertifikat_utbk:
                   type: string
                   format: binary
-                  description: Upload sertifikat UTBK
+                  description: Upload sertifikat UTBK [pdf, png, jpg, jpeg]
               required:
               - sertifikat_utbk
   "/api/v1/utbk_school_informations":
