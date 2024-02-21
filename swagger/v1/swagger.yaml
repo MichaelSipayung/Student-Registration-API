@@ -3262,6 +3262,13 @@ paths:
       required: true
       schema:
         type: string
+    get:
+      summary: show pmdk_file_upload
+      tags:
+      - Pmdk file upload endpoint
+      responses:
+        '200':
+          description: successful
     patch:
       summary: update pmdk_file_upload
       tags:

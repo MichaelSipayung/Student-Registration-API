@@ -1,9 +1,24 @@
 module Api
   module V1
     class PmdkFileUploadsController < ApplicationController
-      before_action :authorize_request, only: %i[create update]
+      before_action :authorize_request, only: %i[create update show]
       before_action :fill_pmdk_file_upload, only: %i[create]
-      before_action :current_pmdk_file_upload, only: %i[update]
+      before_action :current_pmdk_file_upload, only: %i[update show]
+
+      def show
+        @pmdk_file_upload= PmdkFileUpload.find_by(id: params[:id])
+        if @pmdk_file_upload
+          render json: {
+            sertifikat: url_for(@pmdk_file_upload.sertifikat),
+            surat_rekomendasi: url_for(@pmdk_file_upload.surat_rekomendasi),
+            nilai_rapor: url_for(@pmdk_file_upload.nilai_rapor)
+          }, status: :ok
+        else
+          render json: {errors: 'pmdk file upload not found'},
+            status: :not_found
+        end
+      end
+
       def create
         @pmdk_file_upload =
           @current_user.build_pmdk_file_upload(pmdk_file_upload_params)

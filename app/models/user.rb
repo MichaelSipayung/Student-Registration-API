@@ -7,11 +7,11 @@ class User < ApplicationRecord
   validates :password, length: {minimum: 6},
             if: -> {:new_record? || !password.nil?}
 
-  has_many :achievements
-  has_many :addresses
-  has_many :extras
-  has_many :languages
-  has_many :organizations
+  has_many :achievements, dependent: :destroy
+  has_many :addresses, dependent: :destroy
+  has_many :extras, dependent: :destroy
+  has_many :languages, dependent: :destroy
+  has_many :organizations, dependent: :destroy
 
   has_one :major, dependent: :destroy
   has_one :personal, dependent: :destroy
