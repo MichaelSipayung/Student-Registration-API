@@ -20,6 +20,7 @@ amazon:
   region: <%= ENV['AWS_REGION'] %>
   bucket: <%= ENV['AWS_BUCKET'] %>
   endpoint: <%= ENV['ENDPOINT'] %>
+  force_path_style: true
 # Remember not to checkin your GCS keyfile to a repository
 # google:
 #   service: GCS
