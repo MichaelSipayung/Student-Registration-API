@@ -28,3 +28,5 @@ curl -X POST -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwi
                 - pmdk_file_upload[sertifikat]
                 - pmdk_file_upload[surat_rekomendasi]
                 - pmdk_file_upload[nilai_rapor]
+
+curl -X POST -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOSwiZXhwIjoxNzA4NTY1OTg0fQ.QoS2rhvXRudUfsfYtL2Sx9xy611FbaSvwREIDL7fo7E" -F "sertifikat=@C:\Users\ASUS\RubymineProjects\ApiExperiment\test\fixtures\files\cis.pdf" http://localhost:3000/api/v1/utbk_file_uploads

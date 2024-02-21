@@ -47,7 +47,7 @@ class UtbkFileUploadUpdateControllerTest < ActionDispatch::IntegrationTest
     image = fixture_file_upload('test/fixtures/files/Berlian.pdf', 'application/pdf')
     patch api_v1_utbk_file_upload_url(UtbkFileUpload.last.id), params: {
       # utbk_file_upload: {
-        sertifikat_utbk: image 
+        sertifikat_utbk: image
       # }
     }, headers: {'Authorization'=>"Bearer #{@token}"}, as: :multipart
     assert_response :success
@@ -56,5 +56,5 @@ class UtbkFileUploadUpdateControllerTest < ActionDispatch::IntegrationTest
     assert_equal true, JSON.parse(response.body)['sertifikat_utbk_uploaded']
     assert_equal 'Berlian.pdf', UtbkFileUpload.last.sertifikat_utbk.filename.to_s
   end
-
+  
 end

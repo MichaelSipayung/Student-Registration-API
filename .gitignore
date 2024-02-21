@@ -46,3 +46,4 @@ tmp/.keep
 tmp/pids/.keep
 tmp/storage/.keep
 vendor/.keep
+test/fixtures/files/cis.pdf

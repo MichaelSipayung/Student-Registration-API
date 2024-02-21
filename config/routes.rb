@@ -30,8 +30,8 @@ Rails.application.routes.draw do
       resources :achievements, only: %i[create update show]
       resources :addresses, only: %i[create update show]
       # handling file upload
-      resources :pmdk_file_uploads, only: %i[update create]
-      resources :utbk_file_uploads, only: %i[update create]
+      resources :pmdk_file_uploads, only: %i[update create show]
+      resources :utbk_file_uploads, only: %i[update create show]
       # for list data
       resources :accreditation_school_lists, only: %i[create update show destroy index]
       resources :achievement_kategori_lists, only: %i[create update show destroy index]
