@@ -4,18 +4,24 @@ michael:
   username: michael
   email: michaelhar@gmail.com
   password_digest: <%=User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 nina:
   name: Nina hartl
   username: nina
   email: nina@gmail.com
   password_digest: <%=User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 john:
   name: John Hartl
   username: john
   email: john@gmail.com
   password_digest: <%=User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 admin_michael:
   name: Admin Michael
@@ -23,6 +29,8 @@ admin_michael:
   email: admin_michael@gmail.com
   admin: true
   password_digest: <%=User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 admin_nina:
   name: Admin Nina
@@ -30,6 +38,8 @@ admin_nina:
   email: admin_nina@gmail.com
   admin: true
   password_digest: <%=User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 admin_john:
   name: Admin John
@@ -37,3 +47,5 @@ admin_john:
   email: admin_john@gmail.com
   admin: true
   password_digest: <%=User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>

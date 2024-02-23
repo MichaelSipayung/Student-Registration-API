@@ -17,9 +17,14 @@ module Api
       def create
         @user = User.new(user_params)
         if @user.save
-          render json: @user, status: :created
+          UserMailer.account_activation(@user).deliver_now
+          render json: {
+            message: 'User created successfully.Check your email to activate your account.',
+            user: {name: @user.name, email: @user.email, username: @user.username} },
+                 status: :created
         else
-          render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+          render json: { errors: @user.errors.full_messages },
+                 status: :unprocessable_entity
         end
       end
 
