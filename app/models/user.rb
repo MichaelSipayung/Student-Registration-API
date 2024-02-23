@@ -1,6 +1,9 @@
 class User < ApplicationRecord
+  attr_accessor :activation_token # create a virtual attribute
+  before_create :create_activation_digest # call the method before creating a new user
   has_secure_password
   # mount_uploader :avatar, AvatarUploader
+  validates :name, presence: true, length: {minimum: 4, maximum: 25}
   validates :email, presence:true, uniqueness: true
   validates :email, format: {with: URI::MailTo::EMAIL_REGEXP}
   validates :username, presence: true, uniqueness: true, length: {minimum: 6}
@@ -35,5 +38,30 @@ class User < ApplicationRecord
            end
     # return the hash digest
     BCrypt::Password.create(string, cost:)
+  end
+
+  def self.new_token
+    SecureRandom.urlsafe_base64 # create a random token
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
+  def activate
+    update_attribute(:activated, true)
+    update_attribute(:activated_at, Time.zone.now)
+  end
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest") # get the digest
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token) # compare the token with the digest
+  end
+
+  private
+
+  def create_activation_digest
+    self.activation_token = User.new_token # create a new token
+    self.activation_digest = User.digest(activation_token) # create a new digest
   end
 end

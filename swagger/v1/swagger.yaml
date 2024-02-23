@@ -4065,6 +4065,10 @@ paths:
                 user:
                   type: object
                   properties:
+                    name:
+                      type: string
+                      minLength: 4
+                      maxLength: 25
                     email:
                       type: string
                       minLength: 10
@@ -4080,6 +4084,7 @@ paths:
                       format: password
                       minLength: 6
                   required:
+                  - name
                   - email
                   - username
                   - password

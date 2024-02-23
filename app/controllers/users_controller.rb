@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       render json: @user, status: :created
     else
       render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
-      Rails.logger.debug "Parameters: #{params.inspect}"
+      #Rails.logger.debug "Parameters: #{params.inspect}"
     end
   end
 

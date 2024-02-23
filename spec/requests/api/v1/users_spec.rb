@@ -29,12 +29,13 @@ RSpec.describe 'api/v1/users', type: :request, tags: ['User'] do
             user: {
               type: :object,
               properties: {
+                name: {type: :string, minLength: 4, maxLength: 25},
                 email: {type: :string, minLength: 10},
                 username: {type: :string, minLength: 6},
                 password: {type: :string, format: :password, minLength: 6},
                 password_confirmation: {type: :string, format: :password, minLength: 6},
               },
-              required: %w[email username password password_confirmation]
+              required: %w[name email username password password_confirmation]
             }
           }
         }
