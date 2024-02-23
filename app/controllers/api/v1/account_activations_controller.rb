@@ -3,7 +3,7 @@ class Api::V1::AccountActivationsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && !user.activated? &&
       user.authenticated?(:activation, params[:id])
-      activate(user)
+      user.activate
       render json: { message: 'Account activated' }, status: :ok
     else
       render json: { message: 'Invalid activation link' },
@@ -11,10 +11,10 @@ class Api::V1::AccountActivationsController < ApplicationController
     end
   end
 
-  private
-  def activate(user)
-    user.update_attribute(:activated, true)
-    user.update_attribute(:activated_at, Time.zone.now)
-  end
+  # private
+  # def activate
+  #   update_attribute(:activated, true)
+  #   update_attribute(:activated_at, Time.zone.now)
+  # end
 
 end

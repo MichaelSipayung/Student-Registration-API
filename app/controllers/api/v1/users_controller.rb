@@ -17,7 +17,8 @@ module Api
       def create
         @user = User.new(user_params)
         if @user.save
-          UserMailer.account_activation(@user).deliver_now
+          # UserMailer.account_activation(@user).deliver_now
+          @user.send_activation_email
           render json: {
             message: 'User created successfully.Check your email to activate your account.',
             user: {name: @user.name, email: @user.email, username: @user.username} },
