@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, param: :_username
+      # password reset route
+      resources :password_resets, only: %i[create update]
       resources :account_activations, only: %i[edit]
       post 'auth/login', to: 'authentication#login'
       resources :personals, only: %i[create update show]
