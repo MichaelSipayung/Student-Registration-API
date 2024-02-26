@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
             source_motivation_list: {
               type: :object,
               properties: {
-                motivasi: { type: :string, minLength: 4, maxLength: 20 },
+                motivasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Keluarga'},
               },
               required: %w[motivasi]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
             source_motivation_list: {
               type: :object,
               properties: {
-                motivasi: { type: :string, minLength: 4, maxLength: 20 },
+                motivasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Keluarga'},
               },
               # required: %w[motivasi]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/source_motivation_lists', type: :request do
             source_motivation_list: {
               type: :object,
               properties: {
-                motivasi: { type: :string, minLength: 4, maxLength: 20 },
+                motivasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Keluarga'},
               },
               # required: %w[motivasi]
             }

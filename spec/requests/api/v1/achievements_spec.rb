@@ -14,10 +14,11 @@ RSpec.describe 'api/v1/achievements', type: :request do
             achievement: {
               type: :object,
               properties: {
-                nama_prestasi: { type: :string, minLength: 4, maxLength: 20 },
-                tingkat: { type: :string, minLength: 4, maxLength: 20 },
-                tahun: { type: :string, minLength: 4, maxLength: 20 },
-                kategori: { type: :string, minLength: 4, maxLength: 20 },
+                nama_prestasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Juara 1 Lomba Cerdas Cermat' },
+                tingkat: { type: :string, minLength: 4, maxLength: 20, example: 'Kabupaten' },
+                tahun: { type: :string, minLength: 4, maxLength: 20, example: '2020-12-11' },
+                kategori: { type: :string, minLength: 4, maxLength: 20, example: 'Akademik'},
 
               },
               required: %w[nama_prestasi tingkat tahun kategori]
@@ -67,10 +68,14 @@ RSpec.describe 'api/v1/achievements', type: :request do
             achievement: {
               type: :object,
               properties: {
-                nama_prestasi: { type: :string, minLength: 4, maxLength: 20 },
-                tingkat: { type: :string, minLength: 4, maxLength: 20 },
-                tahun: { type: :string, minLength: 4, maxLength: 20 },
-                kategori: { type: :string, minLength: 4, maxLength: 20 },
+                nama_prestasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Juara 1 Lomba Cerdas Cermat'},
+                tingkat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Kabupaten' },
+                tahun: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2020-12-11' },
+                kategori: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Akademik'},
 
               },
               # required: %w[nama_prestasi tingkat tahun kategori]
@@ -99,11 +104,14 @@ RSpec.describe 'api/v1/achievements', type: :request do
             achievement: {
               type: :object,
               properties: {
-                nama_prestasi: { type: :string, minLength: 4, maxLength: 20 },
-                tingkat: { type: :string, minLength: 4, maxLength: 20 },
-                tahun: { type: :string, minLength: 4, maxLength: 20 },
-                kategori: { type: :string, minLength: 4, maxLength: 20 },
-
+                nama_prestasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Juara 1 Lomba Cerdas Cermat'},
+                tingkat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Kabupaten'},
+                tahun: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2020-12-11'},
+                kategori: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Akademik'},
               },
               # required: %w[nama_prestasi tingkat tahun kategori]
             }

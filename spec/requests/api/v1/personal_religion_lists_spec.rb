@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
             personal_religion_list: {
               type: :object,
               properties: {
-                agama: { type: :string, minLength: 4, maxLength: 20 },
+                agama: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Islam'},
               },
               required: %w[agama]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
             personal_religion_list: {
               type: :object,
               properties: {
-                agama: { type: :string, minLength: 4, maxLength: 20 },
+                agama: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Islam'},
               },
               # required: %w[agama]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/personal_religion_lists', type: :request do
             personal_religion_list: {
               type: :object,
               properties: {
-                agama: { type: :string, minLength: 4, maxLength: 20 },
+                agama: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Islam'},
               },
               # required: %w[agama]
             }

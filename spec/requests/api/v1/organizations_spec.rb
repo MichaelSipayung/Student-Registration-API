@@ -15,10 +15,14 @@ RSpec.describe 'api/v1/organizations', type: :request do
             organization: {
               type: :object,
               properties: {
-                nama_organisasi: { type: :string, minLength: 4, maxLength: 20 },
-                mulai: { type: :string, minLength: 4, maxLength: 20 },
-                berakhir: { type: :string, minLength: 4, maxLength: 20 },
-                jabatan: { type: :string, minLength: 4, maxLength: 20 },
+                nama_organisasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'OSIS SMAN 1' },
+                mulai: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-01-01' },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 ,
+                  example: '2021-10-01' },
+                jabatan: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Ketua'},
 
               },
               required: %w[nama_organisasi mulai berakhir jabatan ]
@@ -70,11 +74,14 @@ RSpec.describe 'api/v1/organizations', type: :request do
             organization: {
               type: :object,
               properties: {
-                nama_organisasi: { type: :string, minLength: 4, maxLength: 20 },
-                mulai: { type: :string, minLength: 4, maxLength: 20 },
-                berakhir: { type: :string, minLength: 4, maxLength: 20 },
-                jabatan: { type: :string, minLength: 4, maxLength: 20 },
-
+                nama_organisasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'OSIS SMAN 1' },
+                mulai: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-01-01' },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 ,
+                  example: '2021-10-01' },
+                jabatan: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Ketua'},
               },
               # required: %w[nama_organisasi mulai berakhir jabatan ]
             }
@@ -103,10 +110,14 @@ RSpec.describe 'api/v1/organizations', type: :request do
             organization: {
               type: :object,
               properties: {
-                nama_organisasi: { type: :string, minLength: 4, maxLength: 20 },
-                mulai: { type: :string, minLength: 4, maxLength: 20 },
-                berakhir: { type: :string, minLength: 4, maxLength: 20 },
-                jabatan: { type: :string, minLength: 4, maxLength: 20 },
+                nama_organisasi: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'OSIS SMAN 1' },
+                mulai: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-01-01' },
+                berakhir: { type: :string, minLength: 4, maxLength: 20 ,
+                  example: '2021-10-01' },
+                jabatan: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Ketua'},
 
               },
               # required: %w[nama_organisasi mulai berakhir jabatan ]

@@ -15,10 +15,14 @@ RSpec.describe 'api/v1/majors', type: :request do
             major: {
               type: :object,
               properties: {
-                jurusan1: { type: :string, minLength: 4, maxLength: 30 },
-                jurusan2: { type: :string, minLength: 4, maxLength: 30 },
-                jurusan3: { type: :string, minLength: 4, maxLength: 30 },
-                gelombang: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan1: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Informatika'},
+                jurusan2: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Sistem Informasi'},
+                jurusan3: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Elektro'},
+                gelombang: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'PMDK Sumut'},
               },
               required: %w[jurusan1 jurusan2 jurusan3 gelombang]
             }
@@ -69,10 +73,14 @@ RSpec.describe 'api/v1/majors', type: :request do
             major: {
               type: :object,
               properties: {
-                jurusan1: { type: :string, minLength: 4, maxLength: 30 },
-                jurusan2: { type: :string, minLength: 4, maxLength: 30 },
-                jurusan3: { type: :string, minLength: 4, maxLength: 30 },
-                gelombang: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan1: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Informatika'},
+                jurusan2: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Sistem Informasi'},
+                jurusan3: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Elektro'},
+                gelombang: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'PMDK Sumut'},
               },
               # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
             }
@@ -101,10 +109,14 @@ RSpec.describe 'api/v1/majors', type: :request do
             major: {
               type: :object,
               properties: {
-                jurusan1: { type: :string, minLength: 4, maxLength: 30 },
-                jurusan2: { type: :string, minLength: 4, maxLength: 30 },
-                jurusan3: { type: :string, minLength: 4, maxLength: 30 },
-                gelombang: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan1: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Informatika'},
+                jurusan2: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Sistem Informasi'},
+                jurusan3: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Elektro'},
+                gelombang: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'PMDK Sumut'},
               },
               # required: %w[jurusan1 jurusan2 jurusan3 gelombang]
             }

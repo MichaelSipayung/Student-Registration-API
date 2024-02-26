@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
             source_information_list: {
               type: :object,
               properties: {
-                informasi: { type: :string, minLength: 4, maxLength: 25 },
+                informasi: { type: :string, minLength: 4, maxLength: 25,
+                  example: 'Kompas'},
               },
               required: %w[informasi]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
             source_information_list: {
               type: :object,
               properties: {
-                informasi: { type: :string, minLength: 4, maxLength: 25 },
+                informasi: { type: :string, minLength: 4, maxLength: 25,
+                  example: 'Kompas'},
               },
               # required: %w[informasi]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/source_information_lists', type: :request do
             source_information_list: {
               type: :object,
               properties: {
-                informasi: { type: :string, minLength: 4, maxLength: 25 },
+                informasi: { type: :string, minLength: 4, maxLength: 25,
+                  example: 'Kompas'},
               },
               # required: %w[informasi]
             }

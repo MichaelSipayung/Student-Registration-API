@@ -29,8 +29,9 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
             address_kecamatan_list: {
               type: :object,
               properties: {
-                kecamatan: { type: :string, minLength: 3, maxLength: 35 },
-                address_kabupaten_list_id: { type: :integer },
+                kecamatan: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Cibiru'},
+                address_kabupaten_list_id: { type: :integer, example: 1},
               },
               required: %w[kecamatan address_kabupaten_list_id]
             }
@@ -81,8 +82,9 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
             address_kecamatan_list: {
               type: :object,
               properties: {
-                kecamatan: { type: :string, minLength: 3, maxLength: 35 },
-                address_kabupaten_list_id: { type: :integer },
+                kecamatan: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Cibiru'},
+                address_kabupaten_list_id: { type: :integer, example: 1},
               },
               # required: %w[kecamatan address_kabupaten_list_id]
             }
@@ -111,8 +113,9 @@ RSpec.describe 'api/v1/address_kecamatan_lists', type: :request do
             address_kecamatan_list: {
               type: :object,
               properties: {
-                kecamatan: { type: :string, minLength: 3, maxLength: 35 },
-                address_kabupaten_list_id: { type: :integer },
+                kecamatan: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Cibiru'},
+                address_kabupaten_list_id: { type: :integer, example: 1},
               },
               # required: %w[kecamatan address_kabupaten_list_id]
             }

@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/major_lists', type: :request do
             major_list: {
               type: :object,
               properties: {
-                jurusan: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Informatika'},
               },
               required: %w[jurusan]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/major_lists', type: :request do
             major_list: {
               type: :object,
               properties: {
-                jurusan: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Informatika'},
               },
               # required: %w[jurusan]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/major_lists', type: :request do
             major_list: {
               type: :object,
               properties: {
-                jurusan: { type: :string, minLength: 4, maxLength: 30 },
+                jurusan: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Teknik Informatika'},
               },
               # required: %w[jurusan]
             }

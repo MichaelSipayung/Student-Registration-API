@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
             organization_degree_list: {
               type: :object,
               properties: {
-                jabatan: { type: :string, minLength: 3, maxLength: 15 },
+                jabatan: { type: :string, minLength: 3, maxLength: 15,
+                  example: 'Ketua'},
               },
               required: %w[jabatan]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
             organization_degree_list: {
               type: :object,
               properties: {
-                jabatan: { type: :string, minLength: 3, maxLength: 15 },
+                jabatan: { type: :string, minLength: 3, maxLength: 15,
+                  example: 'Ketua'},
               },
               # required: %w[jabatan]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/organization_degree_lists', type: :request do
             organization_degree_list: {
               type: :object,
               properties: {
-                jabatan: { type: :string, minLength: 3, maxLength: 15 },
+                jabatan: { type: :string, minLength: 3, maxLength: 15,
+                  example: 'Ketua'},
               },
               # required: %w[jabatan]
             }

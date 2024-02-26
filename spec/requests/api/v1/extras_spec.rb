@@ -15,10 +15,14 @@ RSpec.describe 'api/v1/extras', type: :request do
             extra: {
               type: :object,
               properties: {
-                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20 },
-                predikat: { type: :string, minLength: 4, maxLength: 20 },
-                mulai: { type: :string, minLength: 4, maxLength: 20 },
-                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Pramuka' },
+                predikat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Memuaskan' },
+                mulai: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-01-01' },
+                berakhir: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-10-01'},
               },
               required: %w[nama_kegiatan predikat mulai berakhir]
             }
@@ -69,10 +73,14 @@ RSpec.describe 'api/v1/extras', type: :request do
             extra: {
               type: :object,
               properties: {
-                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20 },
-                predikat: { type: :string, minLength: 4, maxLength: 20 },
-                mulai: { type: :string, minLength: 4, maxLength: 20 },
-                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Pramuka' },
+                predikat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Memuaskan' },
+                mulai: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-01-01' },
+                berakhir: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-10-01'},
               },
               # required: %w[nama_kegiatan predikat mulai berakhir]
             }
@@ -101,10 +109,14 @@ RSpec.describe 'api/v1/extras', type: :request do
             extra: {
               type: :object,
               properties: {
-                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20 },
-                predikat: { type: :string, minLength: 4, maxLength: 20 },
-                mulai: { type: :string, minLength: 4, maxLength: 20 },
-                berakhir: { type: :string, minLength: 4, maxLength: 20 },
+                nama_kegiatan: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Pramuka' },
+                predikat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Memuaskan' },
+                mulai: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-01-01' },
+                berakhir: { type: :string, minLength: 4, maxLength: 20,
+                  example: '2021-10-01'},
               },
               # required: %w[nama_kegiatan predikat mulai berakhir]
             }

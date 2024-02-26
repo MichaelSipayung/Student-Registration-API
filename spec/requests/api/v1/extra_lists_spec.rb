@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
             extra_list: {
               type: :object,
               properties: {
-                predikat: { type: :string, minLength: 4, maxLength: 15 },
+                predikat: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Memuaskan'},
               },
               required: %w[predikat]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
             extra_list: {
               type: :object,
               properties: {
-                predikat: { type: :string, minLength: 4, maxLength: 15 },
+                predikat: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Memuaskan'},
               },
               # required: %w[predikat]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
             extra_list: {
               type: :object,
               properties: {
-                predikat: { type: :string, minLength: 4, maxLength: 15 },
+                predikat: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Memuaskan'},
               },
               # required: %w[predikat]
             }
@@ -131,14 +134,15 @@ RSpec.describe 'api/v1/extra_lists', type: :request do
 
       response(200, 'successful') do
         let(:id) { '123' }
-        consumes 'application/json'
-        parameter name: :extra_list, in: :body, schema: {
-          type: :object,
-          properties: {
-            predikat: { type: :string, minLength: 4, maxLength: 15 },
-          },
+        # consumes 'application/json'
+        # parameter name: :extra_list, in: :body, schema: {
+        #   type: :object,
+        #   properties: {
+        #     predikat: { type: :string, minLength: 4, maxLength: 15,
+        #       example: 'Memuaskan'},
+          # },
           # required: %w[predikat]
-        }
+        # }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

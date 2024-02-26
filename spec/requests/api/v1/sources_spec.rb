@@ -15,9 +15,12 @@ RSpec.describe 'api/v1/sources', type: :request do
             source: {
               type: :object,
               properties: {
-                sumber_informasi: { type: :string, minLength: 4, maxLength: 30 },
-                motivasi: { type: :string, minLength: 4, maxLength: 30 },
-                jumlah_n: { type: :integer, minimum: 1, maximum: 50 },
+                sumber_informasi: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Kompas'},
+                motivasi: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Keluarga' },
+                jumlah_n: { type: :integer, minimum: 1, maximum: 50,
+                  example: 10},
               },
               required: %w[sumber_informasi motivasi jumlah_n]
             }
@@ -68,9 +71,12 @@ RSpec.describe 'api/v1/sources', type: :request do
             source: {
               type: :object,
               properties: {
-                sumber_informasi: { type: :string, minLength: 4, maxLength: 30 },
-                motivasi: { type: :string, minLength: 4, maxLength: 30 },
-                jumlah_n: { type: :integer, minimum: 1, maximum: 50 },
+                sumber_informasi: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Kompas'},
+                motivasi: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Keluarga' },
+                jumlah_n: { type: :integer, minimum: 1, maximum: 50,
+                  example: 10},
               },
               # required: %w[sumber_informasi motivasi jumlah_n]
             }
@@ -99,9 +105,12 @@ RSpec.describe 'api/v1/sources', type: :request do
             source: {
               type: :object,
               properties: {
-                sumber_informasi: { type: :string, minLength: 4, maxLength: 30 },
-                motivasi: { type: :string, minLength: 4, maxLength: 30 },
-                jumlah_n: { type: :integer, minimum: 1, maximum: 50 },
+                sumber_informasi: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Kompas'},
+                motivasi: { type: :string, minLength: 4, maxLength: 30,
+                  example: 'Keluarga' },
+                jumlah_n: { type: :integer, minimum: 1, maximum: 50,
+                  example: 10},
               },
               # required: %w[sumber_informasi motivasi jumlah_n]
             }

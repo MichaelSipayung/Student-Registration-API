@@ -15,8 +15,10 @@ RSpec.describe 'api/v1/languages', type: :request do
             language: {
               type: :object,
               properties: {
-                nama_bahasa: { type: :string, minLength: 4, maxLength: 20 },
-                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+                nama_bahasa: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Bahasa Indonesia' },
+                tingkat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Pemula'},
               },
               required: %w[nama_bahasa tingkat]
             }
@@ -67,8 +69,10 @@ RSpec.describe 'api/v1/languages', type: :request do
             language: {
               type: :object,
               properties: {
-                nama_bahasa: { type: :string, minLength: 4, maxLength: 20 },
-                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+                nama_bahasa: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Bahasa Indonesia'},
+                tingkat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Pemula'},
               },
               # required: %w[nama_bahasa tingkat]
             }
@@ -97,8 +101,10 @@ RSpec.describe 'api/v1/languages', type: :request do
             language: {
               type: :object,
               properties: {
-                nama_bahasa: { type: :string, minLength: 4, maxLength: 20 },
-                tingkat: { type: :string, minLength: 4, maxLength: 20 },
+                nama_bahasa: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Bahasa Indonesia'},
+                tingkat: { type: :string, minLength: 4, maxLength: 20,
+                  example: 'Pemula'},
               },
               # required: %w[nama_bahasa tingkat]
             }
