@@ -28,8 +28,9 @@ RSpec.describe 'api/v1/address_kabupaten_lists', type: :request do
             address_kabupaten_list: {
               type: :object,
               properties: {
-                kabupaten: { type: :string, minLength: 3, maxLength: 35 },
-                address_province_list_id: { type: :integer },
+                kabupaten: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Bandung'},
+                address_province_list_id: { type: :integer, example: 1},
               },
               required: %w[kabupaten address_province_list_id]
             }
@@ -79,8 +80,10 @@ RSpec.describe 'api/v1/address_kabupaten_lists', type: :request do
             address_kabupaten_list: {
               type: :object,
               properties: {
-                kabupaten: { type: :string, minLength: 3, maxLength: 35 },
-                address_province_list_id: { type: :integer },
+                kabupaten: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Bandung'},
+                address_province_list_id: { type: :integer,
+                  example: 1},
               },
               # required: %w[kabupaten address_province_list_id]
             }
@@ -109,8 +112,9 @@ RSpec.describe 'api/v1/address_kabupaten_lists', type: :request do
             address_kabupaten_list: {
               type: :object,
               properties: {
-                kabupaten: { type: :string, minLength: 3, maxLength: 35 },
-                address_province_list_id: { type: :integer },
+                kabupaten: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Bandung'},
+                address_province_list_id: { type: :integer, example: 1},
               },
               # required: %w[kabupaten address_province_list_id]
             }

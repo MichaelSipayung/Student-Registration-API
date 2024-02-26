@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
             high_school_major: {
               type: :object,
               properties: {
-                jurusan: { type: :string, minLength: 3, maxLength: 25 },
+                jurusan: { type: :string, minLength: 3, maxLength: 25,
+                  example: 'IPA'},
               },
               required: %w[jurusan]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
             high_school_major: {
               type: :object,
               properties: {
-                jurusan: { type: :string, minLength: 3, maxLength: 25 },
+                jurusan: { type: :string, minLength: 3, maxLength: 25,
+                  example: 'IPS'},
               },
               # required: %w[jurusan]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/high_school_major_lists', type: :request do
             high_school_major: {
               type: :object,
               properties: {
-                jurusan: { type: :string, minLength: 3, maxLength: 25 },
+                jurusan: { type: :string, minLength: 3, maxLength: 25,
+                  example: 'IPS'},
               },
               # required: %w[jurusan]
             }

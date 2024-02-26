@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/language_degree_lists', type: :request do
             language_degree_list: {
               type: :object,
               properties: {
-                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+                tingkat: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Pemula'},
               },
               required: %w[tingkat]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/language_degree_lists', type: :request do
             language_degree_list: {
               type: :object,
               properties: {
-                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+                tingkat: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Pemula'},
               },
               # required: %w[tingkat]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/language_degree_lists', type: :request do
             language_degree_list: {
               type: :object,
               properties: {
-                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+                tingkat: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Pemula'},
               },
               # required: %w[tingkat]
             }

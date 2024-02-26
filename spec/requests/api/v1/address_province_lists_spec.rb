@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
             address_province_list: {
               type: :object,
               properties: {
-                provinsi: { type: :string, minLength: 3, maxLength: 35 },
+                provinsi: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Jawa Barat'},
               },
               required: %w[provinsi]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
             address_province_list: {
               type: :object,
               properties: {
-                provinsi: { type: :string, minLength: 3, maxLength: 35 },
+                provinsi: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Jawa Barat'},
               },
               # required: %w[provinsi]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/address_province_lists', type: :request do
             address_province_list: {
               type: :object,
               properties: {
-                provinsi: { type: :string, minLength: 3, maxLength: 35 },
+                provinsi: { type: :string, minLength: 3, maxLength: 35,
+                  example: 'Jawa Barat'},
               },
               # required: %w[provinsi]
             }

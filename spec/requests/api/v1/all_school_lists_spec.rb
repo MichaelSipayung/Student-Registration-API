@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
             all_school_list: {
               type: :object,
               properties: {
-                sekolah: { type: :string, minLength: 5, maxLength: 35 },
+                sekolah: { type: :string, minLength: 5, maxLength: 35,
+                  example: 'SMPN 1 Bandung'},
               },
               required: %w[sekolah]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
             all_school_list: {
               type: :object,
               properties: {
-                sekolah: { type: :string, minLength: 5, maxLength: 35 },
+                sekolah: { type: :string, minLength: 5, maxLength: 35,
+                  example: 'SMPN 1 Bandung'},
               },
               # required: %w[sekolah]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/all_school_lists', type: :request do
             all_school_list: {
               type: :object,
               properties: {
-                sekolah: { type: :string, minLength: 5, maxLength: 35 },
+                sekolah: { type: :string, minLength: 5, maxLength: 35,
+                  example: 'SMPN 1 Bandung'},
               },
               # required: %w[sekolah]
             }

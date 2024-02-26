@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/parent_job_lists', type: :request do
             parent_job_list: {
               type: :object,
               properties: {
-                pekerjaan: { type: :string, minLength: 3, maxLength: 25 },
+                pekerjaan: { type: :string, minLength: 3, maxLength: 25,
+                  example: 'PNS'},
               },
               required: %w[pekerjaan]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/parent_job_lists', type: :request do
             parent_job_list: {
               type: :object,
               properties: {
-                pekerjaan: { type: :string, minLength: 3, maxLength: 25 },
+                pekerjaan: { type: :string, minLength: 3, maxLength: 25,
+                  example: 'PNS'},
               },
               # required: %w[pekerjaan]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/parent_job_lists', type: :request do
             parent_job_list: {
               type: :object,
               properties: {
-                pekerjaan: { type: :string, minLength: 3, maxLength: 25 },
+                pekerjaan: { type: :string, minLength: 3, maxLength: 25,
+                  example: 'PNS'},
               },
               # required: %w[pekerjaan]
             }

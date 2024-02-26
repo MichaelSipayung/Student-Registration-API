@@ -29,8 +29,9 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
             batch_list: {
               type: :object,
               properties: {
-                gelombang: { type: :string, minLength: 4, maxLength: 25 },
-                aktif: { type: :boolean },
+                gelombang: { type: :string, minLength: 4, maxLength: 25,
+                  example: 'PMDK Sumut'},
+                aktif: { type: :boolean, example: true},
               },
               required: %w[gelombang aktif]
             }
@@ -81,8 +82,9 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
             batch_list: {
               type: :object,
               properties: {
-                gelombang: { type: :string, minLength: 4, maxLength: 25 },
-                aktif: { type: :boolean },
+                gelombang: { type: :string, minLength: 4, maxLength: 25,
+                  example: 'PMDK Sumut'},
+                aktif: { type: :boolean, example: true},
               },
               # required: %w[gelombang aktif]
             }
@@ -111,8 +113,9 @@ RSpec.describe 'api/v1/batch_lists', type: :request do
             batch_list: {
               type: :object,
               properties: {
-                gelombang: { type: :string, minLength: 4, maxLength: 25 },
-                aktif: { type: :boolean },
+                gelombang: { type: :string, minLength: 4, maxLength: 25,
+                  example: 'PMDK Sumut'},
+                aktif: { type: :boolean, example: true},
               },
               # required: %w[gelombang aktif]
             }

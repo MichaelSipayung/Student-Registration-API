@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
             parent_education_list: {
               type: :object,
               properties: {
-                pendidikan: { type: :string, minLength: 2, maxLength: 20 },
+                pendidikan: { type: :string, minLength: 2, maxLength: 20,
+                  example: 'Sarjana'},
               },
               required: %w[pendidikan]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
             parent_education_list: {
               type: :object,
               properties: {
-                pendidikan: { type: :string, minLength: 2, maxLength: 20 },
+                pendidikan: { type: :string, minLength: 2, maxLength: 20,
+                  example: 'Sarjana'},
               },
               # required: %w[pendidikan]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/parent_education_lists', type: :request do
             parent_education_list: {
               type: :object,
               properties: {
-                pendidikan: { type: :string, minLength: 2, maxLength: 20 },
+                pendidikan: { type: :string, minLength: 2, maxLength: 20,
+                  example: 'Sarjana'},
               },
               # required: %w[pendidikan]
             }

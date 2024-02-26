@@ -28,7 +28,7 @@ RSpec.describe 'api/v1/achievement_kategori_lists', type: :request do
             achievement_kategori_list: {
               type: :object,
               properties: {
-                kategori: { type: :string, minLength: 4, maxLength: 15 },
+                kategori: { type: :string, minLength: 4, maxLength: 15, example: 'Akademik' },
               },
               required: %w[kategori]
             }
@@ -77,7 +77,7 @@ RSpec.describe 'api/v1/achievement_kategori_lists', type: :request do
             achievement_kategori_list: {
               type: :object,
               properties: {
-                kategori: { type: :string, minLength: 4, maxLength: 15 },
+                kategori: { type: :string, minLength: 4, maxLength: 15, example: 'Akademik' },
               },
               # required: %w[kategori]
             }
@@ -105,7 +105,7 @@ RSpec.describe 'api/v1/achievement_kategori_lists', type: :request do
             achievement_kategori_list: {
               type: :object,
               properties: {
-                kategori: { type: :string, minLength: 4, maxLength: 15 },
+                kategori: { type: :string, minLength: 4, maxLength: 15, example: 'Akademik' },
               },
               # required: %w[kategori]
             }

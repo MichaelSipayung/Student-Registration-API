@@ -109,7 +109,8 @@ RSpec.describe 'api/v1/pmdk_school_lists', type: :request do
             pmdk_school_list: {
               type: :object,
               properties: {
-                sekolah: { type: :string, minLength: 5, maximum: 35 },
+                sekolah: { type: :string, minLength: 5, maximum: 35,
+                  example: 'SMA 1 Bandung'},
               },
               # required: %w[sekolah]
             }

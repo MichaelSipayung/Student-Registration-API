@@ -15,11 +15,14 @@ RSpec.describe 'api/v1/pmdk_school_informations', type: :request do
             pmdk_school_information: {
               type: :object,
               properties: {
-                asal_sekolah: { type: :string, minLength: 3, maxLength: 50 },
-                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50 },
-                akreditas: { type: :string, minLength: 1, maxLength: 20 },
-                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000 },
-                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10 },
+                asal_sekolah: { type: :string, minLength: 3, maxLength: 50,
+                  example: 'SMPN 1 Bandung'},
+                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50,
+                  example: 'IPA'},
+                akreditas: { type: :string, minLength: 1, maxLength: 20,
+                  example: 'A'},
+                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000, example: 800 },
+                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10, example: 8},
               },
               required: %w[sekolah]
             }
@@ -70,11 +73,14 @@ RSpec.describe 'api/v1/pmdk_school_informations', type: :request do
             pmdk_school_information: {
               type: :object,
               properties: {
-                asal_sekolah: { type: :string, minLength: 3, maxLength: 50 },
-                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50 },
-                akreditas: { type: :string, minLength: 1, maxLength: 20 },
-                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000 },
-                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10 },
+                asal_sekolah: { type: :string, minLength: 3, maxLength: 50,
+                  example: 'SMPN 1 Bandung'},
+                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50,
+                  example: 'IPA'},
+                akreditas: { type: :string, minLength: 1, maxLength: 20,
+                  example: 'A'},
+                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000, example: 800 },
+                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10, example: 8},
               },
               # required: %w[sekolah]
             }
@@ -103,11 +109,14 @@ RSpec.describe 'api/v1/pmdk_school_informations', type: :request do
             pmdk_school_information: {
               type: :object,
               properties: {
-                asal_sekolah: { type: :string, minLength: 3, maxLength: 50 },
-                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50 },
-                akreditas: { type: :string, minLength: 1, maxLength: 20 },
-                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000 },
-                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10 },
+                asal_sekolah: { type: :string, minLength: 3, maxLength: 50,
+                  example: 'SMPN 1 Bandung'},
+                jurusan_sekolah: { type: :string, minLength: 3, maxLength: 50,
+                  example: 'IPA'},
+                akreditas: { type: :string, minLength: 1, maxLength: 20,
+                  example: 'A'},
+                jumlah_nilai_un: { type: :number, minimum: 2, maximum: 1000, example: 800 },
+                jumlah_pelajaran_un: { type: :integer, minimum: 2, maximum: 10, example: 8},
               },
               # required: %w[sekolah]
             }

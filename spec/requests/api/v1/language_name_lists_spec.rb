@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
             language_name_list: {
               type: :object,
               properties: {
-                bahasa: { type: :string, minLength: 4, maxLength: 15 },
+                bahasa: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Bahasa Indonesia'},
               },
               required: %w[bahasa]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
             language_name_list: {
               type: :object,
               properties: {
-                bahasa: { type: :string, minLength: 4, maxLength: 15 },
+                bahasa: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Bahasa Indonesia'},
               },
               # required: %w[bahasa]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/language_name_lists', type: :request do
             language_name_list: {
               type: :object,
               properties: {
-                bahasa: { type: :string, minLength: 4, maxLength: 15 },
+                bahasa: { type: :string, minLength: 4, maxLength: 15,
+                  example: 'Bahasa Indonesia'},
               },
               # required: %w[bahasa]
             }

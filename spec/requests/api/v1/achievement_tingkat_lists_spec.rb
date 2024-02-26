@@ -28,7 +28,7 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
             achievement_tingkat_list: {
               type: :object,
               properties: {
-                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+                tingkat: { type: :string, minLength: 4, maxLength: 15, example: 'Provinsi'},
               },
               required: %w[tingkat]
             }
@@ -77,7 +77,7 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
             achievement_tingkat_list: {
               type: :object,
               properties: {
-                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+                tingkat: { type: :string, minLength: 4, maxLength: 15, example: 'Provinsi'},
               },
               # required: %w[tingkat]
             }
@@ -105,7 +105,7 @@ RSpec.describe 'api/v1/achievement_tingkat_lists', type: :request do
             achievement_tingkat_list: {
               type: :object,
               properties: {
-                tingkat: { type: :string, minLength: 4, maxLength: 15 },
+                tingkat: { type: :string, minLength: 4, maxLength: 15, example: 'Provinsi'},
               },
               # required: %w[tingkat]
             }

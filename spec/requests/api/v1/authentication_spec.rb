@@ -12,8 +12,9 @@ RSpec.describe 'api/v1/authentication', type: :request do
         parameter name: :user, in: :body, schema: {
           type: :object,
           properties: {
-              email: {type: :string, minLength: 10},
-              password: {type: :string, format: :password, minLength: 6},
+              email: {type: :string, minLength: 10, example: 'michael@gmail.com'},
+              password: {type: :string, format: :password, minLength: 6,
+                example: 'password'},
             },
               required: %w[email password]
             }

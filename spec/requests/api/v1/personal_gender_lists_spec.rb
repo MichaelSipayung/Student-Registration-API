@@ -29,7 +29,8 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
             personal_gender_list: {
               type: :object,
               properties: {
-                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10 },
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10,
+                  example: 'Laki-laki'},
               },
               required: %w[jenis_kelamin]
             }
@@ -80,7 +81,8 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
             personal_gender_list: {
               type: :object,
               properties: {
-                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10 },
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10,
+                  example: 'Laki-laki'},
               },
               # required: %w[jenis_kelamin]
             }
@@ -109,7 +111,8 @@ RSpec.describe 'api/v1/personal_gender_lists', type: :request do
             personal_gender_list: {
               type: :object,
               properties: {
-                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10 },
+                jenis_kelamin: { type: :string, minLength: 4, maxLength: 10,
+                  example: 'Laki-laki'},
               },
               # required: %w[jenis_kelamin]
             }

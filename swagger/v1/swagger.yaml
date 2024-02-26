@@ -128,6 +128,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Akademik
                   required:
                   - kategori
   "/api/v1/achievement_kategori_lists/{id}":
@@ -166,6 +167,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Akademik
     put:
       summary: update achievement_kategori_list
       tags:
@@ -187,6 +189,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Akademik
     delete:
       summary: delete achievement_kategori_list
       tags:
@@ -223,6 +226,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Provinsi
                   required:
                   - tingkat
   "/api/v1/achievement_tingkat_lists/{id}":
@@ -261,6 +265,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Provinsi
     put:
       summary: update achievement_tingkat_list
       tags:
@@ -282,6 +287,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Provinsi
     delete:
       summary: delete achievement_tingkat_list
       tags:
@@ -311,18 +317,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Juara 1 Lomba Cerdas Cermat
                     tingkat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Kabupaten
                     tahun:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2020-12-11'
                     kategori:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Akademik
                   required:
                   - nama_prestasi
                   - tingkat
@@ -364,18 +374,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Juara 1 Lomba Cerdas Cermat
                     tingkat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Kabupaten
                     tahun:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2020-12-11'
                     kategori:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Akademik
     put:
       summary: update achievement
       tags:
@@ -397,18 +411,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Juara 1 Lomba Cerdas Cermat
                     tingkat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Kabupaten
                     tahun:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2020-12-11'
                     kategori:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Akademik
   "/api/v1/address_kabupaten_lists":
     get:
       summary: show all address_kabupaten_lists
@@ -438,8 +456,10 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Bandung
                     address_province_list_id:
                       type: integer
+                      example: 1
                   required:
                   - kabupaten
                   - address_province_list_id
@@ -479,8 +499,10 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Bandung
                     address_province_list_id:
                       type: integer
+                      example: 1
     put:
       summary: update address_kabupaten_list
       tags:
@@ -502,8 +524,10 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Bandung
                     address_province_list_id:
                       type: integer
+                      example: 1
     delete:
       summary: delete address_kabupaten_list
       tags:
@@ -540,8 +564,10 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Cibiru
                     address_kabupaten_list_id:
                       type: integer
+                      example: 1
                   required:
                   - kecamatan
                   - address_kabupaten_list_id
@@ -581,8 +607,10 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Cibiru
                     address_kabupaten_list_id:
                       type: integer
+                      example: 1
     put:
       summary: update address_kecamatan_list
       tags:
@@ -604,8 +632,10 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Cibiru
                     address_kabupaten_list_id:
                       type: integer
+                      example: 1
     delete:
       summary: delete address_kecamatan_list
       tags:
@@ -642,6 +672,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Jawa Barat
                   required:
                   - provinsi
   "/api/v1/address_province_lists/{id}":
@@ -680,6 +711,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Jawa Barat
     put:
       summary: update address_province_list
       tags:
@@ -701,6 +733,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 35
+                      example: Jawa Barat
     delete:
       summary: delete address_province_list
       tags:
@@ -741,30 +774,37 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jl. Cibiru No. 123
                     kelurahan:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Cibiru
                     kecamatan:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Cibiru
                     kode_pos:
                       type: integer
                       minimum: 5
                       maximum: 5
+                      example: 40525
                     provinsi:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jawa Barat
                     no_telepon:
                       type: integer
                       minimum: 10
                       maximum: 13
+                      example: 82272168956
                     kabupaten:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Bandung
                   required:
                   - alamat
                   - kelurahan
@@ -809,30 +849,37 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jl. Cibiru No. 123
                     kelurahan:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Cibiru
                     kecamatan:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Cibiru
                     kode_pos:
                       type: integer
                       minimum: 5
                       maximum: 5
+                      example: 40525
                     provinsi:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jawa Barat
                     no_telepon:
                       type: integer
                       minimum: 10
                       maximum: 13
+                      example: 82272168956
                     kabupaten:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Bandung
     put:
       summary: update address
       tags:
@@ -854,30 +901,37 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jl. Cibiru No. 123
                     kelurahan:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Cibiru
                     kecamatan:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Cibiru
                     kode_pos:
                       type: integer
                       minimum: 5
                       maximum: 5
+                      example: 40525
                     provinsi:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jawa Barat
                     no_telepon:
                       type: integer
                       minimum: 10
                       maximum: 13
+                      example: 82272168956
                     kabupaten:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Bandung
   "/api/v1/all_school_lists":
     get:
       summary: show all all_school_lists
@@ -907,6 +961,7 @@ paths:
                       type: string
                       minLength: 5
                       maxLength: 35
+                      example: SMPN 1 Bandung
                   required:
                   - sekolah
   "/api/v1/all_school_lists/{id}":
@@ -945,6 +1000,7 @@ paths:
                       type: string
                       minLength: 5
                       maxLength: 35
+                      example: SMPN 1 Bandung
     put:
       summary: update all_school_list
       tags:
@@ -966,6 +1022,7 @@ paths:
                       type: string
                       minLength: 5
                       maxLength: 35
+                      example: SMPN 1 Bandung
     delete:
       summary: delete all_school_list
       tags:
@@ -991,10 +1048,12 @@ paths:
                 email:
                   type: string
                   minLength: 10
+                  example: michael@gmail.com
                 password:
                   type: string
                   format: password
                   minLength: 6
+                  example: password
               required:
               - email
               - password
@@ -1027,8 +1086,10 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: PMDK Sumut
                     aktif:
                       type: boolean
+                      example: true
                   required:
                   - gelombang
                   - aktif
@@ -1068,8 +1129,10 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: PMDK Sumut
                     aktif:
                       type: boolean
+                      example: true
     put:
       summary: update batch_list
       tags:
@@ -1091,8 +1154,10 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: PMDK Sumut
                     aktif:
                       type: boolean
+                      example: true
     delete:
       summary: delete batch_list
       tags:
@@ -1129,6 +1194,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Memuaskan
                   required:
                   - predikat
   "/api/v1/extra_lists/{id}":
@@ -1167,6 +1233,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Memuaskan
     put:
       summary: update extra_list
       tags:
@@ -1188,24 +1255,14 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Memuaskan
     delete:
       summary: delete extra_list
       tags:
       - Extra list endpoint
-      parameters: []
       responses:
         '200':
           description: successful
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                predikat:
-                  type: string
-                  minLength: 4
-                  maxLength: 15
   "/api/v1/extras":
     post:
       summary: create extra
@@ -1228,18 +1285,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Pramuka
                     predikat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Memuaskan
                     mulai:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-01-01'
                     berakhir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-10-01'
                   required:
                   - nama_kegiatan
                   - predikat
@@ -1281,18 +1342,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Pramuka
                     predikat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Memuaskan
                     mulai:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-01-01'
                     berakhir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-10-01'
     put:
       summary: update extra
       tags:
@@ -1314,18 +1379,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Pramuka
                     predikat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Memuaskan
                     mulai:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-01-01'
                     berakhir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-10-01'
   "/api/v1/high_school_major_lists":
     get:
       summary: show all high_school_major_lists
@@ -1355,6 +1424,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 25
+                      example: IPA
                   required:
                   - jurusan
   "/api/v1/high_school_major_lists/{id}":
@@ -1393,6 +1463,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 25
+                      example: IPS
     put:
       summary: update high_school_major_list
       tags:
@@ -1414,6 +1485,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 25
+                      example: IPS
     delete:
       summary: delete high_school_major_list
       tags:
@@ -1450,6 +1522,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Pemula
                   required:
                   - tingkat
   "/api/v1/language_degree_lists/{id}":
@@ -1488,6 +1561,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Pemula
     put:
       summary: update language_degree_list
       tags:
@@ -1509,6 +1583,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Pemula
     delete:
       summary: delete language_degree_list
       tags:
@@ -1545,6 +1620,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Bahasa Indonesia
                   required:
                   - bahasa
   "/api/v1/language_name_lists/{id}":
@@ -1583,6 +1659,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Bahasa Indonesia
     put:
       summary: update language_name_list
       tags:
@@ -1604,6 +1681,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 15
+                      example: Bahasa Indonesia
     delete:
       summary: delete language_name_list
       tags:
@@ -1633,10 +1711,12 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Bahasa Indonesia
                     tingkat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Pemula
                   required:
                   - nama_bahasa
                   - tingkat
@@ -1676,10 +1756,12 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Bahasa Indonesia
                     tingkat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Pemula
     put:
       summary: update language
       tags:
@@ -1701,10 +1783,12 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Bahasa Indonesia
                     tingkat:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Pemula
   "/api/v1/major_lists":
     get:
       summary: show all major_lists
@@ -1734,6 +1818,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Informatika
                   required:
                   - jurusan
   "/api/v1/major_lists/{id}":
@@ -1772,6 +1857,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Informatika
     put:
       summary: update major_list
       tags:
@@ -1793,6 +1879,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Informatika
     delete:
       summary: delete major_list
       tags:
@@ -1822,18 +1909,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Informatika
                     jurusan2:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Sistem Informasi
                     jurusan3:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Elektro
                     gelombang:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: PMDK Sumut
                   required:
                   - jurusan1
                   - jurusan2
@@ -1875,18 +1966,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Informatika
                     jurusan2:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Sistem Informasi
                     jurusan3:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Elektro
                     gelombang:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: PMDK Sumut
     put:
       summary: update major
       tags:
@@ -1908,18 +2003,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Informatika
                     jurusan2:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Sistem Informasi
                     jurusan3:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Teknik Elektro
                     gelombang:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: PMDK Sumut
   "/api/v1/organization_degree_lists":
     get:
       summary: show all organization_degree_lists
@@ -1949,6 +2048,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 15
+                      example: Ketua
                   required:
                   - jabatan
   "/api/v1/organization_degree_lists/{id}":
@@ -1987,6 +2087,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 15
+                      example: Ketua
     put:
       summary: update organization_degree_list
       tags:
@@ -2008,6 +2109,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 15
+                      example: Ketua
     delete:
       summary: delete organization_degree_list
       tags:
@@ -2037,18 +2139,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: OSIS SMAN 1
                     mulai:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-01-01'
                     berakhir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-10-01'
                     jabatan:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Ketua
                   required:
                   - nama_organisasi
                   - mulai
@@ -2090,18 +2196,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: OSIS SMAN 1
                     mulai:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-01-01'
                     berakhir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-10-01'
                     jabatan:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Ketua
     put:
       summary: update organization
       tags:
@@ -2123,18 +2233,22 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: OSIS SMAN 1
                     mulai:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-01-01'
                     berakhir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '2021-10-01'
                     jabatan:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Ketua
   "/api/v1/parent_education_lists":
     get:
       summary: show all parent_education_lists
@@ -2164,6 +2278,7 @@ paths:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
                   required:
                   - pendidikan
   "/api/v1/parent_education_lists/{id}":
@@ -2202,6 +2317,7 @@ paths:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
     put:
       summary: update parent_education_list
       tags:
@@ -2223,6 +2339,7 @@ paths:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
     delete:
       summary: delete parent_education_list
       tags:
@@ -2259,6 +2376,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 25
+                      example: PNS
                   required:
                   - pekerjaan
   "/api/v1/parent_job_lists/{id}":
@@ -2297,6 +2415,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 25
+                      example: PNS
     put:
       summary: update parent_job_list
       tags:
@@ -2318,6 +2437,7 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 25
+                      example: PNS
     delete:
       summary: delete parent_job_list
       tags:
@@ -2347,42 +2467,52 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Budi
                     nama_ibu:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Siti
                     nik_ayah:
                       type: integer
                       minimum: 1111111111111111
                       maxLength: 9999999999999999
+                      example: 1234567890123456
                     nik_ibu:
                       type: integer
                       minimum: 1111111111111111
                       maxLength: 9999999999999999
+                      example: 1234567890123456
                     pendidikan_ayah:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
                     pendidikan_ibu:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
                     tanggal_lahir_ayah:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     tanggal_lahir_ibu:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     pekerjaan_ayah:
                       type: string
                       minLength: 3
                       maxLength: 20
+                      example: PNS
                     pekerjaan_ibu:
                       type: string
                       minLength: 3
                       maxLength: 20
+                      example: PNS
                   required:
                   - nama_ayah
                   - nama_ibu
@@ -2428,42 +2558,52 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Budi
                     nama_ibu:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Siti
                     nik_ayah:
                       type: integer
                       minimum: 1111111111111111
                       maxLength: 9999999999999999
+                      example: 1234567890123456
                     nik_ibu:
                       type: integer
                       minimum: 1111111111111111
                       maxLength: 9999999999999999
+                      example: 1234567890123456
                     pendidikan_ayah:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
                     pendidikan_ibu:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
                     tanggal_lahir_ayah:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     tanggal_lahir_ibu:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     pekerjaan_ayah:
                       type: string
                       minLength: 3
                       maxLength: 20
+                      example: PNS
                     pekerjaan_ibu:
                       type: string
                       minLength: 3
                       maxLength: 20
+                      example: PNS
     put:
       summary: update parent
       tags:
@@ -2485,42 +2625,164 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Budi
                     nama_ibu:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Siti
                     nik_ayah:
                       type: integer
                       minimum: 1111111111111111
                       maxLength: 9999999999999999
+                      example: 1234567890123456
                     nik_ibu:
                       type: integer
                       minimum: 1111111111111111
                       maxLength: 9999999999999999
+                      example: 1234567890123456
                     pendidikan_ayah:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
                     pendidikan_ibu:
                       type: string
                       minLength: 2
                       maxLength: 20
+                      example: Sarjana
                     tanggal_lahir_ayah:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     tanggal_lahir_ibu:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     pekerjaan_ayah:
                       type: string
                       minLength: 3
                       maxLength: 20
+                      example: PNS
                     pekerjaan_ibu:
                       type: string
                       minLength: 3
                       maxLength: 20
+                      example: PNS
+  "/api/v1/password_resets":
+    post:
+      summary: create password_reset
+      tags:
+      - Password reset endpoint
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password_reset:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      minLength: 10
+                      example: michael@gmail.com
+                  required:
+                  - email
+  "/api/v1/password_resets/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    patch:
+      summary: update password_reset
+      tags:
+      - Password reset endpoint
+      parameters:
+      - name: id
+        in: path
+        format: regex
+        pattern: "^[0-9]{6}$"
+        description: six digit token sent to user email
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password_reset:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      minLength: 10
+                      example: michael@gmail.com
+                    password:
+                      type: string
+                      format: password
+                      minLength: 6
+                    password_confirmation:
+                      type: string
+                      format: password
+                      minLength: 6
+                  required:
+                  - password
+                  - password_confirmation
+    put:
+      summary: update password_reset
+      tags:
+      - Password reset endpoint
+      parameters:
+      - name: id
+        in: path
+        format: regex
+        pattern: "^[0-9]{6}$"
+        description: six digit token sent to user email
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password_reset:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      minLength: 10
+                      example: michael@gmail.com
+                    password:
+                      type: string
+                      format: password
+                      minLength: 6
+                    password_confirmation:
+                      type: string
+                      format: password
+                      minLength: 6
+                  required:
+                  - password
+                  - password_confirmation
   "/api/v1/personal_gender_lists":
     get:
       summary: show all personal_gender_lists
@@ -2550,6 +2812,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 10
+                      example: Laki-laki
                   required:
                   - jenis_kelamin
   "/api/v1/personal_gender_lists/{id}":
@@ -2588,6 +2851,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 10
+                      example: Laki-laki
     put:
       summary: update personal_gender_list
       tags:
@@ -2609,6 +2873,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 10
+                      example: Laki-laki
     delete:
       summary: delete personal_gender_list
       tags:
@@ -2645,6 +2910,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Islam
                   required:
                   - agama
   "/api/v1/personal_religion_lists/{id}":
@@ -2683,6 +2949,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Islam
     put:
       summary: update personal_religion_list
       tags:
@@ -2704,6 +2971,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Islam
     delete:
       summary: delete personal_religion_list
       tags:
@@ -2733,38 +3001,47 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: John Doe
                     agama:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Islam
                     nik:
                       type: integer
                       minimum: 1111111111111111
                       maximum: 9999999999999999
+                      example: 1234567890123456
                     nisn:
                       type: integer
                       minimum: 1111111111
                       maximum: 9999999999
+                      example: 1234567890
                     no_kps:
                       type: integer
                       minimum: 111111
                       maximum: 999999
+                      example: 123456
                     tanggal_lahir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     tempat_lahir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Jakarta
                     jenis_kelamin:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Laki-laki
                     domisili:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jakarta
                   required:
                   - nama_lengkap
                   - agama
@@ -2810,38 +3087,47 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: John Doe
                     agama:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Islam
                     nik:
                       type: integer
                       minimum: 1111111111111111
                       maximum: 9999999999999999
+                      example: 1234567890123456
                     nisn:
                       type: integer
                       minimum: 1111111111
                       maximum: 9999999999
+                      example: 1234567890
                     no_kps:
                       type: integer
                       minimum: 111111
                       maximum: 999999
+                      example: 123456
                     tanggal_lahir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     tempat_lahir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Jakarta
                     jenis_kelamin:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Laki-laki
                     domisili:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jakarta
     put:
       summary: update personal
       tags:
@@ -2863,38 +3149,47 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: John Doe
                     agama:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Islam
                     nik:
                       type: integer
                       minimum: 1111111111111111
                       maximum: 9999999999999999
+                      example: 1234567890123456
                     nisn:
                       type: integer
                       minimum: 1111111111
                       maximum: 9999999999
+                      example: 1234567890
                     no_kps:
                       type: integer
                       minimum: 111111
                       maximum: 999999
+                      example: 123456
                     tanggal_lahir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: '1990-01-01'
                     tempat_lahir:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Jakarta
                     jenis_kelamin:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Laki-laki
                     domisili:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Jakarta
   "/api/v1/pmdk_each_score_informations":
     post:
       summary: create pmdk_each_score_information
@@ -2917,82 +3212,102 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                   required:
                   - matematika1
                   - matematika2
@@ -3050,82 +3365,102 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
     put:
       summary: update pmdk_each_score_information
       tags:
@@ -3147,82 +3482,102 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     matematika5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     kimia5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     fisika5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris1:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris2:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris3:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris4:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
                     inggris5:
                       type: number
                       minimum: 2
                       maximum: 100
+                      example: 80
   "/api/v1/pmdk_file_uploads":
     post:
       summary: create pmdk_file_upload
@@ -3343,22 +3698,27 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMPN 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
                   required:
                   - sekolah
   "/api/v1/pmdk_school_informations/{id}":
@@ -3397,22 +3757,27 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMPN 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
     put:
       summary: update pmdk_school_information
       tags:
@@ -3434,22 +3799,27 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMPN 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
   "/api/v1/pmdk_school_lists":
     get:
       summary: show all pmdk_school_lists
@@ -3538,6 +3908,7 @@ paths:
                       type: string
                       minLength: 5
                       maximum: 35
+                      example: SMA 1 Bandung
     delete:
       summary: delete pmdk_school_list
       tags:
@@ -3567,42 +3938,52 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester2:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester3:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester4:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester5:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_pelajaran_semester1:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester2:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester3:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester4:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester5:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                   required:
                   - jumlah_nilai_semester1
                   - jumlah_nilai_semester2
@@ -3650,42 +4031,52 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester2:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester3:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester4:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester5:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_pelajaran_semester1:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester2:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester3:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester4:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester5:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
     put:
       summary: update pmdk_total_score_information
       tags:
@@ -3707,42 +4098,52 @@ paths:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester2:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester3:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester4:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_nilai_semester5:
                       type: number
                       minimum: 2
                       maximum: 3000
+                      example: 800
                     jumlah_pelajaran_semester1:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester2:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester3:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester4:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
                     jumlah_pelajaran_semester5:
                       type: integer
                       minimum: 2
                       maximum: 30
+                      example: 8
   "/api/v1/source_information_lists":
     get:
       summary: show all source_information_lists
@@ -3772,6 +4173,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Kompas
                   required:
                   - informasi
   "/api/v1/source_information_lists/{id}":
@@ -3810,6 +4212,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Kompas
     put:
       summary: update source_information_list
       tags:
@@ -3831,6 +4234,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 25
+                      example: Kompas
     delete:
       summary: delete source_information_list
       tags:
@@ -3867,6 +4271,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Keluarga
                   required:
                   - motivasi
   "/api/v1/source_motivation_lists/{id}":
@@ -3905,6 +4310,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Keluarga
     put:
       summary: update source_motivation_list
       tags:
@@ -3926,6 +4332,7 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 20
+                      example: Keluarga
     delete:
       summary: delete source_motivation_list
       tags:
@@ -3955,14 +4362,17 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Kompas
                     motivasi:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Keluarga
                     jumlah_n:
                       type: integer
                       minimum: 1
                       maximum: 50
+                      example: 10
                   required:
                   - sumber_informasi
                   - motivasi
@@ -4003,14 +4413,17 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Kompas
                     motivasi:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Keluarga
                     jumlah_n:
                       type: integer
                       minimum: 1
                       maximum: 50
+                      example: 10
     put:
       summary: update source
       tags:
@@ -4032,14 +4445,17 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Kompas
                     motivasi:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: Keluarga
                     jumlah_n:
                       type: integer
                       minimum: 1
                       maximum: 50
+                      example: 10
   "/api/v1/users":
     get:
       summary: list users
@@ -4072,17 +4488,21 @@ paths:
                     email:
                       type: string
                       minLength: 10
+                      example: michael@gmail.com
                     username:
                       type: string
                       minLength: 6
+                      example: michael
                     password:
                       type: string
                       format: password
                       minLength: 6
+                      example: password
                     password_confirmation:
                       type: string
                       format: password
                       minLength: 6
+                      example: password
                   required:
                   - name
                   - email
@@ -4124,9 +4544,11 @@ paths:
                     email:
                       type: string
                       minLength: 10
+                      example: michael@gmail.com
                     username:
                       type: string
                       minLength: 6
+                      example: michael
                     password:
                       type: string
                       format: password
@@ -4155,9 +4577,11 @@ paths:
                     email:
                       type: string
                       minLength: 10
+                      example: michael@gmail.com
                     username:
                       type: string
                       minLength: 6
+                      example: michael
                     password:
                       type: string
                       format: password
@@ -4195,30 +4619,37 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMA 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
                     jumlah_pelajaran_semester5:
                       type: integer
                       minimum: 2
                       maximum: 20
+                      example: 8
                     jumlah_nilai_semester5:
                       type: number
                       minimum: 2
                       maximum: 2000
+                      example: 800
                   required:
                   - asal_sekolah
                   - jurusan_sekolah
@@ -4261,30 +4692,37 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMA 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
                     jumlah_pelajaran_semester5:
                       type: integer
                       minimum: 2
                       maximum: 20
+                      example: 8
                     jumlah_nilai_semester5:
                       type: number
                       minimum: 2
                       maximum: 2000
+                      example: 800
     put:
       summary: update usm_school_information
       tags:
@@ -4306,30 +4744,37 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMA 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
                     jumlah_pelajaran_semester5:
                       type: integer
                       minimum: 2
                       maximum: 20
+                      example: 8
                     jumlah_nilai_semester5:
                       type: number
                       minimum: 2
                       maximum: 2000
+                      example: 800
   "/api/v1/utbk_file_uploads/{id}":
     parameters:
     - name: id
@@ -4424,22 +4869,27 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMA 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
                   required:
                   - asal_sekolah
                   - jurusan_sekolah
@@ -4480,22 +4930,27 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMA 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
                   required:
                   - asal_sekolah
                   - jurusan_sekolah
@@ -4521,22 +4976,27 @@ paths:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: SMA 1 Bandung
                     jurusan_sekolah:
                       type: string
                       minLength: 3
                       maxLength: 50
+                      example: IPA
                     akreditas:
                       type: string
                       minLength: 1
                       maxLength: 20
+                      example: A
                     jumlah_nilai_un:
                       type: number
                       minimum: 2
                       maximum: 1000
+                      example: 800
                     jumlah_pelajaran_un:
                       type: integer
                       minimum: 2
                       maximum: 10
+                      example: 8
                   required:
                   - asal_sekolah
                   - jurusan_sekolah
@@ -4563,34 +5023,42 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: '1234567890'
                     tanggal_ujian:
                       type: string
                       minLength: 4
                       maxLength: 10
+                      example: '2021-01-01'
                     jumlah_nilai_semester6:
                       type: number
                       minimum: 2
                       maximum: 2000
+                      example: 800
                     jumlah_pelajaran_semester6:
                       type: integer
                       minimum: 2
                       maximum: 100
+                      example: 8
                     nilai_penalaran_umum:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_pengetahuan_kuantitatif:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_kemampuan_memahami_bacaan_dan_menulis:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_pengetahuan_dan_pemahaman_umum:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                   required:
                   - no_peserta
                   - tanggal_ujian
@@ -4636,34 +5104,42 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: '1234567890'
                     tanggal_ujian:
                       type: string
                       minLength: 4
                       maxLength: 10
+                      example: '2021-01-01'
                     jumlah_nilai_semester6:
                       type: number
                       minimum: 2
                       maximum: 2000
+                      example: 800
                     jumlah_pelajaran_semester6:
                       type: integer
                       minimum: 2
                       maximum: 100
+                      example: 8
                     nilai_penalaran_umum:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_pengetahuan_kuantitatif:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_kemampuan_memahami_bacaan_dan_menulis:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_pengetahuan_dan_pemahaman_umum:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
     put:
       summary: update utbk_score
       tags:
@@ -4685,34 +5161,42 @@ paths:
                       type: string
                       minLength: 4
                       maxLength: 30
+                      example: '1234567890'
                     tanggal_ujian:
                       type: string
                       minLength: 4
                       maxLength: 10
+                      example: '2021-01-01'
                     jumlah_nilai_semester6:
                       type: number
                       minimum: 2
                       maximum: 2000
+                      example: 800
                     jumlah_pelajaran_semester6:
                       type: integer
                       minimum: 2
                       maximum: 100
+                      example: 8
                     nilai_penalaran_umum:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_pengetahuan_kuantitatif:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_kemampuan_memahami_bacaan_dan_menulis:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
                     nilai_pengetahuan_dan_pemahaman_umum:
                       type: number
                       minimum: 5
                       maximum: 1000
+                      example: 800
 servers:
 - url: http://{defaultHost}
   variables:

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_accessor :activation_token # create a virtual attribute
+  attr_accessor :activation_token, :reset_token # create a virtual attribute
   before_create :create_activation_digest # call the method before creating a new user
   has_secure_password
   # mount_uploader :avatar, AvatarUploader
@@ -37,11 +37,15 @@ class User < ApplicationRecord
              BCrypt::Engine.cost
            end
     # return the hash digest
-    BCrypt::Password.create(string, cost:)
+    BCrypt::Password.create(string, cost: cost)
   end
 
-  def self.new_token
-    SecureRandom.urlsafe_base64 # create a random token
+  def self.new_token(type=:string)
+    if type == :string
+      SecureRandom.urlsafe_base64 # create a random token
+    else
+      SecureRandom.random_number(900_000)+100_000 # create a random number token
+    end
   end
 
   def send_activation_email
@@ -52,10 +56,26 @@ class User < ApplicationRecord
     update_attribute(:activated, true)
     update_attribute(:activated_at, Time.zone.now)
   end
+
+  def clear_reset_digest
+    update_attribute(:reset_digest, nil)
+    update_attribute(:reset_sent_at, nil)
+  end
+
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest") # get the digest
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password?(token) # compare the token with the digest
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token(1)
+    update_attribute(:reset_digest, User.digest(reset_token)) # create a new digest
+    update_attribute(:reset_sent_at, Time.zone.now) # set the reset sent time
+  end
+
+  def send_password_reset_email # send the email with the reset token
+    UserMailer.password_reset(self).deliver_now
   end
 
   private
